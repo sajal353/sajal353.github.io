@@ -10,6 +10,9 @@
     background-color: #000;
     color: #fff;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .d1{
