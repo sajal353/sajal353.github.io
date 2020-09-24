@@ -4,6 +4,14 @@
     box-sizing: border-box;
 }
 
+.typed-cursor{
+    font-size: 5rem;
+    opacity: 1;
+    -webkit-animation: blink 0.7s infinite;
+    -moz-animation: blink 0.7s infinite;
+    animation: blink 0.7s infinite;
+}
+
 .intro{
     width: 100%;
     min-height: 100vh;
