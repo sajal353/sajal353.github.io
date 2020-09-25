@@ -32,6 +32,7 @@ var typed = new Typed("#introtxt", {
   typeSpeed: 100,
   backDelay: 1000,
   loop: false,
+  startDelay: 2000,
   showCursor: false
 });
 
