@@ -63,7 +63,7 @@
     object-fit: cover;
     object-position: center;
     opacity: 0.8;
-    animation: opacity0to8 5s ease;
+    animation: opacity0to8 10s ease;
   }
 
   @keyframes opacity0to8{
