@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
     <title>Sajal Biswas</title>
     <link rel="stylesheet" href="assets/css/bootstrap-grid.min.css" />
     <link rel="stylesheet" href="assets/css/jquery.pagepiling.css" />
@@ -21,7 +22,7 @@
     </ul>
 
     <div id="pagepiling">
-        <div class="section" id="intro">
+        <div class="section nooverflow" id="intro">
             <div class="navdark">
                 <span id="cake" onclick="showMenu()">MENU</span>
             </div>
@@ -34,21 +35,33 @@
                 </div>
                 <div id="intro2">
                     <span class="name kushan">Sajal Biswas</span>
-                <span class="d1">/ * <span id="introtxt"></span> * /</span>
+                    <span class="d1">/ * <span id="introtxt"></span> * /</span>
                 </div>
                 <div id="intro3">
-                    <span data-menuanchor="portfolio" class="dropit"><a href="#portfolio">Check Out My Portfolio<br><i class="fas fa-angle-down"></i></a></span>
+                    <span data-menuanchor="portfolio" class="dropit"><a href="#portfolio">Check Out My Portfolio<br><i
+                                class="fas fa-angle-down"></i></a></span>
                 </div>
 
             </div>
         </div>
 
-        <div class="section" id="portfolio">
-            <div class="navdark">
+        <div class="section nooverflow" id="portfolio">
+            <div class="nav">
                 <span id="cake" onclick="showMenu()">MENU</span>
             </div>
-            <div class="sec1">
-                <p class="d1" id="introtxt"></p>
+            <div class="portfolio">
+                <img src="assets/media/foggy-1149180_1920.jpg" alt="" class="bgimg">
+                <span class="name kushan">Portfolio</span>
+                <div class="portflex">
+                    <div>
+                        <a href="ui.html" target="_blank"><img src="assets/media/ui.png" alt="" class="logo"></a>
+                        <a href="ui.html" class="mono" target="_blank">UI Designs</a>
+                    </div>
+                    <div>
+                        <a href="landing.html" target="_blank"><img src="assets/media/site.png" alt="" class="logo"></a>
+                        <a href="landing.html" class="mono" target="_blank">Landing Pages</a>
+                    </div>
+                </div>
             </div>
         </div>
 
@@ -56,17 +69,14 @@
             <div class="navdark">
                 <span id="cake" onclick="showMenu()">MENU</span>
             </div>
-            <div class="sec1">
-                <p class="d1" id="introtxt"></p>
-            </div>
-        </div>
-
-        <div class="section" id="about">
-            <div class="navdark">
-                <span id="cake" onclick="showMenu()">MENU</span>
-            </div>
-            <div class="sec1">
-                <p class="d1" id="introtxt"></p>
+            <div class="contact">
+                <img src="assets/media/typewriter-1248088_1920.jpg" alt="" class="bgimg">
+                <span class="name kushan">Contact Me</span>
+                <div class="contactlinks">
+                    <a href="tel:+8801960459166" class="quicksand"><i class="fas fa-phone"></i> Phone</a>
+                    <a href="mailto:sajalbiswas353@gmail.com" class="quicksand"><i class="fas fa-envelope"></i> Mail</a>
+                    <a href="http://fb.com/sajal.biswas.353" class="quicksand"><i class="fab fa-facebook"></i> Facebook</a>
+                </div>
             </div>
         </div>
     </div>

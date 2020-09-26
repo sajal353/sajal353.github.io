@@ -44,95 +44,99 @@ html, body {
         top: 50%;
         opacity: 1;
     }
+
+    #pp-nav.right {
+        right: 17px;
+    }
+    #pp-nav.left {
+        left: 17px;
+    }
+    .pp-section.pp-table{
+        display: table;
+    }
+    .pp-tableCell {
+        display: table-cell;
+        vertical-align: middle;
+        width: 100%;
+        height: 100%;
+    }
+    .pp-slidesNav{
+        position: absolute;
+        z-index: 1;
+        left: 50%;
+        opacity: 1;
+    }
+    .pp-slidesNav.bottom {
+        bottom: 14px;
+    }
+    .pp-slidesNav.top {
+        top: 14px;
+    }
+    #pp-nav ul,
+    .pp-slidesNav ul {
+      margin: 0;
+      padding: 0;
+    }
+    #pp-nav li,
+    .pp-slidesNav li {
+        display: block;
+        width: 14px;
+        height: 2rem;
+        margin: 7px;
+        position:relative;
+    }
+    .pp-slidesNav li {
+        display: inline-block;
+    }
+    #pp-nav li a,
+    .pp-slidesNav li a {
+        display: block;
+        position: relative;
+        z-index: 1;
+        width: 100%;
+        height: 100%;
+        cursor: pointer;
+        text-decoration: none;
+    }
+    #pp-nav li .active span,
+    .pp-slidesNav .active span {
+        background: #fff;
+    }
+    #pp-nav span,
+    .pp-slidesNav span {
+        top: 2px;
+        left: 2px;
+        width: 8px;
+        height: 8px;
+        border: 1px solid #000;
+        background: rgba(0, 0, 0, 0);
+        border-radius: 50%;
+        position: absolute;
+        z-index: 1;
+    }
+    .pp-tooltip {
+        position: absolute;
+        top: -0.9rem;
+        background-color: #fff;
+        color: #000;
+        font-weight: bold;
+        padding: 0.5rem 1rem;
+        font-size: 1rem;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        white-space: nowrap;
+        max-width: 220px;
+    }
+    .pp-tooltip.right {
+        right: 20px;
+    }
+    .pp-tooltip.left {
+        left: 20px;
+    }
 }
 
-#pp-nav.right {
-    right: 17px;
-}
-#pp-nav.left {
-    left: 17px;
-}
-.pp-section.pp-table{
-    display: table;
-}
-.pp-tableCell {
-    display: table-cell;
-    vertical-align: middle;
-    width: 100%;
-    height: 100%;
-}
-.pp-slidesNav{
-    position: absolute;
-    z-index: 1;
-    left: 50%;
-    opacity: 1;
-}
-.pp-slidesNav.bottom {
-    bottom: 14px;
-}
-.pp-slidesNav.top {
-    top: 14px;
-}
-#pp-nav ul,
-.pp-slidesNav ul {
-  margin: 0;
-  padding: 0;
-}
-#pp-nav li,
-.pp-slidesNav li {
-    display: block;
-    width: 14px;
-    height: 2rem;
-    margin: 7px;
-    position:relative;
-}
-.pp-slidesNav li {
-    display: inline-block;
-}
-#pp-nav li a,
-.pp-slidesNav li a {
-    display: block;
-    position: relative;
-    z-index: 1;
-    width: 100%;
-    height: 100%;
-    cursor: pointer;
-    text-decoration: none;
-}
-#pp-nav li .active span,
-.pp-slidesNav .active span {
-    background: #fff;
-}
-#pp-nav span,
-.pp-slidesNav span {
-    top: 2px;
-    left: 2px;
-    width: 8px;
-    height: 8px;
-    border: 1px solid #000;
-    background: rgba(0, 0, 0, 0);
-    border-radius: 50%;
-    position: absolute;
-    z-index: 1;
-}
-.pp-tooltip {
-    position: absolute;
-    top: -0.9rem;
-    background-color: #fff;
-    color: #000;
-    font-weight: bold;
-    padding: 0.5rem 1rem;
-    font-size: 1rem;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    white-space: nowrap;
-    max-width: 220px;
-}
-.pp-tooltip.right {
-    right: 20px;
-}
-.pp-tooltip.left {
-    left: 20px;
-}
+
+
+
 .pp-scrollable{
     overflow-y: scroll;
     height: 100%;
