@@ -3,142 +3,211 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="swiper-bundle.css">
+    <title>Spotcab</title>
+    <link rel="icon" href="assets/logo.png" type="image/png" sizes="16x16">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
     <link rel="stylesheet" href="main.css">
-    <title>Taxi</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+    integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+    crossorigin=""/>
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+    integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+    crossorigin=""></script>
+    <script src="https://kit.fontawesome.com/4594e6f8e1.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    
-    <!-- Navbar -->
 
-    <div class="nav">
-        <span class="logo">
-            <img src="assets/logo.png" alt="SPOTCAB">
-        </span>
-        <a href="#" class="button">Stuck? Need Help?</a>
+    <!-- Nav -->
+
+    <div class="navx">
         <span>
-            
-            <form action="" method="POST" id="login">
-                <input type="text" name="username" id="username" placeholder="Username" required>
-                <input type="password" name="password" id="password" placeholder="Password" required>
-                <input type="submit" value="Login">
-            </form>
+            <img src="assets/logo.png" alt="">
+        </span>
+        <span>
+            <a class="button" href="" id="help"><i class="fas fa-phone-alt"></i> Stuck? Need Help?</a>
+            <a class="button" href="" data-toggle="modal" data-target="#login"><i class="fas fa-user"></i> Login</a>
         </span>
     </div>
 
-    <!-- Main -->
-
-    <div class="main">
-        
+    
+    <!-- Modal -->
+    
+    <div class="modal fade" id="login">
+        <div class="modal-dialog modal-dialog-center modal-md">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2>Log In</h2>
+                    <button class="close" data-dismiss="modal">&times;</button>
+                </div>
+                <form action="" class="formx">
+                    <input type="text" name="username" id="username" placeholder="Username" required>
+                    <input type="password" name="password" id="password" placeholder="Password" required>
+                    <input type="submit" value="Login">
+                </form>
+            </div>
+        </div>
+    </div>
+    
+    
+    <!-- map -->
+    <div class="map">
+        <div class="col-md-6" id="find">
+            <form action="">
+                <input type="text" placeholder="Source" required>
+                <input type="text" placeholder="Destination" required>
+                <span>
+                    <label>Car Type:</label><b><input type="radio" name="cartype" id="cartype1"><label for="cartype1"> 2</label></b>
+                                        <b><input type="radio" name="cartype" id="cartype2"><label for="cartype2"> 3</label></b>
+                                        <b><input type="radio" name="cartype" id="cartype3"><label for="cartype3"> 4+</label></b>
+                </span>
+                <input type="submit" value="GO">
+            </form>
+        </div>
+        <div id="mapid" class="col-md-6"></div>
     </div>
 
 
-    <!-- Popular -->
-
+    <!-- Popular Destination -->
 
     <div class="popular">
-        <div class="popslide">
-            <span>Popular Destinations</span>
-            <span>
-                <i class="" id="popleft">left</i>
-                <i class="" id="popright">right</i>
-            </span>
+        <h3>Popular Destinations</h3>
+        <span>
+            <i class="fas fa-caret-left" id="popleft"></i>
+            <i class="fas fa-caret-right" id="popright"></i>
+        </span>
+    </div>
+    <div class="swiper-container swiper1">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide" id="destination">
+                <img src="assets/place1.jpg" alt="">
+            </div>
+            <div class="swiper-slide" id="destination">
+                <img src="assets/place2.jpg" alt="">
+            </div>
+            <div class="swiper-slide" id="destination">
+                <img src="assets/place3.jpg" alt="">
+            </div>
+            <div class="swiper-slide" id="destination">
+                <img src="assets/place4.jpg" alt="">
+            </div>
+            <div class="swiper-slide" id="destination">
+                <img src="assets/place1.jpg" alt="">
+            </div>
+            <div class="swiper-slide" id="destination">
+                <img src="assets/place2.jpg" alt="">
+            </div>
         </div>
-        <div class="swiper-container">
-            <div class="swiper-wrapper">
-                <div class="swiper-slide">
-                    <div class="popcard">
-                        <div id="card">
-                            <img src="assets/place1.jpg" alt="">
-                            <a href="#" id="placename">Bridge</a>
-                        </div>  
+    </div>
+
+    <!-- Review -->
+    
+    <div class="middle">
+        <div class="review">
+            <h3>What do our customers say?</h3>
+            <div class="swiper-container swiper2">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide" id="reviews">
+                        <img src="assets/place1.jpg" alt="">
                     </div>
-                </div>
-                <div class="swiper-slide">
-                    <div class="popcard">
-                        <div id="card">
-                            <img src="assets/place2.jpg" alt="">
-                            <a href="#" id="placename">Bridge</a>
-                        </div>  
+                    <div class="swiper-slide" id="reviews">
+                        <img src="assets/place2.jpg" alt="">
                     </div>
-                </div>
-                <div class="swiper-slide">
-                    <div class="popcard">
-                        <div id="card">
-                            <img src="assets/place3.jpg" alt="">
-                            <a href="#" id="placename">Bridge</a>
-                        </div>  
+                    <div class="swiper-slide" id="reviews">
+                        <img src="assets/place3.jpg" alt="">
                     </div>
-                </div>
-                <div class="swiper-slide">
-                    <div class="popcard">
-                        <div id="card">
-                            <img src="assets/place4.jpg" alt="">
-                            <a href="#" id="placename">Bridge</a>
-                        </div>  
-                    </div>
-                </div>
-                <div class="swiper-slide">
-                    <div class="popcard">
-                        <div id="card">
-                            <img src="assets/place1.jpg" alt="">
-                            <a href="#" id="placename">Bridge</a>
-                        </div>  
-                    </div>
-                </div>
-                <div class="swiper-slide">
-                    <div class="popcard">
-                        <div id="card">
-                            <img src="assets/place2.jpg" alt="">
-                            <a href="#" id="placename">Bridge</a>
-                        </div>  
+                    <div class="swiper-slide" id="reviews">
+                        <img src="assets/place4.jpg" alt="">
                     </div>
                 </div>
             </div>
-            <div class="swiper-pagination"></div>  
+        </div>
+
+
+        <div class="join">
+            <div class="row">
+                <div class="col-md-5 bg-white" id="partner">
+                    <h1 class="font-uppercase text-denger">Partner with us!</h1>
+                    <p>Benefits:</p>
+
+                    <ul>
+                        <li>lorem dolor sit amet</li>
+                        <li>lorem dolor sit amet</li>
+                        <li>lorem dolor sit amet</li>
+                        <li>lorem dolor sit amet</li>
+                        <li>lorem dolor sit amet</li>
+                    
+                    </ul>
+                    
+                </div>
+                <div class="col-md-5" id="reg">
+                    <form action="">
+                        <input type="text" placeholder="Name">
+                        <input type="email" placeholder="Email">
+                        <input type="text" placeholder="Organization">
+                        <input type="submit" value="JOIN">
+                    </form>
+                </div>
+            </div>
+
         </div>
     </div>
 
 
 
-    <!-- Review -->
 
-    <div class="review">
-        <span>What do our customers say?</span>
-            <div class="swiper-container" id="review">
+<!-- who we are -->
+
+<div class="who">
+    
+    <div class="whoweare">
+        <h3>WHO WE ARE</h3>
+        <span>
+            <i class="fas fa-caret-right" id="whoright"></i>
+            <i class="fas fa-caret-left" id="wholeft"></i>
+        </span>
+    </div>
+    <div class="swiper-container swiper3">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide" id="we">
+                <i class="fas fa-star"></i>
+                <span>
+                    <h2>Taxi Booking Service Of the year</h2>
+                    <h4>
+                        Lorem ipsum dolor sit, amet consectetur adipis.<br>
+                    </h4>
+                </span>
+            </div>
+            <div class="swiper-slide" id="we">
                 
-                <div class="swiper-wrapper" id="review-wrapper">
-                    
-                    <div class="swiper-slide" id="reviews">
-                        <img src="assets/image1.jpg" alt="">
-                        <div>
-                            <p>FROST</p>
-                            <p>Very Good</p>
-                            <i>Star</i>
-                        </div>
-                    </div>
-                    <div class="swiper-slide" id="reviews">
-                        <img src="assets/image1.jpg" alt="">
-                        <div>
-                            <p>FROST</p>
-                            <p>Very Good</p>
-                            <i>Star</i>
-                        </div>
-                    </div>
-                    <div class="swiper-slide" id="reviews">
-                        <img src="assets/image1.jpg" alt="">
-                        <div>
-                            <p>FROST</p>
-                            <p>Very Good</p>
-                            <i>Star</i>
-                        </div>
-                    </div>
-                    
-                </div>
+            </div>
+            <div class="swiper-slide" id="we">
+                
+            </div>
+            <div class="swiper-slide" id="we">
+                
             </div>
         </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 </body>
-<script src="swiper-bundle.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 <script src="app.js"></script>
 </html>
