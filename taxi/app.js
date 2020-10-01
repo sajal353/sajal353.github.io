@@ -5,8 +5,12 @@ var mySwiper = new Swiper('.swiper-container', {
     spaceBetween: 30,
     autoplay: {
         delay: 2500,
-        disableOnInteraction: true,
+        disableOnInteraction: false,
       },
+    navigation: {
+      nextEl: '#popright',
+      prevEl: '#popleft',
+    },
     pagination: {
       el: '.swiper-pagination',
     }

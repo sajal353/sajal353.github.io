@@ -159,6 +159,10 @@ a{
     margin: 2rem 0;
 }
 
+#review-wrapper{
+    padding: 0 1rem;
+}
+
 #reviews{
     height: 150px;
     width: 33%;
