@@ -1,0 +1,179 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Quicksand', sans-serif;
+}
+
+a{
+    text-decoration: none;
+}
+
+.nav{
+    position: fixed;
+    width: 100%;
+    font-weight: bold;
+    background-color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 2rem;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    z-index: 99;
+}
+
+.logo img{
+    height: 4rem;
+}
+
+.button{
+    border: 0.2rem solid #1F77BD;
+    padding: 0.5rem 2rem;
+    border-radius: 50px;
+}
+
+#login input{
+    border: 0.2rem solid #1F77BD;
+    padding: 0.5rem 2rem;
+    border-radius: 50px;
+    font-weight: bold;
+    font-size: 1rem;
+    background-color: #fff;
+}
+
+#login input:focus{
+    outline: none;
+}
+
+#login input[type=submit]{
+    background-color: #1F77BD;
+    color: #fff;
+    border: 0.2rem solid #1F77BD;
+    cursor: pointer;
+}
+
+#login input::-webkit-input-placeholder{
+    font-weight: bold;
+}
+
+
+.main{
+    padding-top: 5rem;
+    background-image: url("assets/image1.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 80vh;
+}
+
+.swiper-container {
+    width: 100%;
+}
+
+
+.popular{
+    padding: 2rem 2rem;
+    width: 100%;
+}
+
+.popslide{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.popslide span i{
+    cursor: pointer;
+}
+
+.popslide span i:focus{
+    outline: none;
+}
+
+.swiper-wrapper{
+    margin-bottom: 1rem;
+}
+
+.popcard{
+    margin: 2rem 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.popcard div{
+    position: relative;
+    height: 300px;
+    width: 300px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.popcard div img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    z-index: -1;
+}
+
+.popcard div a{
+    margin-bottom: 1rem;
+    width: 90%;
+    background-color: #fff;
+    z-index: 2;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 20px;
+    padding: 0.2rem 2rem;
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #000;
+}
+
+.review{
+    background-image: url("assets/image2.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.review span{
+    text-align: center;
+    font-size: 2rem;
+    color: #fff;
+    margin: 2rem 0;
+}
+
+#reviews{
+    height: 150px;
+    width: 33%;
+    background-color: #fff;
+    border-radius: 20px;
+    padding: 2rem;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    font-size: 1.5rem;
+}
+
+#reviews img{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-right: 2rem;
+}
