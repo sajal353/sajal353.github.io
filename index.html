@@ -15,78 +15,44 @@
 
     <ul id="menu">
         <li data-menuanchor="intro" onclick="hideMenu()"><a href="#intro" class="kushan" id="link">Sajal</a></li>
-        <li data-menuanchor="portfolio" onclick="hideMenu()"><a href="#portfolio" id="link">Portfolio</a></li>
         <li data-menuanchor="contact" onclick="hideMenu()"><a href="#contact" id="link">Contact Me</a></li>
-        <li data-menuanchor="about" onclick="hideMenu()"><a href="#about" id="link">About</a></li>
         <li><span id="cake2" onclick="hideMenu()">[ X ]</span></li>
     </ul>
 
-    <div id="pagepiling">
-        <div class="section nooverflow" id="intro">
-            <div class="navdark">
-                <span id="cake" onclick="showMenu()">MENU</span>
-            </div>
-            <div class="intro">
-                <video autoplay muted loop id="introvid">
-                    <source src="assets/media/wave.mp4">
-                </video>
-                <div id="intro1">
-                    <a href="https://fb.com/sajal.biswas.353" target="_blank"><i class="fab fa-facebook-f"></i></a>
-                </div>
-                <div id="intro2">
-                    <span class="name kushan">Sajal Biswas</span>
-                    <span class="d1">/ * <span id="introtxt"></span> * /</span>
-                </div>
-                <div id="intro3">
-                    <span data-menuanchor="portfolio" class="dropit"><a href="#portfolio">Check Out My Portfolio<br><i
-                                class="fas fa-angle-down"></i></a></span>
-                </div>
+    <div class="logo"><a href="#intro" class="kushan">Sajal Biswas</a></div>
 
-            </div>
-        </div>
-
-        <div class="section nooverflow" id="portfolio">
-            <div class="nav">
-                <span id="cake" onclick="showMenu()">MENU</span>
-            </div>
-            <div class="portfolio">
-                <img src="assets/media/foggy-1149180_1920.jpg" alt="" class="bgimg">
-                <span class="name kushan">Portfolio</span>
-                <div class="portflex">
-                    <div>
-                        <a href="ui.html" target="_blank"><img src="assets/media/ui.png" alt="" class="logo"></a>
-                        <a href="ui.html" class="mono" target="_blank">UI Designs</a>
-                    </div>
-                    <div>
-                        <a href="landing.html" target="_blank"><img src="assets/media/site.png" alt="" class="logo"></a>
-                        <a href="landing.html" class="mono" target="_blank">Landing Pages</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="section" id="contact">
-            <div class="navdark">
-                <span id="cake" onclick="showMenu()">MENU</span>
-            </div>
-            <div class="contact">
-                <img src="assets/media/typewriter-1248088_1920.jpg" alt="" class="bgimg">
-                <span class="name kushan">Contact Me</span>
-                <div class="contactlinks">
-                    <a href="tel:+8801960459166" class="quicksand"><i class="fas fa-phone"></i> Phone</a>
-                    <a href="mailto:sajalbiswas353@gmail.com" class="quicksand"><i class="fas fa-envelope"></i> Mail</a>
-                    <a href="http://fb.com/sajal.biswas.353" class="quicksand"><i class="fab fa-facebook"></i> Facebook</a>
-                </div>
-            </div>
-        </div>
+    <div class="navdark">
+        <span id="cake" onclick="showMenu()">MENU <i class="fas fa-bars"></i></span>
     </div>
 
+    <div class="social">
+        <a href="https://fb.com/sajal.biswas.353" class="fab fa-facebook-square" target="_blank"></a>
+        <a href="https://instagram.com/wtfimdoingoninstaowo" class="fab fa-instagram-square" target="_blank"></a>
+        <a href="https://t.me/sajal353" class="fab fa-telegram-plane" target="_blank"></a>
+        <a href="mailto:sajalbiswas353@gmail.com" class="fas fa-envelope"></a>
+    </div>
 
+    <div class="mail">
+        <a href="mailto:sajalbiswas353@gmail.com"><i class="fas fa-envelope"></i> Mail Me</a>
+    </div>
+
+    <div id="pagepiling">
+        <div class="section" id="intro">
+                <video autoplay muted loop src="assets/media/leaf.mp4" class="bgvid"></video>
+                <div class="intro">
+                    <div></div>
+                    <p class="quicksand">I'm <span id="introtxt" class="quicksand"></span></p>
+                    <a href="#portfolio" class="seeport quicksand">See My Portfolio<i class="fas fa-arrow-down"></i></a>
+                </div>
+        </div>
+        <div class="section" id="portfolio">Some section</div>
+
+        <div class="section" id="contact">Some section</div>
+    </div>
 
 </body>
 <script src="assets/js/jquery-3.5.1.min.js"></script>
 <script src="assets/js/jquery.pagepiling.min.js"></script>
-<script src="assets/js/isInViewport.min.js"></script>
 <script src="assets/js/anime.min.js"></script>
 <script src="assets/js/typed.min.js"></script>
 <script src="https://kit.fontawesome.com/25fb0cd007.js" crossorigin="anonymous"></script>

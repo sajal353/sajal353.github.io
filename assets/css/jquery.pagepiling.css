@@ -40,16 +40,16 @@ html, body {
     #pp-nav {
         position: fixed;
         z-index: 99;
-        margin-top: -32px;
+        margin-top: -1rem;
         top: 50%;
         opacity: 1;
     }
 
     #pp-nav.right {
-        right: 17px;
+        right: 16px;
     }
     #pp-nav.left {
-        left: 17px;
+        left: 16px;
     }
     .pp-section.pp-table{
         display: table;
@@ -67,10 +67,10 @@ html, body {
         opacity: 1;
     }
     .pp-slidesNav.bottom {
-        bottom: 14px;
+        bottom: 16px;
     }
     .pp-slidesNav.top {
-        top: 14px;
+        top: 16px;
     }
     #pp-nav ul,
     .pp-slidesNav ul {
@@ -80,9 +80,9 @@ html, body {
     #pp-nav li,
     .pp-slidesNav li {
         display: block;
-        width: 14px;
-        height: 2rem;
-        margin: 7px;
+        width: 16px;
+        height: 1rem;
+        margin: 8px;
         position:relative;
     }
     .pp-slidesNav li {
@@ -114,7 +114,8 @@ html, body {
         position: absolute;
         z-index: 1;
     }
-    .pp-tooltip {
+    /* .pp-tooltip {
+        display: none;
         position: absolute;
         top: -0.9rem;
         background-color: #fff;
@@ -131,7 +132,7 @@ html, body {
     }
     .pp-tooltip.left {
         left: 20px;
-    }
+    } */
 }
 
 
