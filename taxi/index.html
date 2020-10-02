@@ -25,42 +25,81 @@
             <img src="assets/logo.png" alt="">
         </span>
         <span>
-            <a href="" id="help"><i class="fas fa-phone-alt"></i> Stuck? Need Help?</a>
+            <b>Home</b>
+            <b>Services</b>
+            <b>Our Story</b>
+            <b>Blogs</b>
+            <b>Jobs</b>
+            <a href="" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-globe"></i> EN</a>
+            <span class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <b class="dropdown-item" href="#">IN</b>
+                <b class="dropdown-item" href="#">BN</b>
+                <b class="dropdown-item" href="#">CN</b>
+        </span>
+            <a href="" id="help" data-toggle="modal" data-target="#support"><i class="fas fa-phone-alt"></i> Support</a>
             <a href="" data-toggle="modal" data-target="#login"><i class="fas fa-user"></i> Login</a>
         </span>
     </div>
 
     
     <!-- Modal -->
-    
-    <div class="modal fade" id="login">
+    <div class="modal fade" id="support">
         <div class="modal-dialog modal-dialog-center modal-md">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h2>Welcome back.</h2>
+                    <h2>Contact us</h2>
                     <button class="close" data-dismiss="modal">&times;</button>
                 </div>
-                <form action="" class="formx">
-                    <input type="text" name="username" id="username" placeholder="Username" required>
-                    <input type="password" name="password" id="password" placeholder="Password" required>
-                    <span><input type="submit" value="Login"><div class="button">Sign Up</div></span>
-                </form>
-                <h3 style="text-align: center;">Or, Sign In with:</h3>
+                <h4>Phone</h4>
+                <h4>Email</h4>
+                <h4>FAQ</h4>
+            </div>
+        </div>
+    </div>
+    
+    <div class="modal fade" id="login">
+        <div class="modal-dialog modal-dialog-center modal-md">
+            <div class="modal-content" id="logincontent">
+                    <button class="close" data-dismiss="modal">&times;</button>
+                <h2>Welcome Back.</h2>
+                <h5>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, voluptas!</h5>
                 <div class="sociallogin">
                     <div class="button2"><i class="fab fa-google"></i> Google</div>
                     <div class="button2"><i class="fab fa-facebook"></i> Facebook</div>
                     <div class="button2"><i class="fab fa-twitter"></i> Twitter</div>
                 </div>
+                <form action="" class="formx">
+                    <input type="text" name="username" id="username" placeholder="Username" required>
+                    <input type="password" name="password" id="password" placeholder="Password" required>
+                    <span><input type="submit" value="Login"></span>
+                </form>
+                <h5 style="text-align: center;">Or, <b data-toggle="modal" data-target="#register" data-dismiss="modal">Sign Up</b></h5>
             </div>
         </div>
     </div>
     
+    <div class="modal fade" id="register">
+        <div class="modal-dialog modal-dialog-center modal-md">
+            <div class="modal-content" id="registercontent">
+                <button class="close" data-dismiss="modal">&times;</button>
+                <h2>Sign Up</h2>
+                <h5>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, voluptas!</h5>
+                <form action="" class="formx">
+                    <input type="text" name="username" id="username" placeholder="Username" required>
+                    <input type="password" name="password" id="password" placeholder="Password" required>
+                    <span><input type="submit" value="Sign Up"></span>
+                </form>
+            </div>
+        </div>
+    </div>
     
-    <!-- map -->
+    <div class="container">
+        <!-- map -->
     <div class="map">
         <div id="mapid">
 
             <div class="col-md-6 col-lg-4" id="find">
+                <h4 style="text-align: center;">Fare Calculator</h4>
                 <form action="">
                     <input type="text" placeholder="Source" required>
                     <input type="text" placeholder="Destination" required>
@@ -71,12 +110,33 @@
                                             <b><input type="radio" name="cartype" id="cartype2"><label for="cartype2"><h5 class="fas fa-car"></h5> 3</label></b>
                                             <b><input type="radio" name="cartype" id="cartype3"><label for="cartype3"><h4 class="fas fa-car"></h4> 4+</label></b>
                     </span>
-                    <input type="submit" value="GO">
+                    <span>
+                        <label>Trip Type:</label><b><input type="radio" name="triptype" id="triptype1"><label for="triptype1"> One way</label></b>
+                                            <b><input type="radio" name="triptype" id="triptype2"><label for="triptype2"> Two way</label></b>
+                    </span>
+                    <input type="submit" value="GO" data-toggle="modal" data-target="#fare">
                 </form>
+                <img src="assets/ssl-badge.png" alt="" width="100px">
             </div>
         </div>
         
         
+    </div>
+
+    <div class="modal fade" id="fare">
+        <div class="modal-dialog modal-dialog-center modal-md">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2>Fare Details</h2>
+                    <button class="close" data-dismiss="modal">&times;</button>
+                </div>
+                <span><b>Total Distance:</b><b>NaN</b></span>
+                <span><b>Fare:</b><b>NaN</b></span>
+                <span><b>Tax:</b><b>NaN</b></span>
+                <span><b>Total:</b><b>NaN</b></span>
+                <h4>Confirm and Pay</h4>
+            </div>
+        </div>
     </div>
 
 
@@ -202,6 +262,7 @@
         </div>
     </div>
 </div>
+    </div>
 
 
 
