@@ -43,12 +43,14 @@
                 <form action="" class="formx">
                     <input type="text" name="username" id="username" placeholder="Username" required>
                     <input type="password" name="password" id="password" placeholder="Password" required>
-                    <input type="submit" value="Login">
+                    <span><input type="submit" value="Login"><div class="button">Sign Up</div></span>
                 </form>
-                <div class="button"><i class="fas fa-user"></i> Sign Up</div>
-                <div class="button"><i class="fab fa-google"></i> Sign in with Google</div>
-                <div class="button"><i class="fab fa-facebook"></i> Sign in with Facebook</div>
-                <div class="button"><i class="fab fa-twitter"></i> Sign in with Twitter</div>
+                <h3 style="text-align: center;">Or, Sign In with:</h3>
+                <div class="sociallogin">
+                    <div class="button2"><i class="fab fa-google"></i> Google</div>
+                    <div class="button2"><i class="fab fa-facebook"></i> Facebook</div>
+                    <div class="button2"><i class="fab fa-twitter"></i> Twitter</div>
+                </div>
             </div>
         </div>
     </div>
@@ -62,13 +64,13 @@
                 <form action="">
                     <input type="text" placeholder="Source" required>
                     <input type="text" placeholder="Destination" required>
+                    <input type="time" id="time" name="time" required>
+                    <input type="date" id="date" name="date" required>
                     <span>
-                        <label>Car Type:</label><b><input type="radio" name="cartype" id="cartype1"><label for="cartype1"> 2</label></b>
-                                            <b><input type="radio" name="cartype" id="cartype2"><label for="cartype2"> 3</label></b>
-                                            <b><input type="radio" name="cartype" id="cartype3"><label for="cartype3"> 4+</label></b>
+                        <label>Car Type:</label><b><input type="radio" name="cartype" id="cartype1"><label for="cartype1"><h6 class="fas fa-car"></h6> 2</label></b>
+                                            <b><input type="radio" name="cartype" id="cartype2"><label for="cartype2"><h5 class="fas fa-car"></h5> 3</label></b>
+                                            <b><input type="radio" name="cartype" id="cartype3"><label for="cartype3"><h4 class="fas fa-car"></h4> 4+</label></b>
                     </span>
-                    <span><label>Time: </label><input type="time" id="time" name="time" required></span>
-                    <span><label>Date: </label><input type="date" id="date" name="date" required></span>
                     <input type="submit" value="GO">
                 </form>
             </div>

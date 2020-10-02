@@ -70,3 +70,17 @@ L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_toke
     zoomOffset: -1,
     accessToken: 'pk.eyJ1Ijoic2FqYWwzNTMiLCJhIjoiY2tmcjIydGpoMGthNDJwb2ZoaXE1MHI3ZyJ9.z0Q6aQoAP6FQaXMm1TtSrQ'
 }).addTo(mymap);
+
+Date.prototype.toDateInputValue = (function() {
+  var local = new Date(this);
+  local.setMinutes(this.getMinutes() - this.getTimezoneOffset());
+  return local.toJSON().slice(0,10);
+});
+
+document.getElementById('date').value = new Date().toDateInputValue();
+
+var d = new Date();
+var h = d.getHours();
+var m = d.getMinutes();
+
+document.getElementById('time').value = `${h}:${m}`;
