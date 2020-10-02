@@ -102,6 +102,7 @@ a{
 #find{
     position: absolute;
     width: 100%;
+    max-height: 90%;
     top: 0;
     left: 0;
     background-image: url("assets/bg.png");
@@ -325,7 +326,17 @@ a{
     }
 
     #find{
+        padding: 1rem;
         margin: 0;
         height: 100%;
+    }
+    .popular i{
+        display: none;
+    }
+}
+
+@media screen and (max-height: 670px){
+    .map{
+        height: 95vh;
     }
 }
