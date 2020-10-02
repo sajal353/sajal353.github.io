@@ -7,7 +7,6 @@
     <link rel="icon" href="assets/logo.png" type="image/png" sizes="16x16">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
-    <link rel="stylesheet" href="main.css">
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
     integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
     crossorigin=""/>
@@ -15,6 +14,7 @@
     integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
     crossorigin=""></script>
     <script src="https://kit.fontawesome.com/4594e6f8e1.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="main.css">
 </head>
 <body>
 
@@ -25,8 +25,8 @@
             <img src="assets/logo.png" alt="">
         </span>
         <span>
-            <a class="button" href="" id="help"><i class="fas fa-phone-alt"></i> Stuck? Need Help?</a>
-            <a class="button" href="" data-toggle="modal" data-target="#login"><i class="fas fa-user"></i> Login</a>
+            <a href="" id="help"><i class="fas fa-phone-alt"></i> Stuck? Need Help?</a>
+            <a href="" data-toggle="modal" data-target="#login"><i class="fas fa-user"></i> Login</a>
         </span>
     </div>
 
@@ -37,14 +37,12 @@
         <div class="modal-dialog modal-dialog-center modal-md">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h2>Log In</h2>
+                    <h2>Welcome back.</h2>
                     <button class="close" data-dismiss="modal">&times;</button>
                 </div>
-                <form action="" class="formx">
-                    <input type="text" name="username" id="username" placeholder="Username" required>
-                    <input type="password" name="password" id="password" placeholder="Password" required>
-                    <input type="submit" value="Login">
-                </form>
+                <div class="button"><i class="fab fa-google"></i> Sign in with Google</div>
+                <div class="button"><i class="fab fa-facebook"></i> Sign in with Facebook</div>
+                <div class="button"><i class="fab fa-twitter"></i> Sign in with Twitter</div>
             </div>
         </div>
     </div>
@@ -52,19 +50,23 @@
     
     <!-- map -->
     <div class="map">
-        <div class="col-md-6" id="find">
-            <form action="">
-                <input type="text" placeholder="Source" required>
-                <input type="text" placeholder="Destination" required>
-                <span>
-                    <label>Car Type:</label><b><input type="radio" name="cartype" id="cartype1"><label for="cartype1"> 2</label></b>
-                                        <b><input type="radio" name="cartype" id="cartype2"><label for="cartype2"> 3</label></b>
-                                        <b><input type="radio" name="cartype" id="cartype3"><label for="cartype3"> 4+</label></b>
-                </span>
-                <input type="submit" value="GO">
-            </form>
+        <div id="mapid">
+
+            <div class="col-md-4" id="find">
+                <form action="">
+                    <input type="text" placeholder="Source" required>
+                    <input type="text" placeholder="Destination" required>
+                    <span>
+                        <label>Car Type:</label><b><input type="radio" name="cartype" id="cartype1"><label for="cartype1"> 2</label></b>
+                                            <b><input type="radio" name="cartype" id="cartype2"><label for="cartype2"> 3</label></b>
+                                            <b><input type="radio" name="cartype" id="cartype3"><label for="cartype3"> 4+</label></b>
+                    </span>
+                    <input type="submit" value="GO">
+                </form>
+            </div>
         </div>
-        <div id="mapid" class="col-md-6"></div>
+        
+        
     </div>
 
 

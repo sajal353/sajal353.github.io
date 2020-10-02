@@ -1,8 +1,5 @@
-function myFunction(x) {
-  if (x.matches) {
-    var swiper = new Swiper('.swiper1', {
+  var swiper = new Swiper('.swiper1', {
       spaceBetween: 30,
-      slidesPerView: 1,
       loop: true,
       autoplay: {
         delay: 2500,
@@ -12,15 +9,42 @@ function myFunction(x) {
         nextEl: '#popright',
         prevEl: '#popleft',
       },
+      breakpoints: {
+        0: {
+          slidesPerView: 1,
+          spaceBetween: 30,
+        },
+        768: {
+          slidesPerView: 3,
+          spaceBetween: 30,
+        },
+        1024: {
+          slidesPerView: 'auto',
+          spaceBetween: 30,
+        }
+      }
     });
 
-    var swiper2 = new Swiper('.swiper2', {
+  var swiper2 = new Swiper('.swiper2', {
       spaceBetween: 30,
-      slidesPerView: '1',
-      loop: false
+      loop: false,
+      breakpoints: {
+        0: {
+          slidesPerView: 1,
+          spaceBetween: 30,
+        },
+        768: {
+          slidesPerView: 'auto',
+          spaceBetween: 30,
+        },
+        1024: {
+          slidesPerView: 'auto',
+          spaceBetween: 30,
+        }
+      }
     });
 
-    var swiper = new Swiper('.swiper3', {
+  var swiper = new Swiper('.swiper3', {
       spaceBetween: 30,
       slidesPerView: '1',
       loop: false,
@@ -32,50 +56,9 @@ function myFunction(x) {
       navigation: {
         nextEl: '#whoright',
         prevEl: '#wholeft',
-      },
+      }
     });
 
-  } else {
-    var swiper = new Swiper('.swiper1', {
-      spaceBetween: 30,
-      slidesPerView: 'auto',
-      loop: true,
-      autoplay: {
-        delay: 2500,
-        disableOnInteraction: false,
-      },
-      navigation: {
-        nextEl: '#popright',
-        prevEl: '#popleft',
-      },
-    });
-
-    var swiper2 = new Swiper('.swiper2', {
-      spaceBetween: 30,
-      slidesPerView: 'auto',
-      loop: false
-    });
-
-    var swiper = new Swiper('.swiper3', {
-      spaceBetween: 30,
-      slidesPerView: '1',
-      loop: false,
-      centeredSlide: true,
-      autoplay: {
-        delay: 2500,
-        disableOnInteraction: false,
-      },
-      navigation: {
-        nextEl: '#whoright',
-        prevEl: '#wholeft',
-      },
-    });
-  }
-}
-
-var x = window.matchMedia("(max-width: 768px)")
-myFunction(x)
-x.addListener(myFunction)
 
 var mymap = L.map('mapid').setView([51.505, -0.09], 13);
 
