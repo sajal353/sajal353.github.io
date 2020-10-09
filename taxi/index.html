@@ -21,25 +21,43 @@
     <!-- Nav -->
 
     <div class="navx">
-        <span>
+        <span style="float: left;">
             <img src="assets/logo.png" alt="">
         </span>
-        <span>
-            <b>Home</b>
-            <b>Services</b>
-            <b>Our Story</b>
-            <b>Blogs</b>
-            <b>Jobs</b>
-            <a href="" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-globe"></i> EN</a>
-            <span class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                <b class="dropdown-item" href="#">IN</b>
-                <b class="dropdown-item" href="#">BN</b>
-                <b class="dropdown-item" href="#">CN</b>
+        <span style="float: right; margin: 1.5rem;">
+            <span class="pcmenu">
+                <b>Home</b>
+                <b>Services</b>
+                <b>Our Story</b>
+                <b>Blogs</b>
+                <b>Jobs</b>
+                <a href="" class="blackbtn" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-globe"></i> EN</a>
+                <span class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                    <b class="dropdown-item" href="#">IN</b>
+                    <b class="dropdown-item" href="#">BN</b>
+                    <b class="dropdown-item" href="#">CN</b>
+                </span>
+                <a href="" class="blackbtn" id="help" data-toggle="modal" data-target="#support"><i class="fas fa-phone-alt"></i> Support</a>
+                <a href="" class="blackbtn" data-toggle="modal" data-target="#login"><i class="fas fa-user"></i> Login</a>
+            </span>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+                <i class="fas fa-bars"></i>
+            </button>
         </span>
-            <a href="" id="help" data-toggle="modal" data-target="#support"><i class="fas fa-phone-alt"></i> Support</a>
-            <a href="" data-toggle="modal" data-target="#login"><i class="fas fa-user"></i> Login</a>
-        </span>
+        <div class="collapse" id="navbarToggleExternalContent" style="clear: both;">
+            <ul class="mobilemenu">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Our Story</a></li>
+                <li><a href="#">Blogs</a></li>
+                <li><a href="#">Jobs</a></li>
+                <li><a href="" id="help" data-toggle="modal" data-target="#support"><i class="fas fa-phone-alt"></i> Support</a></li>
+                <li><a href="" data-toggle="modal" data-target="#login"><i class="fas fa-user"></i> Login</a></li>
+            </ul>
+</div>
     </div>
+
+    
 
     
     <!-- Modal -->
@@ -96,7 +114,27 @@
     <div class="container">
         <!-- map -->
     <div class="map">
-        <div id="mapid">
+        <div class="col-md-6 col-lg-4" id="findmobile">
+            <h4 style="text-align: center;">Fare Calculator</h4>
+            <form action="">
+                <input type="text" placeholder="Source" required>
+                <input type="text" placeholder="Destination" required>
+                <input type="time" id="time" name="time" required>
+                <input type="date" id="date" name="date" required>
+                <span>
+                    <label>Car Type:</label><b><input type="radio" name="cartype" id="cartype1"><label for="cartype1"><h6 class="fas fa-car"></h6> 2</label></b>
+                                        <b><input type="radio" name="cartype" id="cartype2"><label for="cartype2"><h5 class="fas fa-car"></h5> 3</label></b>
+                                        <b><input type="radio" name="cartype" id="cartype3"><label for="cartype3"><h4 class="fas fa-car"></h4> 4+</label></b>
+                </span>
+                <span>
+                    <label>Trip Type:</label><b><input type="radio" name="triptype" id="triptype1"><label for="triptype1"> One way</label></b>
+                                        <b><input type="radio" name="triptype" id="triptype2"><label for="triptype2"> Two way</label></b>
+                </span>
+                <input type="submit" value="GO" data-toggle="modal" data-target="#fare">
+            </form>
+            <img src="assets/ssl-badge.png" alt="" width="100px">
+        </div>
+        <div id="mapid" class="pcmap">
 
             <div class="col-md-6 col-lg-4" id="find">
                 <h4 style="text-align: center;">Fare Calculator</h4>
@@ -139,7 +177,9 @@
         </div>
     </div>
 
-
+    <div class="mobilemapholder">
+        <div id="mapid" class="mobilemap"></div>
+    </div>
     <!-- Popular Destination -->
 
     <div class="popular">
