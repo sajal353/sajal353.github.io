@@ -1,10 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Quicksand', sans-serif;
+    font-family: 'Open Sans', sans-serif;
 }
 
 @media only screen and (min-width : 1200px) {
@@ -232,7 +231,7 @@ a{
 }
 
 .pcmap{
-    border: 2px solid #000;
+    border: 2px solid grey;
 }
 
 #mapid2 {
@@ -430,7 +429,55 @@ a{
     display: none;
 }
 
+.footerx{
+    background-color: #1F77BD;
+    width: 100%;
+    color: #fff;
+}
+
+#footerelements{
+    padding: 2rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+#footerelements a{
+    text-decoration: none;
+    color: #fff;
+}
+
+#footerelements input[type=email]{
+    background-color: grey;
+    color: #fff;
+    border: none;
+    padding: 0.5rem 1rem;
+}
+
+#footerelements input[type=submit]{
+    background-color: #000;
+    color: #fff;
+    border: none;
+    padding: 0.5rem 1rem;
+}
+
+#footerelements input[type=email]::placeholder{
+    color: #fff;
+}
+
+.footerlinks{
+    display: flex;
+    justify-content: space-between;
+}
+
 @media screen and (max-width: 768px){
+    #footerelements{
+        flex-direction: column;
+    }
+    #footerelements div{
+        width: 100%;
+        margin-bottom: 1rem;
+    }
     .map{
         height: auto;
         background-image: none;
@@ -446,7 +493,7 @@ a{
     }    
 
     .mobilemap{
-        border: 2px solid #000;
+        border: 2px solid grey;
         height: 85%;
         width: 85%;
         margin: 0 auto;
