@@ -26,19 +26,19 @@
         </span>
         <span style="float: right; margin: 1.5rem;">
             <span class="pcmenu">
-                <b>Home</b>
-                <b>Services</b>
-                <b>Our Story</b>
-                <b>Blogs</b>
-                <b>Jobs</b>
-                <a href="" class="blackbtn" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-globe"></i> EN</a>
+                <b class="menuitem">Home</b>
+                <b class="menuitem">Services</b>
+                <b class="menuitem">Our Story</b>
+                <b class="menuitem">Blogs</b>
+                <b class="menuitem">Jobs</b>
+                <a class="menuitem" href="" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-globe"></i> EN</a>
                 <span class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                     <b class="dropdown-item" href="#">IN</b>
                     <b class="dropdown-item" href="#">BN</b>
                     <b class="dropdown-item" href="#">CN</b>
                 </span>
-                <a href="" class="blackbtn" id="help" data-toggle="modal" data-target="#support"><i class="fas fa-phone-alt"></i> Support</a>
-                <a href="" class="blackbtn" data-toggle="modal" data-target="#login"><i class="fas fa-user"></i> Login</a>
+                <a class="menuitem" href="" id="help" data-toggle="modal" data-target="#support"><i class="fas fa-phone-alt"></i> Support</a>
+                <a class="menuitem" href="" data-toggle="modal" data-target="#login"><i class="fas fa-user"></i> Login</a>
             </span>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
                 <i class="fas fa-bars"></i>
@@ -131,20 +131,20 @@
         <!-- map -->
     <div class="map">
         <div class="col-md-6 col-lg-4" id="findmobile">
-            <h4 style="text-align: center;">Fare Calculator</h4>
+            <h5 style="text-align: center;">Fare Calculator</h5>
             <form action="">
                 <input type="text" placeholder="Source" required>
                 <input type="text" placeholder="Destination" required>
                 <input type="time" id="time" name="time" required>
                 <input type="date" id="date" name="date" required>
                 <span>
-                    <label>Car Type:</label><b><input type="radio" name="cartype" id="cartype1"><label for="cartype1"><h6 class="fas fa-car"></h6> 2</label></b>
-                                        <b><input type="radio" name="cartype" id="cartype2"><label for="cartype2"><h5 class="fas fa-car"></h5> 3</label></b>
-                                        <b><input type="radio" name="cartype" id="cartype3"><label for="cartype3"><h4 class="fas fa-car"></h4> 4+</label></b>
+                    <label>Car Type:</label><font><input type="radio" name="cartype" id="cartype1"><label for="cartype1"><h6 class="fas fa-car"></h6> 2</label></font>
+                                        <font><input type="radio" name="cartype" id="cartype2"><label for="cartype2"><h5 class="fas fa-car"></h5> 3</label></font>
+                                        <font><input type="radio" name="cartype" id="cartype3"><label for="cartype3"><h4 class="fas fa-car"></h4> 4+</label></font>
                 </span>
                 <span>
-                    <label>Trip Type:</label><b><input type="radio" name="triptype" id="triptype1"><label for="triptype1"> One way</label></b>
-                                        <b><input type="radio" name="triptype" id="triptype2"><label for="triptype2"> Two way</label></b>
+                    <label>Trip Type:</label><font><input type="radio" name="triptype" id="triptype1"><label for="triptype1"> One way</label></font>
+                                        <font><input type="radio" name="triptype" id="triptype2"><label for="triptype2"> Two way</label></font>
                 </span>
                 <input type="submit" value="GO" data-toggle="modal" data-target="#fare">
             </form>
@@ -153,23 +153,23 @@
         <div id="mapid" class="pcmap">
 
             <div class="col-md-6 col-lg-4" id="find">
-                <h4 style="text-align: center;">Fare Calculator</h4>
+                <h5 style="text-align: center;">Fare Calculator</h5>
                 <form action="">
                     <input type="text" placeholder="Source" required>
                     <input type="text" placeholder="Destination" required>
-                    <input type="time" id="time" name="time" required>
                     <input type="date" id="date" name="date" required>
+                    <input type="time" id="time" name="time" required>
                     <span>
-                        <label>Car Type:</label><b><input type="radio" name="cartype" id="cartype1"><label for="cartype1"><h6 class="fas fa-car"></h6> 2</label></b>
-                                            <b><input type="radio" name="cartype" id="cartype2"><label for="cartype2"><h5 class="fas fa-car"></h5> 3</label></b>
-                                            <b><input type="radio" name="cartype" id="cartype3"><label for="cartype3"><h4 class="fas fa-car"></h4> 4+</label></b>
+                        <label>Car Type:</label><font><input type="radio" name="cartype" id="cartype1"><label for="cartype1"><h6 class="fas fa-car"></h6> 3</label></b>
+                                            <font><input type="radio" name="cartype" id="cartype2"><label for="cartype2"><h5 class="fas fa-car"></h5> 4</label></font>
+                                            <font><input type="radio" name="cartype" id="cartype3"><label for="cartype3"><h4 class="fas fa-car"></h4> 5+</label></font>
                     </span>
                     <span>
-                        <label>Trip Type:</label><b><input type="radio" name="triptype" id="triptype1"><label for="triptype1"> One way</label></b>
-                                            <b><input type="radio" name="triptype" id="triptype2"><label for="triptype2"> Two way</label></b>
+                        <label>Trip Type:</label><font><input type="radio" name="triptype" id="triptype1"><label for="triptype1"> One way</label></font>
+                                            <font><input type="radio" name="triptype" id="triptype2"><label for="triptype2"> Two way</label></font>
                     </span>
                     <input type="submit" value="GO" data-toggle="modal" data-target="#fare">
-                </form>
+                </form><br>
                 <img src="assets/ssl-badge.png" alt="" width="100px">
             </div>
         </div>
