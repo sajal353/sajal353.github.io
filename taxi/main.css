@@ -106,6 +106,24 @@ a{
     margin-bottom: 0.5rem;
 }
 
+.formx textarea{
+    width: 100%;
+    padding: 0.5rem 2rem;
+    border: 2px solid #000;
+    border-radius: 15px;
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.formx textarea::placeholder{
+    font-weight: bold;
+    color: #000;
+}
+
+.formx textarea:focus{
+    outline: none;
+}
+
 .formx input::placeholder{
     font-weight: bold;
     color: #000;
@@ -348,6 +366,26 @@ a{
 
 .join{
     padding: 2rem;
+    text-align: center;
+}
+
+.benefits{
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.benefits img{
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    object-position: center;
+}
+
+.benefits h5{
+    margin: 1rem 0;
+    max-width: 200px;
 }
 
 #partner{
@@ -397,6 +435,31 @@ a{
     background-color: #fff;
     color: #000;
     margin-bottom: 0;
+}
+
+.services{
+    margin: 2rem;
+    text-align: center;
+}
+
+.servicetiles{
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.servicetiles img{
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 8px;
+}
+
+.servicetiles h5{
+    margin: 1rem auto;
+    max-width: 200px;
 }
 
 .row{
@@ -484,6 +547,9 @@ a{
 }
 
 @media screen and (max-width: 768px){
+    .servicetiles{
+        flex-direction: column;
+    }
     #footerelements{
         flex-direction: column;
     }
