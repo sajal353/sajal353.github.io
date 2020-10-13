@@ -384,7 +384,7 @@ a{
 }
 
 .benefits h5{
-    margin: 1rem 0;
+    margin: 1rem auto;
     max-width: 200px;
 }
 
@@ -547,6 +547,9 @@ a{
 }
 
 @media screen and (max-width: 768px){
+    .benefits{
+        flex-direction: column;
+    }
     .servicetiles{
         flex-direction: column;
     }
