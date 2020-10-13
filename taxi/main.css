@@ -134,11 +134,27 @@ a{
     display: inline;
 }
 
+.gradbg{
+    width: 100%;
+    background-image: linear-gradient(#DFDFDF, #DFDFDF, #DFDFDF, #DFDFDF, #fff);
+}
+
+.gradbg2{
+    width: 100%;
+    background-image: linear-gradient(#fff, #E2F5FA, #E2F5FA, #E2F5FA, #E2F5FA, #fff);
+}
+
+.gradbg3{
+    width: 100%;
+    background-image: linear-gradient(#fff, #DFDFDF, #DFDFDF, #DFDFDF, #DFDFDF);
+}
+
+
 .map{
     height: 80vh;
     width: 100%;
     padding: 6rem 2rem 2rem;
-    background-image: linear-gradient(#DFDFDF, #DFDFDF, #DFDFDF, #DFDFDF, #fff);
+    background-color: transparent;
 }
 
 #login{
@@ -305,7 +321,7 @@ a{
 .middle{
     margin-top: 2rem;
     width: 100%;
-    background-color: #DFDFDF;
+    background-color: transparent;
 }
 
 .review{

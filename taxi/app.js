@@ -28,6 +28,10 @@
   var swiper2 = new Swiper('.swiper2', {
       spaceBetween: 30,
       loop: false,
+      autoplay: {
+        delay: 8000,
+        disableOnInteraction: false,
+      },
       breakpoints: {
         0: {
           slidesPerView: 1,
