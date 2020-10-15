@@ -4,6 +4,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Open Sans', sans-serif;
+    scroll-behavior: smooth;
 }
 
 @media only screen and (min-width : 1200px) {
@@ -200,6 +201,7 @@ a{
     position: absolute;
     width: 100%;
     max-height: 90%;
+    overflow-y: scroll;
     top: 0;
     left: 0;
     background-image: url("assets/bg.png");
@@ -546,7 +548,98 @@ a{
     justify-content: space-between;
 }
 
+.fleetwrap{
+    margin: 2rem 0 0;
+}
+
+.fleetwrap h3{
+    text-align: center;
+}
+
+.fleet{
+    margin-top: 2rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.flip-card {
+    background-color: transparent;
+    width: 300px;
+    height: 350px;
+    border: 1px solid #f1f1f1;
+    perspective: 1000px;
+    margin-bottom: 1rem;
+  }
+  
+  .flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+  }
+  
+  .flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+  }
+  
+  .flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+  }
+  
+  .flip-card-front {
+    padding: 1rem;
+    background-color: #fff;
+    color: black;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  }
+
+  .flip-card-front img{
+      width: 100%;
+  }
+
+  .flip-card-back {
+    padding: 1rem;
+    background-color: #fff;
+    color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transform: rotateY(180deg);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  }
+
+  .cardbackdata{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 2rem 1rem;
+    font-size: 13px;
+  }
+
+  .cardbackdata h6:not(:last-child){
+      margin-bottom: 2rem;
+  }
+
+  .cardbackdata i{
+      margin-right: 0.5rem;
+  }
+
 @media screen and (max-width: 768px){
+    .fleet{
+        flex-direction: column;
+    }
+
+    .flip-card{
+        width: 80%;
+    }
+
     .benefits{
         flex-direction: column;
     }
