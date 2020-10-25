@@ -16,11 +16,11 @@
         },
         768: {
           slidesPerView: 3,
-          spaceBetween: 30,
+          spaceBetween: 20,
         },
         1024: {
-          slidesPerView: 'auto',
-          spaceBetween: 30,
+          slidesPerView: 4,
+          spaceBetween: 20,
         }
       }
     });
@@ -39,18 +39,18 @@
         },
         768: {
           slidesPerView: 'auto',
-          spaceBetween: 30,
+          spaceBetween: 20,
         },
         1024: {
           slidesPerView: 'auto',
-          spaceBetween: 30,
+          spaceBetween: 20,
         }
       }
     });
 
   var swiper = new Swiper('.swiper3', {
-      spaceBetween: 30,
-      slidesPerView: '1',
+      spaceBetween: 20,
+      slidesPerView: 'auto',
       loop: false,
       centeredSlide: true,
       autoplay: {
@@ -75,17 +75,6 @@ L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_toke
     accessToken: 'pk.eyJ1Ijoic2FqYWwzNTMiLCJhIjoiY2tmcjIydGpoMGthNDJwb2ZoaXE1MHI3ZyJ9.z0Q6aQoAP6FQaXMm1TtSrQ'
 }).addTo(mymap);
 
-var mymap2 = L.map('mapid2').setView([51.505, -0.09], 13);
-
-L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}', {
-    attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
-    maxZoom: 18,
-    id: 'mapbox/streets-v11',
-    tileSize: 512,
-    zoomOffset: -1,
-    accessToken: 'pk.eyJ1Ijoic2FqYWwzNTMiLCJhIjoiY2tmcjIydGpoMGthNDJwb2ZoaXE1MHI3ZyJ9.z0Q6aQoAP6FQaXMm1TtSrQ'
-}).addTo(mymap2);
-
 Date.prototype.toDateInputValue = (function() {
   var local = new Date(this);
   local.setMinutes(this.getMinutes() - this.getTimezoneOffset());
@@ -99,3 +88,13 @@ var h = d.getHours();
 var m = d.getMinutes();
 
 document.getElementById('time').value = `${h}:${m}`;
+
+const showhour = () => {
+  document.getElementById("hourpc").style.display = "block";
+  document.getElementById("hourmbl").style.display = "block";
+}
+
+const hidehour = () => {
+  document.getElementById("hourpc").style.display = "none";
+  document.getElementById("hourmbl").style.display = "none";
+}

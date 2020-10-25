@@ -200,14 +200,13 @@ a{
 #find{
     position: absolute;
     width: 100%;
-    max-height: 90%;
-    overflow-y: scroll;
+    overflow: auto;
     top: 0;
     left: 0;
     background-image: url("assets/bg.png");
     color: #fff;
     border-radius: 1rem;
-    padding: 2rem;
+    padding: 2rem 2rem 1rem;
     margin: 1rem;
     font-size: 13px;
     z-index: 9999;
@@ -304,13 +303,13 @@ a{
 }
 
 .swiper-container {
-    padding: 0 2rem;
+    padding: 0 1rem;
     width: 100%;
     height: 300px;
 }
 
 #destination{
-    width: 20%;
+    width: 25%;
     background-color: #000;
     border-radius: 1rem;
     position: relative;
@@ -354,7 +353,7 @@ a{
 }
 
 #reviews{
-    width: 50%;
+    width: 70%;
     border-radius: 1rem;
 }
 
@@ -375,17 +374,21 @@ a{
     margin-top: 2rem;
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: center;
+}
+
+.benefits span{
+    margin: 0 2rem;
 }
 
 .benefits img{
-    width: 150px;
-    height: 150px;
+    width: 120px;
+    height: 120px;
     object-fit: cover;
     object-position: center;
 }
 
-.benefits h5{
+.benefits h6{
     margin: 1rem auto;
     max-width: 200px;
 }
@@ -445,10 +448,14 @@ a{
 }
 
 .servicetiles{
-    margin-top: 2rem;
+    margin-top: 4rem;
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: center;
+}
+
+.servicetiles span{
+    margin: 0 1rem;
 }
 
 .servicetiles img{
@@ -470,12 +477,12 @@ a{
 }
 
 .who{
-    padding: 2rem 0;
+    padding: 2rem 0 4rem;
     text-align: center;
 }
 
 #we{
-    width: 100%;
+    width: 70%;
     background-image: url("assets/image1.jpg");
     background-repeat: no-repeat;
     background-position: center;
@@ -513,6 +520,10 @@ a{
     color: #fff;
 }
 
+.footerx li{
+    font-size: 13px;
+}
+
 #footerelements{
     padding: 2rem;
     display: flex;
@@ -530,6 +541,7 @@ a{
     color: #fff;
     border: none;
     padding: 0.5rem 1rem;
+    font-size: 13px;
 }
 
 #footerelements input[type=submit]{
@@ -559,7 +571,7 @@ a{
 .fleet{
     margin-top: 2rem;
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
 }
 
@@ -569,7 +581,7 @@ a{
     height: 350px;
     border: 1px solid #f1f1f1;
     perspective: 1000px;
-    margin-bottom: 1rem;
+    margin: 0 2rem 1rem;
   }
   
   .flip-card-inner {
@@ -632,6 +644,9 @@ a{
   }
 
 @media screen and (max-width: 768px){
+    .navx{
+        padding: 0.5rem 1rem;
+    }
     .fleet{
         flex-direction: column;
     }
@@ -684,7 +699,7 @@ a{
         border-radius: 1rem;
         padding: 1rem;
         margin: 0 0 2rem 0;
-        font-size: 1rem;
+        font-size: 13px;
         z-index: 9999;
     }
     
@@ -706,7 +721,7 @@ a{
         padding: 0.2rem 1rem;
         margin-bottom: 0.5rem;
         background-color: transparent;
-        font-size: 1rem;
+        font-size: 13px;
         color: #fff;
     }
     

@@ -21,40 +21,48 @@
     <!-- Nav -->
 
     <div class="navx">
-        <span style="float: left;">
-            <img src="assets/logo.png" alt="">
-        </span>
-        <span style="float: right; margin: 1.5rem;">
-            <span class="pcmenu">
-                <b class="menuitem">Home</b>
-                <b class="menuitem">Services</b>
-                <b class="menuitem">Our Story</b>
-                <b class="menuitem">Blogs</b>
-                <b class="menuitem">Jobs</b>
-                <a class="menuitem" href="" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-globe"></i> EN</a>
-                <span class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                    <b class="dropdown-item" href="#">IN</b>
-                    <b class="dropdown-item" href="#">BN</b>
-                    <b class="dropdown-item" href="#">CN</b>
-                </span>
-                <a class="menuitem" href="" id="help" data-toggle="modal" data-target="#support"><i class="fas fa-phone-alt"></i> Support</a>
-                <a class="menuitem" href="" data-toggle="modal" data-target="#login"><i class="fas fa-user"></i> Login</a>
+        <div class="container">
+            <span style="float: left; margin-left: 2rem;">
+                <img src="assets/logo.png" alt="">
             </span>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
-                <i class="fas fa-bars"></i>
-            </button>
-        </span>
-        <div class="collapse" id="navbarToggleExternalContent" style="clear: both;">
-            <ul class="mobilemenu">
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Services</a></li>
-                <li><a href="#">Our Story</a></li>
-                <li><a href="#">Blogs</a></li>
-                <li><a href="#">Jobs</a></li>
-                <li><a href="" id="help" data-toggle="modal" data-target="#support"><i class="fas fa-phone-alt"></i> Support</a></li>
-                <li><a href="" data-toggle="modal" data-target="#login"><i class="fas fa-user"></i> Login</a></li>
-            </ul>
-</div>
+            <span style="float: right; margin: 1.5rem 2rem;">
+                <span class="pcmenu">
+                    <a class="menuitem" href="#">Home</a>
+                    <a class="menuitem" href="#">Services</a>
+                    <span>
+                        <a class="menuitem" href="#" id="ourstory" data-toggle="dropdown">Our Story</a>
+                    <span class="dropdown-menu" aria-labelledby="ourstory">
+                        <a class="dropdown-item" href="#">Blogs</a>
+                        <a class="dropdown-item" href="#">Jobs</a>
+                    </span>
+                    </span>
+                    <span>
+                        <a class="menuitem" href="#" id="dropdownMenuButton" data-toggle="dropdown"><i class="fas fa-globe"></i> EN</a>
+                    <span class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <b class="dropdown-item" href="#">IN</b>
+                        <b class="dropdown-item" href="#">BN</b>
+                        <b class="dropdown-item" href="#">CN</b>
+                    </span>
+                    </span>
+                    <a class="menuitem" href="" id="help" data-toggle="modal" data-target="#support"><i class="fas fa-phone-alt"></i> Support</a>
+                    <a class="menuitem" href="" data-toggle="modal" data-target="#login"><i class="fas fa-user"></i> Login</a>
+                </span>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </span>
+            <div class="collapse" id="navbarToggleExternalContent" style="clear: both;">
+                <ul class="mobilemenu">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">Our Story</a></li>
+                    <li><a href="#">Blogs</a></li>
+                    <li><a href="#">Jobs</a></li>
+                    <li><a href="" id="help" data-toggle="modal" data-target="#support"><i class="fas fa-phone-alt"></i> Support</a></li>
+                    <li><a href="" data-toggle="modal" data-target="#login"><i class="fas fa-user"></i> Login</a></li>
+                </ul>
+    </div>
+        </div>
     </div>
 
     
@@ -133,55 +141,59 @@
         <div class="container map">
         <div class="col-md-6 col-lg-4" id="findmobile">
             <h5 style="text-align: center;">Fare Calculator</h5>
-            <form action="">
+            <form action="" id="fareform">
                 <span>
-                    <label>Trip Type:</label><font><input type="radio" name="triptype" id="triptype1"><label for="triptype1"> One way</label></font>
-                                        <font><input type="radio" name="triptype" id="triptype2"><label for="triptype2"> Two way</label></font>
-                                        <font><input type="radio" name="triptype" id="triptype3"><label for="triptype3"> Hourly</label></font>
+                    <label>Trip Type:</label><font onclick="hidehour()"><input type="radio" name="triptype" id="triptype1" checked><label for="triptype1"> One way</label></font>
+                                        <font onclick="hidehour()"><input type="radio" name="triptype" id="triptype2"><label for="triptype2"> Two way</label></font>
+                                        <font onclick="showhour()"><input type="radio" name="triptype" id="triptype3"><label for="triptype3"> Hourly</label></font>
                 </span>
                 <input type="text" placeholder="Source" required>
                 <input type="text" placeholder="Destination" required>
-                <input type="number" name="hours" id="hours" placeholder="Hours (Only for hourly trip)">
+                <input type="number" name="hours" id="hourmbl" placeholder="Hours" style="display: none;">
                 <input type="date" id="date" name="date" required>
                 <input type="time" id="time" name="time" required>
                 <span>
                     <label>Car Type:</label><font><input type="radio" name="cartype" id="cartype1"><label for="cartype1"><h6 class="fas fa-car"></h6> 3</label></b>
-                                        <font><input type="radio" name="cartype" id="cartype2"><label for="cartype2"><h5 class="fas fa-car"></h5> 4</label></font>
+                                        <font><input type="radio" name="cartype" id="cartype2" checked><label for="cartype2"><h5 class="fas fa-car"></h5> 4</label></font>
                                         <font><input type="radio" name="cartype" id="cartype3"><label for="cartype3"><h4 class="fas fa-car"></h4> 5+</label></font>
                 </span>
-                <span><p>Fare</p><p id="fare">NaN</p></span>
-                <span><p>Tax</p><p id="tax">NaN</p></span>
-                <span><p>Total</p><p id="total">NaN</p></span>
-                <input type="submit" value="GO">
+                <div style="width: 55%; float: left;">
+                    <span><p>Fare</p><p id="fare">0.00</p></span>
+                    <span><p>Tax</p><p id="tax">0.00</p></span>
+                    <span><p>Total</p><p id="total">0.00</p></span>
+                </div>
+                <input type="submit" value="GO" style="float: right; margin-top: 4rem;">
             </form>
-            <img src="assets/ssl-badge.png" alt="" width="100px">
+            <img src="assets/ssl-badge.png" alt="" width="50px" style="clear: both; display: block;">
         </div>
         <div id="mapid" class="pcmap">
 
             <div class="col-md-6 col-lg-4" id="find">
                 <h5 style="text-align: center;">Fare Calculator</h5>
-                <form action="">
+                <form action="" id="fareform">
                     <span>
-                        <label>Trip Type:</label><font><input type="radio" name="triptype" id="triptype1"><label for="triptype1"> One way</label></font>
-                                            <font><input type="radio" name="triptype" id="triptype2"><label for="triptype2"> Two way</label></font>
-                                            <font><input type="radio" name="triptype" id="triptype3"><label for="triptype3"> Hourly</label></font>
+                        <label>Trip Type:</label><font onclick="hidehour()"><input type="radio" name="triptype" id="xtriptype1" value="one" checked><label for="xtriptype1"> One way</label></font>
+                                            <font onclick="hidehour()"><input type="radio" name="triptype" id="xtriptype2" value="two"><label for="xtriptype2"> Two way</label></font>
+                                            <font onclick="showhour()"><input type="radio" name="triptype" id="xtriptype3" value="hour"><label for="xtriptype3"> Hourly</label></font>
                     </span>
                     <input type="text" placeholder="Source" required>
                     <input type="text" placeholder="Destination" required>
-                    <input type="number" name="hours" id="hours" placeholder="Hours (Only for hourly trip)">
-                    <input type="date" id="date" name="date" required>
-                    <input type="time" id="time" name="time" required>
+                    <input type="number" name="hours" id="hourpc" placeholder="Hours" style="display: none;">
+                    <input type="date" id="xdate" name="date" required>
+                    <input type="time" id="xtime" name="time" required>
                     <span>
-                        <label>Car Type:</label><font><input type="radio" name="cartype" id="cartype1"><label for="cartype1"><h6 class="fas fa-car"></h6> 3</label></b>
-                                            <font><input type="radio" name="cartype" id="cartype2"><label for="cartype2"><h5 class="fas fa-car"></h5> 4</label></font>
-                                            <font><input type="radio" name="cartype" id="cartype3"><label for="cartype3"><h4 class="fas fa-car"></h4> 5+</label></font>
+                        <label>Car Type:</label><font><input type="radio" name="cartype" id="xcartype1"><label for="xcartype1"><h6 class="fas fa-car"></h6> 3</label></b>
+                                            <font><input type="radio" name="cartype" id="xcartype2" checked><label for="xcartype2"><h5 class="fas fa-car"></h5> 4</label></font>
+                                            <font><input type="radio" name="cartype" id="xcartype3"><label for="xcartype3"><h4 class="fas fa-car"></h4> 5+</label></font>
                     </span>
-                    <span><p>Fare</p><p id="fare">NaN</p></span>
-                    <span><p>Tax</p><p id="tax">NaN</p></span>
-                    <span><p>Total</p><p id="total">NaN</p></span>
-                    <input type="submit" value="GO">
+                    <div style="width: 55%; float: left;">
+                        <span><p>Fare</p><p id="fare">0.00</p></span>
+                    <span><p>Tax</p><p id="tax">0.00</p></span>
+                    <span><p>Total</p><p id="total">0.00</p></span>
+                    </div>
+                    <input type="submit" value="GO" style="margin-top: 4rem;">
                 </form><br>
-                <img src="assets/ssl-badge.png" alt="" width="80px">
+                <img src="assets/ssl-badge.png" alt="" width="50px" style="clear: both; display: block;">
             </div>
         </div>
         
@@ -189,9 +201,7 @@
     </div>
     </div>
 
-    <div class="mobilemapholder">
-        <div id="mapid2" class="mobilemap"></div>
-    </div>
+    
     <!-- Popular Destination -->
     <div class="container">
     <div class="popular">
@@ -230,6 +240,22 @@
         </div>
     </div>
 </div>
+
+
+<div class="container">
+    <div class="middle">
+        <div class="services">
+            <h3>Our Services</h3>
+            <div class="servicetiles">
+                <span><img src="assets/air.png" alt=""><h5>Airport Pickup and Dropoff</h5></span>
+                <span><img src="assets/holiday.png" alt=""><h5>Outstation and Holidays</h5></span>
+                <span><img src="assets/city.png" alt=""><h5>City commute and tours</h5></span>
+                <span><img src="assets/corp.png" alt=""><h5>Corporate pickup/dropoff and transportation</h5></span>
+            </div>
+        </div>
+    </div>
+</div>
+
 
 
 <div class="container">
@@ -346,16 +372,16 @@
                 <div class="bg-white" id="partner">
                     <h2 class="font-uppercase">Partner with us!</h2>
                     <div class="benefits">
-                        <span><img src="assets/footerlogo.png" alt=""><h5>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod, veritatis!</h5></span>
-                        <span><img src="assets/footerlogo.png" alt=""><h5>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod, veritatis!</h5></span>
-                        <span><img src="assets/footerlogo.png" alt=""><h5>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod, veritatis!</h5></span>
+                        <span><img src="assets/footerlogo.png" alt=""><h6>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod, veritatis!</h6></span>
+                        <span><img src="assets/footerlogo.png" alt=""><h6>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod, veritatis!</h6></span>
+                        <span><img src="assets/footerlogo.png" alt=""><h6>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod, veritatis!</h6></span>
                     </div>
                     <div class="benefits">
-                        <span><img src="assets/footerlogo.png" alt=""><h5>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod, veritatis!</h5></span>
-                        <span><img src="assets/footerlogo.png" alt=""><h5>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod, veritatis!</h5></span>
-                        <span><img src="assets/footerlogo.png" alt=""><h5>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod, veritatis!</h5></span>
+                        <span><img src="assets/footerlogo.png" alt=""><h6>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod, veritatis!</h6></span>
+                        <span><img src="assets/footerlogo.png" alt=""><h6>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod, veritatis!</h6></span>
+                        <span><img src="assets/footerlogo.png" alt=""><h6>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod, veritatis!</h6></span>
                     </div>
-                    <h4 style="margin-top: 2rem;"><a href="" data-toggle="modal" data-target="#partnerreg">Learn more...</a></h4>
+                    <h5 style="margin-top: 2rem;"><a href="" data-toggle="modal" data-target="#partnerreg">Learn more...</a></h5>
                 </div>
                 <div class="modal fade" id="partnerreg">
                     <div class="modal-dialog modal-dialog-center modal-lg">
@@ -382,20 +408,6 @@
 </div>
 </div>
 
-
-<div class="container">
-    <div class="middle">
-        <div class="services">
-            <h3>Our Services</h3>
-            <div class="servicetiles">
-                <span><img src="assets/air.png" alt=""><h5>Airport Pickup and Dropoff</h5></span>
-                <span><img src="assets/holiday.png" alt=""><h5>Outstation and Holidays</h5></span>
-                <span><img src="assets/city.png" alt=""><h5>City commute and tours</h5></span>
-                <span><img src="assets/corp.png" alt=""><h5>Corporate pickup/dropoff and transportation</h5></span>
-            </div>
-        </div>
-    </div>
-</div>
 
 <!-- who we are -->
 <div class="gradbg3">
@@ -437,7 +449,7 @@
 
 <div class="footerx">
     <div class="container" id="footerelements">
-        <div>
+        <div style="font-size: 13px;">
             <img src="assets/footerlogo.png" alt="" width="100px" style="margin-left: 1.5rem;"><br><br>
             <div>
             <i class="fas fa-home" style="float: left; transform: translateY(25%);"></i><b style="display: inline-block; margin-left: 0.5rem;">126, Mansoor Bldg<br>
