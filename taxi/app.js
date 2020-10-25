@@ -82,12 +82,14 @@ Date.prototype.toDateInputValue = (function() {
 });
 
 document.getElementById('date').value = new Date().toDateInputValue();
+document.getElementById('xdate').value = new Date().toDateInputValue();
 
 var d = new Date();
 var h = d.getHours();
 var m = d.getMinutes();
 
 document.getElementById('time').value = `${h}:${m}`;
+document.getElementById('xtime').value = `${h}:${m}`;
 
 const showhour = () => {
   document.getElementById("hourpc").style.display = "block";
