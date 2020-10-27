@@ -94,9 +94,13 @@ document.getElementById('xtime').value = `${h}:${m}`;
 const showhour = () => {
   document.getElementById("hourpc").style.display = "block";
   document.getElementById("hourmbl").style.display = "block";
+  document.getElementById("destpc").style.display = "none";
+  document.getElementById("destmbl").style.display = "none";
 }
 
 const hidehour = () => {
   document.getElementById("hourpc").style.display = "none";
   document.getElementById("hourmbl").style.display = "none";
+  document.getElementById("destpc").style.display = "block";
+  document.getElementById("destmbl").style.display = "block";
 }
