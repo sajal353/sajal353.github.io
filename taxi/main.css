@@ -643,6 +643,21 @@ a{
       margin-right: 0.5rem;
   }
 
+@media screen and (min-width: 769px) and (max-width: 1000px){
+    .flip-card {
+        margin: 0 1rem 1rem;
+      }
+    .flip-card-back {
+        height: auto;
+    }
+    .flip-card-front {
+        height: auto;
+    }
+    .flip-card {
+        height: 400px;
+    }
+}
+
 @media screen and (max-width: 768px){
     .navx{
         padding: 0.5rem 1rem;

@@ -38,11 +38,11 @@
           spaceBetween: 30,
         },
         768: {
-          slidesPerView: 'auto',
+          slidesPerView: '1',
           spaceBetween: 20,
         },
         1024: {
-          slidesPerView: 'auto',
+          slidesPerView: '1',
           spaceBetween: 20,
         }
       }
@@ -50,7 +50,7 @@
 
   var swiper = new Swiper('.swiper3', {
       spaceBetween: 20,
-      slidesPerView: 'auto',
+      slidesPerView: '1',
       loop: false,
       centeredSlide: true,
       autoplay: {
