@@ -1,0 +1,828 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+    scroll-behavior: smooth;
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 5px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track { 
+    border-radius: 10px;
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: white; 
+    border-radius: 10px;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: blue;
+  }
+
+@media only screen and (min-width : 1200px) {
+    .container { max-width: 1500px; padding: 0;}
+}
+
+.container{
+    padding: 0;
+}
+
+a{
+    text-decoration: none;
+}
+
+.leaflet-control {
+    display: none;
+}
+
+.modal{
+    z-index: 99999999;
+}
+
+.button{
+    display: inline-block;
+    border:4px solid #1F77BD;
+    border-radius: 40px;
+    text-align: center;
+    margin-left: 1rem;
+    padding: 0.5rem 2rem;
+}
+
+.sociallogin{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem;
+}
+
+.button2{
+    width: 32%;
+    border:2px solid #000;
+    border-radius: 40px;
+    text-align: center;
+    padding: 0.5rem 0.5rem;
+    font-weight: bold;
+}
+
+.navx{
+    position: fixed;
+    background-color: #fff;
+    width: 100%;
+    padding: 0.5rem 2rem;
+    font-weight: bold;
+    font-size: 13px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    z-index: 9999999;
+}
+
+.navx img{
+    height: 4rem;
+}
+
+.menuitem{
+    margin-left: 2rem;
+}
+
+.blackbtn{
+    color: #fff;
+    background-color: #000;
+    margin-left: 1rem;
+    padding: 0.3rem 0.5rem;
+    border: 4px solid #000;
+    border-radius: 40px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.mobilemenu{
+    list-style-type: none;
+}
+
+.mobilemenu li{
+    margin: 1rem 0;
+    padding: 0;
+}
+
+.formx{
+    margin: 0rem 2rem 0 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.formx input{
+    width: 100%;
+    padding: 0.5rem 2rem;
+    border: 2px solid #000;
+    border-radius: 40px;
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.formx textarea{
+    width: 100%;
+    padding: 0.5rem 2rem;
+    border: 2px solid #000;
+    border-radius: 15px;
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.formx textarea::placeholder{
+    font-weight: bold;
+    color: #000;
+}
+
+.formx textarea:focus{
+    outline: none;
+}
+
+.formx input::placeholder{
+    font-weight: bold;
+    color: #000;
+}
+
+.formx input:focus{
+    outline: none;
+}
+
+.formx input[type=submit]{
+    width: 140px;
+    padding: 0.5rem;
+    background-color: #000;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    color: #fff;
+    font-weight: bold;
+    display: inline;
+}
+
+.formx a{
+    width: 140px;
+    padding: 0.5rem;
+    background-color: #1F77BD;
+    color: #fff;
+    font-weight: bold;
+    display: inline;
+}
+
+.gradbg{
+    width: 100%;
+    background-image: linear-gradient(#DFDFDF, #DFDFDF, #DFDFDF, #DFDFDF, #fff);
+}
+
+.gradbg2{
+    width: 100%;
+    background-image: linear-gradient(#fff, #E2F5FA, #E2F5FA, #E2F5FA, #E2F5FA, #fff);
+}
+
+.gradbg3{
+    width: 100%;
+    background-image: linear-gradient(#fff, #DFDFDF, #DFDFDF, #DFDFDF, #DFDFDF);
+}
+
+
+.map{
+    height: 80vh;
+    width: 100%;
+    padding: 6rem 2rem 2rem;
+    background-color: transparent;
+}
+
+#login{
+    text-align: center;
+}
+
+#logincontent{
+    padding: 0 2rem;
+}
+
+
+#register{
+    text-align: center;
+}
+
+#registercontent{
+    padding: 0 2rem;
+}
+
+#findmobile{
+    display: none;
+}
+
+#find{
+    position: absolute;
+    width: 100%;
+    overflow: auto;
+    top: 0;
+    left: 0;
+    background-image: url("assets/bg.png");
+    color: #fff;
+    border-radius: 1rem;
+    padding: 2rem 2rem 1rem;
+    margin: 1rem;
+    font-size: 13px;
+    z-index: 9999;
+}
+
+#find form{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+#find form span{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#find input:not([type=radio]){
+    width: 100%;
+    border: 2px solid #fff;
+    padding: 0.2rem 1rem;
+    margin-bottom: 0.5rem;
+    background-color: transparent;
+    font-size: 13px;
+    color: #fff;
+}
+
+#find input::placeholder{
+    color: #fff;
+}
+
+#find label{
+    margin-right: 1rem;
+}
+
+#find input[type=submit]{
+    background-color: #fff;
+    color: #000;
+    width: 33%;
+    border-radius: 30px;
+    float: right;
+}
+
+#find input[type=radio]{
+    margin-right: 0.5rem;
+}
+
+#mapid {
+    width: 100%; 
+    height: 100%;
+    border-radius: 1rem;
+    z-index: 2;
+    position: relative;
+}
+
+.pcmap{
+    border: 2px solid grey;
+}
+
+#mapid2 {
+    border-radius: 1rem;
+    z-index: 2;
+}
+
+#support h4{
+    margin: 2rem;
+}
+
+#fare span{
+    display: flex;
+    justify-content: space-between;
+    padding: 0.5rem 1rem;
+}
+
+#fare h4{
+    background-color: #000;
+    color: #fff;
+    margin: 1rem;
+    border-radius: 40px;
+    padding: 0.5rem;
+    text-align: center;
+}
+
+.popular{
+    padding: 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.popular i{
+    font-size: 2rem;
+    margin-left: 2rem;
+}
+
+.swiper-container {
+    padding: 0 1rem;
+    width: 100%;
+    height: 300px;
+}
+
+#destination{
+    width: 25%;
+    background-color: #000;
+    border-radius: 1rem;
+    position: relative;
+}
+
+#destination span{
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    background-color: #fff;
+    width: 90%;
+    text-align: center;
+    font-weight: bold;
+    border-radius: 0.5rem;
+    margin-bottom: 1rem;
+    padding: 0.5rem 1rem;
+}
+
+#destination img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 1rem;
+}
+
+.middle{
+    margin-top: 2rem;
+    width: 100%;
+    background-color: transparent;
+}
+
+.review{
+    padding: 2rem 0;
+    text-align: center;
+}
+
+.review h3{
+    margin: 0 0 2rem;
+}
+
+#reviews{
+    width: 70%;
+    border-radius: 1rem;
+}
+
+#reviews img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 1rem;
+}
+
+.join{
+    padding: 2rem;
+    text-align: center;
+}
+
+.benefits{
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.benefits span{
+    margin: 0 2rem;
+}
+
+.benefits img{
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    object-position: center;
+}
+
+.benefits h6{
+    margin: 1rem auto;
+    max-width: 200px;
+}
+
+#partner{
+    padding: 2rem;
+    border-radius: 1rem;
+    margin-bottom: 1rem;
+}
+
+#partner ul{
+    padding-left: 2rem;
+}
+
+#reg{
+    padding: 2rem;
+    border-radius: 1rem;
+    background-image: url("assets/image2.jpg");
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#reg form{
+    width: 100%;
+}
+
+#reg input{
+    width: 100%;
+    padding: 0.5rem 2rem;
+    border: 4px solid #fff;
+    border-radius: 40px;
+    display: block;
+    margin-bottom: 1rem;
+    background-color: transparent;
+    color: #fff;
+}
+
+#reg input::placeholder{
+    color: #fff;
+}
+
+#reg input[type=submit]{
+    width: 33%;
+    float: right;
+    background-color: #fff;
+    color: #000;
+    margin-bottom: 0;
+}
+
+.services{
+    margin: 2rem;
+    text-align: center;
+}
+
+.servicetiles{
+    margin-top: 4rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.servicetiles span{
+    margin: 0 1rem;
+}
+
+.servicetiles img{
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 8px;
+}
+
+.servicetiles h5{
+    margin: 1rem auto;
+    max-width: 200px;
+}
+
+.row{
+    display: flex;
+    justify-content: space-around;
+}
+
+.who{
+    padding: 2rem 0 4rem;
+    text-align: center;
+}
+
+#we{
+    width: 70%;
+    background-image: url("assets/image1.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    color: #fff;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-radius: 2rem;
+}
+
+#we i{
+    font-size: 8rem;
+}
+
+.whoweare h3{
+    padding: 0 2rem;
+    display: inline-block;
+    margin-bottom: 2rem;
+}
+
+.whoweare i{
+    float: right;
+    font-size: 2rem;
+    margin-right: 2rem;
+}
+
+.navbar-toggler{
+    display: none;
+}
+
+.footerx{
+    background-color: #1F77BD;
+    width: 100%;
+    color: #fff;
+}
+
+.footerx li{
+    font-size: 13px;
+}
+
+#footerelements{
+    padding: 2rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+#footerelements a{
+    text-decoration: none;
+    color: #fff;
+}
+
+#footerelements input[type=email]{
+    background-color: grey;
+    color: #fff;
+    border: none;
+    padding: 0.5rem 1rem;
+    font-size: 13px;
+}
+
+#footerelements input[type=submit]{
+    background-color: #000;
+    color: #fff;
+    border: none;
+    padding: 0.5rem 1rem;
+}
+
+#footerelements input[type=email]::placeholder{
+    color: #fff;
+}
+
+.footerlinks{
+    display: flex;
+    justify-content: space-between;
+}
+
+.fleetwrap{
+    margin: 2rem 0 0;
+}
+
+.fleetwrap h3{
+    text-align: center;
+}
+
+.fleet{
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.flip-card {
+    background-color: transparent;
+    width: 300px;
+    height: 350px;
+    border: 1px solid #f1f1f1;
+    perspective: 1000px;
+    margin: 0 2rem 1rem;
+  }
+  
+  .flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+  }
+  
+  .flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+  }
+  
+  .flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+  }
+  
+  .flip-card-front {
+    padding: 1rem;
+    background-color: #fff;
+    color: black;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  }
+
+  .flip-card-front img{
+      width: 100%;
+  }
+
+  .flip-card-back {
+    padding: 1rem;
+    background-color: #fff;
+    color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transform: rotateY(180deg);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  }
+
+  .cardbackdata{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 2rem 1rem;
+    font-size: 13px;
+  }
+
+  .cardbackdata h6:not(:last-child){
+      margin-bottom: 2rem;
+  }
+
+  .cardbackdata i{
+      margin-right: 0.5rem;
+  }
+
+@media screen and (min-width: 769px) and (max-width: 1000px){
+    .flip-card {
+        margin: 0 1rem 1rem;
+      }
+    .flip-card-back {
+        height: auto;
+    }
+    .flip-card-front {
+        height: auto;
+    }
+    .flip-card {
+        height: 400px;
+    }
+}
+
+@media screen and (max-width: 768px){
+    .navx{
+        padding: 0.5rem 1rem;
+    }
+    .fleet{
+        flex-direction: column;
+    }
+
+    .flip-card{
+        width: 80%;
+    }
+
+    .benefits{
+        flex-direction: column;
+    }
+    .servicetiles{
+        flex-direction: column;
+    }
+    #footerelements{
+        flex-direction: column;
+    }
+    #footerelements div{
+        width: 100%;
+        margin-bottom: 1rem;
+    }
+    .map{
+        height: auto;
+        background-image: none;
+        background-color: #DFDFDF;
+    }
+    .mobilemapholder{
+        height: 50vh;
+        background-color: #DFDFDF;
+    }
+
+    .pcmap {
+        display: none;
+    }    
+
+    .mobilemap{
+        border: 2px solid grey;
+        height: 85%;
+        width: 85%;
+        margin: 0 auto;
+    }
+
+    #findmobile{
+        display: block;
+        width: 100%;
+        background-image: url("assets/image1.jpg");
+        background-position: left;
+        background-size: auto;
+        color: #fff;
+        border-radius: 1rem;
+        padding: 1rem;
+        margin: 0 0 2rem 0;
+        font-size: 13px;
+        z-index: 9999;
+    }
+    
+    #findmobile form{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+    }
+    
+    #findmobile form span{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    #findmobile input:not([type=radio]){
+        width: 100%;
+        border: 2px solid #fff;
+        padding: 0.2rem 1rem;
+        margin-bottom: 0.5rem;
+        background-color: transparent;
+        font-size: 13px;
+        color: #fff;
+    }
+    
+    #findmobile input::placeholder{
+        color: #fff;
+    }
+    
+    #findmobile label{
+        margin-right: 1rem;
+    }
+    
+    #findmobile input[type=submit]{
+        background-color: #fff;
+        color: #000;
+        width: 33%;
+        align-self: flex-end;
+        border-radius: 30px;
+    }
+    
+    #findmobile input[type=radio]{
+        margin-right: 0.5rem;
+    }
+
+
+    #find{
+        display: none;
+    }
+    .popular i{
+        display: none;
+    }
+
+    .sociallogin{
+        flex-direction: column;
+    }
+    
+    .button2{
+        width: 100%;
+        margin-bottom: 1rem;
+    }
+
+    .button{
+        margin-left: 0.2rem;
+    }
+
+    .whoweare #wholeft,#whoright{
+        display: none;
+    }
+
+    .map{
+        padding-top: 8rem;
+    }
+}
+
+@media screen and (max-height: 670px){
+    .map{
+        height: 95vh;
+    }
+}
+
+@media screen and (max-width: 870px){
+    .navbar-toggler{
+        display: block;
+    }
+
+    .pcmenu{
+        display: none;
+    }
+}

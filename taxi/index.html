@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spotcab</title>
+    <link rel="icon" href="assets/favicon.png" type="image/png" sizes="16x16">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+    integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+    crossorigin=""/>
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+    integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+    crossorigin=""></script>
+    <script src="https://kit.fontawesome.com/4594e6f8e1.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+
+    <!-- Nav -->
+
+    <div class="navx">
+        <div class="container">
+            <span style="float: left; margin-left: 2rem;">
+                <img src="assets/logo.png" alt="">
+            </span>
+            <span style="float: right; margin: 1.5rem 2rem;">
+                <span class="pcmenu">
+                    <a class="menuitem" href="#">Home</a>
+                    <a class="menuitem" href="#">Services</a>
+                    <span>
+                        <a class="menuitem" href="#" id="ourstory" data-toggle="dropdown">Our Story</a>
+                    <span class="dropdown-menu" aria-labelledby="ourstory">
+                        <a class="dropdown-item" href="#">Blogs</a>
+                        <a class="dropdown-item" href="#">Jobs</a>
+                    </span>
+                    </span>
+                    <span>
+                        <a class="menuitem" href="#" id="dropdownMenuButton" data-toggle="dropdown"><i class="fas fa-globe"></i> EN</a>
+                    <span class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <b class="dropdown-item" href="#">IN</b>
+                        <b class="dropdown-item" href="#">BN</b>
+                        <b class="dropdown-item" href="#">CN</b>
+                    </span>
+                    </span>
+                    <a class="menuitem" href="" id="help" data-toggle="modal" data-target="#support"><i class="fas fa-phone-alt"></i> Support</a>
+                    <a class="menuitem" href="" data-toggle="modal" data-target="#login"><i class="fas fa-user"></i> Login</a>
+                </span>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </span>
+            <div class="collapse" id="navbarToggleExternalContent" style="clear: both;">
+                <ul class="mobilemenu">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">Our Story</a></li>
+                    <li><a href="#">Blogs</a></li>
+                    <li><a href="#">Jobs</a></li>
+                    <li><a href="" id="help" data-toggle="modal" data-target="#support"><i class="fas fa-phone-alt"></i> Support</a></li>
+                    <li><a href="" data-toggle="modal" data-target="#login"><i class="fas fa-user"></i> Login</a></li>
+                </ul>
+    </div>
+        </div>
+    </div>
+
+    
+
+    
+    <!-- Modal -->
+    <div class="modal fade" id="support">
+        <div class="modal-dialog modal-dialog-center modal-md">
+            <div class="modal-content">
+                <div class="modal-header" style="position: relative;">
+                    <h2 style="margin: auto;">Contact us</h2>
+                    <button style="position: absolute; right: 16px; top: 16px;" class="close" data-dismiss="modal">&times;</button>
+                </div>
+                <h4 style="text-align: center;">
+                <i class="fas fa-envelope"></i> <a href="mailto:support@spot.cab">support@spot.cab</a>
+                <br><br>
+                <i class="fas fa-phone"></i> <a href="tel:+915555555555">+91 5555 5555 55</a>
+                <br><br>
+                <i class="fab fa-whatsapp-square"></i> <a href="">WhatsApp</a>
+                <br><br>
+                <i class="fas fa-question-circle"></i> <a href="spot.cab/faq">spot.cab/faq</a>
+                </h4>
+            </div>
+        </div>
+    </div>
+    
+    <div class="modal fade" id="login">
+        <div class="modal-dialog modal-dialog-center modal-md">
+            <div class="modal-content" id="logincontent">
+                <br>
+                <h2 style="margin: auto;">Welcome Back.</h2>
+                <button style="position: absolute; right: 16px; top: 16px;" class="close" data-dismiss="modal">&times;</button>
+                <br>
+                <h5>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, voluptas!</h5>
+                <div class="sociallogin">
+                    <div class="button2"><i class="fab fa-google"></i> Google</div>
+                    <div class="button2"><i class="fab fa-facebook"></i> Facebook</div>
+                    <div class="button2"><i class="fab fa-twitter"></i> Twitter</div>
+                </div>
+                <form action="" class="formx">
+                    <input type="text" name="username" id="username" placeholder="Username" required>
+                    <input type="password" name="password" id="password" placeholder="Password" required>
+                    <span><input type="submit" value="Login"></span>
+                </form>
+                <h5 style="text-align: center; margin-top: 1rem;">Or, <b data-toggle="modal" data-target="#register" data-dismiss="modal">Sign Up</b></h5>
+            </div>
+        </div>
+    </div>
+    
+    <div class="modal fade" id="register">
+        <div class="modal-dialog modal-dialog-center modal-lg">
+            <div class="modal-content" id="registercontent">
+                <br>
+                <h2>Sign Up</h2>
+                <button style="position: absolute; right: 16px; top: 16px;" class="close" data-dismiss="modal">&times;</button>
+                <br>
+                <h5>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, voluptas!</h5>
+                <br>
+                <form action="" class="formx">
+                    <input type="text" name="firstname" id="firstname" placeholder="First Name" required>
+                    <input type="text" name="lastname" id="lastname" placeholder="Last Name" required>
+                    <input type="email" name="email" id="email" placeholder="Email" required>
+                    <input type="number" name="phone" id="phone" placeholder="Phone number" required>
+                    <input type="text" name="dob" id="dob" placeholder="Date of birth" required>
+                    <input type="password" name="password" id="password" placeholder="Password" required>
+                    <input type="password" name="cpassword" id="password" placeholder="Re-enter Password" required>
+                    <span><input type="submit" value="Sign Up"></span>
+                </form>
+            </div>
+        </div>
+    </div>
+    
+    
+        <!-- map -->
+        <div class="gradbg">
+        <div class="container map">
+        <div class="col-md-6 col-lg-4" id="findmobile">
+            <h5 style="text-align: center;">Fare Calculator</h5>
+            <form action="" id="fareform">
+                <span>
+                    <label>Trip Type:</label><font onclick="hidehour()"><input type="radio" name="triptype" id="triptype1" checked><label for="triptype1"> One way</label></font>
+                                        <font onclick="hidehour()"><input type="radio" name="triptype" id="triptype2"><label for="triptype2"> Two way</label></font>
+                                        <font onclick="showhour()"><input type="radio" name="triptype" id="triptype3"><label for="triptype3"> Hourly</label></font>
+                </span>
+                <input type="text" placeholder="Source" required>
+                <input type="text" id="destmbl" placeholder="Destination" required>
+                <input type="number" name="hours" id="hourmbl" placeholder="Hours" min="0" style="display: none;">
+                <input type="date" id="date" name="date" required>
+                <input type="time" id="time" name="time" value="12:00" required>
+                <span>
+                    <label>Car Type:</label><font><input type="radio" name="cartype" id="cartype1"><label for="cartype1"><h6 class="fas fa-car"></h6> 3</label></b>
+                                        <font><input type="radio" name="cartype" id="cartype2" checked><label for="cartype2"><h5 class="fas fa-car"></h5> 4</label></font>
+                                        <font><input type="radio" name="cartype" id="cartype3"><label for="cartype3"><h4 class="fas fa-car"></h4> 5+</label></font>
+                </span>
+                <div style="width: 55%; float: left;">
+                    <span><p>Fare</p><p id="fare">0.00</p></span>
+                    <span><p>Tax</p><p id="tax">0.00</p></span>
+                    <span><p>Total</p><p id="total">0.00</p></span>
+                </div>
+                <input type="submit" value="GO" style="float: right; margin-top: 4rem;">
+            </form>
+            <img src="assets/ssl-badge.png" alt="" width="50px" style="clear: both; display: block;">
+        </div>
+        <div id="mapid" class="pcmap">
+
+            <div class="col-md-6 col-lg-4" id="find">
+                <h5 style="text-align: center;">Fare Calculator</h5>
+                <form action="" id="fareform">
+                    <span>
+                        <label>Trip Type:</label><font onclick="hidehour()"><input type="radio" name="triptype" id="xtriptype1" value="one" checked><label for="xtriptype1"> One way</label></font>
+                                            <font onclick="hidehour()"><input type="radio" name="triptype" id="xtriptype2" value="two"><label for="xtriptype2"> Two way</label></font>
+                                            <font onclick="showhour()"><input type="radio" name="triptype" id="xtriptype3" value="hour"><label for="xtriptype3"> Hourly</label></font>
+                    </span>
+                    <input type="text" placeholder="Source" required>
+                    <input type="text" id="destpc" placeholder="Destination" required>
+                    <input type="number" name="hours" id="hourpc" placeholder="Hours" min="0" style="display: none;">
+                    <input type="date" id="xdate" name="date" required>
+                    <input type="time" id="xtime" name="time" value="12:00" required>
+                    <span>
+                        <label>Car Type:</label><font><input type="radio" name="cartype" id="xcartype1"><label for="xcartype1"><h6 class="fas fa-car"></h6> 3</label></b>
+                                            <font><input type="radio" name="cartype" id="xcartype2" checked><label for="xcartype2"><h5 class="fas fa-car"></h5> 4</label></font>
+                                            <font><input type="radio" name="cartype" id="xcartype3"><label for="xcartype3"><h4 class="fas fa-car"></h4> 5+</label></font>
+                    </span>
+                    <div style="width: 55%; float: left;">
+                        <span><p>Fare</p><p id="fare">0.00</p></span>
+                    <span><p>Tax</p><p id="tax">0.00</p></span>
+                    <span><p>Total</p><p id="total">0.00</p></span>
+                    </div>
+                    <input type="submit" value="GO" style="margin-top: 4rem;">
+                </form><br>
+                <img src="assets/ssl-badge.png" alt="" width="50px" style="clear: both; display: block;">
+            </div>
+        </div>
+        
+        
+    </div>
+    </div>
+
+    
+    <!-- Popular Destination -->
+    <div class="container">
+    <div class="popular">
+        <h3>Popular Destinations</h3>
+        <span>
+            <i class="fas fa-caret-left" id="popleft"></i>
+            <i class="fas fa-caret-right" id="popright"></i>
+        </span>
+    </div>
+    <div class="swiper-container swiper1">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide" id="destination">
+                <img src="assets/place1.jpg" alt="">
+                <span>Text</span>
+            </div>
+            <div class="swiper-slide" id="destination">
+                <img src="assets/place2.jpg" alt="">
+                <span>Text</span>
+            </div>
+            <div class="swiper-slide" id="destination">
+                <img src="assets/place3.jpg" alt="">
+                <span>Text</span>
+            </div>
+            <div class="swiper-slide" id="destination">
+                <img src="assets/place4.jpg" alt="">
+                <span>Text</span>
+            </div>
+            <div class="swiper-slide" id="destination">
+                <img src="assets/place1.jpg" alt="">
+                <span>Text</span>
+            </div>
+            <div class="swiper-slide" id="destination">
+                <img src="assets/place2.jpg" alt="">
+                <span>Text</span>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+<div class="container">
+    <div class="fleetwrap">
+        <h3>Our Fleet</h3>
+    <div class="fleet">
+        <div class="flip-card">
+            <div class="flip-card-inner">
+              <div class="flip-card-front">
+                <img src="assets/hatchback.jpg">
+                <hr>
+                    <h5>Small | Hatchback</h5>
+                    <span style="display:flex;justify-content:space-around;margin: 2rem 0;">
+                        <h6><i class="fas fa-user"></i> 3</h6>
+                        <h6><i class="fas fa-suitcase"></i> 4</h6>
+                        <h6><i class="far fa-window-maximize"></i> 4</h6>
+                    </span>
+              </div>
+              <div class="flip-card-back">
+                <h5>Small | Hatchback</h5>
+                <hr>
+                <span class="cardbackdata">
+                    <p><i class="fas fa-user"></i> Seats 3 people comfortably</p>
+                    <p><i class="fas fa-suitcase"></i> Accomodates 4 small size bags</p>
+                    <p><i class="far fa-window-maximize"></i> 4 big windows</p>
+                    <p><i class="fas fa-fan"></i> Air conditioned</p>
+                </span>
+                <a href="#find" class="blackbtn">BOOK NOW</a>
+              </div>
+            </div>
+          </div>
+          <div class="flip-card">
+            <div class="flip-card-inner">
+              <div class="flip-card-front">
+                <img src="assets/sedan.jpg">
+                <hr>
+                    <h5>Medium | Sedan</h5>
+                    <span style="display:flex;justify-content:space-around;margin: 2rem 0;">
+                        <h6><i class="fas fa-user"></i> 4</h6>
+                        <h6><i class="fas fa-suitcase"></i> 6</h6>
+                        <h6><i class="far fa-window-maximize"></i> 4</h6>
+                    </span>
+              </div>
+              <div class="flip-card-back">
+                <h5>Medium | Sedan</h5>
+                <hr>
+                <span class="cardbackdata">
+                    <p><i class="fas fa-user"></i> Seats 4 people comfortably</p>
+                    <p><i class="fas fa-suitcase"></i> Accomodates 6 small size bags</p>
+                    <p><i class="far fa-window-maximize"></i> 4 big windows</p>
+                    <p><i class="fas fa-fan"></i> Air conditioned</p>
+                </span>
+                <a href="#find" class="blackbtn">BOOK NOW</a>
+              </div>
+            </div>
+          </div>
+          <div class="flip-card">
+            <div class="flip-card-inner">
+              <div class="flip-card-front">
+                <img src="assets/suv.jpg">
+                <hr>
+                    <h5>Fullsize | SUV</h5>
+                    <span style="display:flex;justify-content:space-around;margin: 2rem 0;">
+                        <h6><i class="fas fa-user"></i> 7</h6>
+                        <h6><i class="fas fa-suitcase"></i> 8</h6>
+                        <h6><i class="far fa-window-maximize"></i> 6</h6>
+                    </span>
+              </div>
+              <div class="flip-card-back">
+                <h5>Fullsize | SUV</h5>
+                <hr>
+                <span class="cardbackdata">
+                    <p><i class="fas fa-user"></i> Seats 7 people comfortably</p>
+                    <p><i class="fas fa-suitcase"></i> Accomodates 8 small size bags</p>
+                    <p><i class="far fa-window-maximize"></i> 6 big windows</p>
+                    <p><i class="fas fa-fan"></i> Air conditioned</p>
+                </span>
+                <a href="#find" class="blackbtn">BOOK NOW</a>
+              </div>
+            </div>
+          </div>
+    </div>
+    </div>
+    </div>
+</div>
+
+
+<div class="container">
+    <div class="middle">
+        <div class="services">
+            <h3>Our Services</h3>
+            <div class="servicetiles">
+                <span><a href=""><img src="assets/air.png" alt=""><h5>Airport Pickup and Dropoff</h5></a></span>
+                <span><a href=""><img src="assets/holiday.png" alt=""><h5>Outstation and Holidays</h5></a></span>
+                <span><a href=""><img src="assets/city.png" alt=""><h5>City commute and tours</h5></a></span>
+                <span><a href=""><img src="assets/corp.png" alt=""><h5>Corporate pickup/dropoff and transportation</h5></a></span>
+            </div>
+            <a href="#">Know More...</a>
+        </div>
+    </div>
+</div>
+
+
+    <!-- Review -->
+    <div class="gradbg2">
+    <div class="container">
+    <div class="middle">
+        <div class="review">
+            <h3>What do our customers say?</h3>
+            <div class="swiper-container swiper2">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide" id="reviews">
+                        <img src="assets/place1.jpg" alt="">
+                    </div>
+                    <div class="swiper-slide" id="reviews">
+                        <img src="assets/place2.jpg" alt="">
+                    </div>
+                    <div class="swiper-slide" id="reviews">
+                        <img src="assets/place3.jpg" alt="">
+                    </div>
+                    <div class="swiper-slide" id="reviews">
+                        <img src="assets/place4.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="join">
+                <div class="bg-white" id="partner">
+                    <h2 class="font-uppercase">Partner with us!</h2>
+                    <div class="benefits">
+                        <span><a href=""><img src="assets/footerlogo.png" alt=""><h6>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod, veritatis!</h6></a></span>
+                        <span><a href=""><img src="assets/footerlogo.png" alt=""><h6>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod, veritatis!</h6></a></span>
+                        <span><a href=""><img src="assets/footerlogo.png" alt=""><h6>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod, veritatis!</h6></a></span>
+                    </div>
+                    <div class="benefits">
+                        <span><a href=""><img src="assets/footerlogo.png" alt=""><h6>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod, veritatis!</h6></a></span>
+                        <span><a href=""><img src="assets/footerlogo.png" alt=""><h6>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod, veritatis!</h6></a></span>
+                        <span><a href=""><img src="assets/footerlogo.png" alt=""><h6>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod, veritatis!</h6></a></span>
+                    </div>
+                    <h5 style="margin-top: 2rem;"><a href="" data-toggle="modal" data-target="#partnerreg">Learn more...</a></h5>
+                </div>
+                <div class="modal fade" id="partnerreg">
+                    <div class="modal-dialog modal-dialog-center modal-lg">
+                        <div class="modal-content" id="registercontent">
+                            <br>
+                            <h2>Learn More</h2>
+                            <button style="position: absolute; right: 16px; top: 16px;" class="close" data-dismiss="modal">&times;</button>
+                            <br>
+                            <h5>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, voluptas!</h5>
+                            <br>
+                            <form action="" class="formx">
+                                <input type="text" name="firstname" id="firstname" placeholder="Name" required>
+                                <input type="email" name="email" id="email" placeholder="Email" required>
+                                <input type="number" name="phone" id="phone" placeholder="Phone number" required>
+                                <textarea name="details" id="" rows="5" placeholder="Details"></textarea>
+                                <span><input type="submit" value="Submit"></span>
+                            </form>
+                            <button style="margin: 1rem;" class="close" data-dismiss="modal">&times;</button>
+                        </div>
+                    </div>
+                </div>
+        </div>
+    </div>
+
+</div>
+</div>
+
+
+<!-- who we are -->
+<div class="gradbg3">
+<div class="container">
+<div class="who">
+    
+    <div class="whoweare">
+        <h3>WHY CHOOSE US</h3>
+        <span>
+            <i class="fas fa-caret-right" id="whoright"></i>
+            <i class="fas fa-caret-left" id="wholeft"></i>
+        </span>
+    </div>
+    <div class="swiper-container swiper3">
+        <div class="swiper-wrapper">
+            <a href="#" style="text-decoration: none;" class="swiper-slide" id="we">
+                <i class="fas fa-star"></i>
+                <span>
+                    <h2>Taxi Booking Service Of the year</h2>
+                    <h4>
+                        Lorem ipsum dolor sit, amet consectetur adipis.<br>
+                    </h4>
+                </span>
+            </a>
+            <a href="#" style="text-decoration: none;" class="swiper-slide" id="we">
+                
+            </a>
+            <a href="#" style="text-decoration: none;" class="swiper-slide" id="we">
+                
+            </a>
+            <a href="#" style="text-decoration: none;" class="swiper-slide" id="we">
+                
+            </a>
+        </div>
+    </div>
+</div>
+</div>
+</div>
+
+<div class="footerx">
+    <div class="container" id="footerelements">
+        <div style="font-size: 13px;">
+            <img src="assets/footerlogo.png" alt="" width="100px" style="margin-left: 1.5rem;"><br><br>
+            <div>
+            <i class="fas fa-home" style="float: left; transform: translateY(25%);"></i><b style="display: inline-block; margin-left: 0.5rem;">126, Mansoor Bldg<br>
+                                        Shamlaldas Gandhi Marg<br>
+                                        Mumbai, Maharashtra</b><br><br>
+
+            <i class="fas fa-phone"></i><b style="margin-left: 0.5rem;">+91 555 555 5555</b><br><br>
+
+            <i class="fas fa-envelope"></i><b style="margin-left: 0.5rem;">info@wxyz.com</b>
+            </div>
+        </div>
+        <div>
+            <h5>Quick Links</h5>
+                <ul style="list-style-position: inside;">
+                    <li><a href="">Home</a></li>
+                    <li><a href="">Services</a></li>
+                    <li><a href="">Popular Destinations</a></li>
+                </ul>
+        </div>
+        <div>
+            <h5>Company</h5>
+                <ul style="list-style-position: inside;">
+                    <li><a href="">Our Story</a></li>
+                    <li><a href="">Meet our team and fleet</a></li>
+                    <li><a href="">Jobs</a></li>
+                    <li><a href="">Blog</a></li>
+                    <li><a href="">Terms and conditions</a></li>
+                    <li><a href="">Privacy Policy</a></li>
+                    <li><a href="">Share Feedback</a></li>
+                </ul>
+        </div>
+        <div>
+            <h5>App<img src="assets/play.png" alt="" width="100px" style="float: right; border-radius: 0.5rem;"></h5>
+            <form action="" style="margin: 2rem 0;">
+                <input type="email" placeholder="Newsletter">
+                <input type="submit" value="Go">
+            </form>
+            <div class="footerlinks">
+                <h3 class="fab fa-facebook-square"></h3>
+            <h3 class="fab fa-twitter-square"></h3>
+            <h3 class="fab fa-linkedin"></h3>
+            <h3 class="fab fa-pinterest-square"></h3>
+            <h3 class="fab fa-instagram-square"></h3>
+            </div>
+        </div>
+    </div>
+</div>
+<div style="background-color: #000; color: #fff; display: flex; justify-content: center; padding: 0.5rem 0;">
+    <p>&#169; 2020 Spotcab Services (OPC) Pvt. Ltd.</p>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+<script src="app.js"></script>
+</html>
