@@ -491,8 +491,16 @@ a{
         padding: 2rem;
     }
 
+    .upper{
+        margin: 10rem 0;
+    }
+
     .upper img{
         display: none;
+    }
+
+    .lower{
+        padding-top: 1rem;
     }
 
     .middleintro{
@@ -519,7 +527,7 @@ a{
     }
 
     .greybtn{
-        margin-bottom: 2rem;
+        margin: 2rem 0;
         width: 100%;
     }
 
