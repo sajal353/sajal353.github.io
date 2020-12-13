@@ -1,0 +1,217 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+  scroll-behavior: smooth;
+}
+
+.container {
+  max-width: 1400px;
+  margin: auto;
+}
+
+.intro {
+  min-height: 100vh;
+  background-image: url("assets/bg.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 2rem 4rem;
+}
+
+.logotxt {
+  display: inline;
+  vertical-align: middle;
+  margin-left: 1rem;
+  color: #fff;
+  letter-spacing: 0.2rem;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  width: 5vw;
+  vertical-align: middle;
+}
+
+.navlinks a {
+  vertical-align: middle;
+  padding: 0.6rem 1rem;
+  border-radius: 40px;
+  color: #1a4f86;
+  text-decoration: none;
+  font-weight: bold;
+  margin-right: 1rem;
+  background-color: #fff;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.introcontent {
+  margin-top: 6rem;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+}
+
+.introleft,
+.introright {
+  width: 50%;
+}
+
+.introcontent h1,
+h3 {
+  font-weight: 400;
+}
+
+.introcontent h1 {
+  font-size: 4rem;
+}
+
+.introleft {
+  padding: 2rem 1rem 2rem 0;
+}
+
+.introleft img {
+  margin-top: 2rem;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  border-radius: 8px;
+  width: 25%;
+}
+
+.introright {
+  padding: 0 2rem 2rem;
+  display: flex;
+  justify-content: center;
+}
+
+.introright img {
+  width: 100%;
+}
+
+.brands {
+  padding: 2rem 4rem;
+  text-align: center;
+}
+
+.brandrow {
+  color: #495057;
+  font-size: 4rem;
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+}
+
+.features {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 2rem 4rem;
+}
+
+.features h1 {
+  display: inline;
+  font-weight: 400;
+  font-size: 3rem;
+  border-bottom: 4px solid #fcc101;
+  margin: 1rem 0;
+  padding: 1rem 0;
+}
+
+.featurerow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.featurerow span {
+  width: 33%;
+  display: flex;
+  align-items: center;
+}
+
+.featurerow span img {
+  width: 100px;
+}
+
+.featurerow span h3 {
+  margin-left: 1rem;
+  font-weight: bold;
+}
+
+.video {
+  padding: 2rem 4rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.video h1 {
+  margin-bottom: 2rem;
+  padding: 0 0 1rem;
+  border-bottom: 4px solid #fcc101;
+}
+
+@media screen and (max-width: 935px) {
+  .navlinks {
+    display: none;
+  }
+
+  .intro {
+    padding: 2rem;
+  }
+
+  .introcontent {
+    margin-top: 2rem;
+    flex-direction: column;
+  }
+
+  .introleft,
+  .introright {
+    width: 100%;
+  }
+
+  .introleft {
+    text-align: center;
+  }
+
+  .brandrow i {
+    font-size: 2rem;
+  }
+
+  .features {
+    padding: 2rem;
+  }
+
+  .featurerow {
+    flex-direction: column;
+    margin: 0;
+  }
+
+  .featurerow span {
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+
+  .video {
+    padding: 2rem;
+  }
+
+  .video iframe {
+    width: 100%;
+  }
+
+  .nav span {
+    margin: 0 auto;
+  }
+
+  .logo {
+    width: 12vw;
+  }
