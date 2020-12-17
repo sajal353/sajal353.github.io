@@ -11,7 +11,7 @@ logo.addEventListener("click", () => {
 });
 
 global.addEventListener("click", () => {
-    window.location.href = "/global.html";
+    window.location.href = "gemf/global.html";
 });
 
 equity.addEventListener("click", () => {
