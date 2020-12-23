@@ -28,7 +28,9 @@
 }
 
 body {
+  width: 100%;
   background-color: #000;
+  overflow-x: hidden;
 }
 
 .videoc {
@@ -44,6 +46,7 @@ body {
   min-height: 100vh;
   object-fit: cover;
   object-position: center;
+  filter: brightness(0.5);
 }
 
 header {
@@ -123,7 +126,7 @@ footer {
   left: 2rem;
   transform: translateY(-50%);
   opacity: 0;
-  animation: opacity 6s ease 3s;
+  animation: opacity 3s ease 3s;
   animation-fill-mode: forwards;
   -o-animation-fill-mode: forwards;
   -webkit-animation-fill-mode: forwards;
@@ -134,7 +137,7 @@ footer {
   left: 9rem;
   transform: translateY(-50%);
   opacity: 0;
-  animation: opacity 6s ease 4s;
+  animation: opacity 3s ease 3.5s;
   animation-fill-mode: forwards;
   -o-animation-fill-mode: forwards;
   -webkit-animation-fill-mode: forwards;
@@ -145,7 +148,7 @@ footer {
   left: 20rem;
   transform: translateY(-50%);
   opacity: 0;
-  animation: opacity 6s ease 5s;
+  animation: opacity 3s ease 4s;
   animation-fill-mode: forwards;
   -o-animation-fill-mode: forwards;
   -webkit-animation-fill-mode: forwards;
@@ -156,7 +159,7 @@ footer {
   left: 29rem;
   transform: translateY(-50%) translateX(-50%);
   opacity: 0;
-  animation: move 2s ease 6s;
+  animation: move 1s ease 4.5s;
   animation-fill-mode: forwards;
   -o-animation-fill-mode: forwards;
   -webkit-animation-fill-mode: forwards;
@@ -173,7 +176,7 @@ footer {
   left: 2rem;
   transform: translateY(-50%);
   opacity: 0;
-  animation: opacity 6s ease 11s;
+  animation: opacity 3s ease 7.5s;
   animation-fill-mode: forwards;
   -o-animation-fill-mode: forwards;
   -webkit-animation-fill-mode: forwards;
@@ -184,7 +187,7 @@ footer {
   left: 9rem;
   transform: translateY(-50%);
   opacity: 0;
-  animation: opacity 6s ease 12s;
+  animation: opacity 3s ease 8s;
   animation-fill-mode: forwards;
   -o-animation-fill-mode: forwards;
   -webkit-animation-fill-mode: forwards;
@@ -195,7 +198,7 @@ footer {
   left: 23rem;
   transform: translateY(-50%);
   opacity: 0;
-  animation: opacity 6s ease 13s;
+  animation: opacity 3s ease 8.5s;
   animation-fill-mode: forwards;
   -o-animation-fill-mode: forwards;
   -webkit-animation-fill-mode: forwards;
@@ -206,7 +209,7 @@ footer {
   left: 32rem;
   transform: translateY(-50%) translateX(-50%);
   opacity: 0;
-  animation: move2 2s ease 14s;
+  animation: move2 1s ease 9s;
   animation-fill-mode: forwards;
   -o-animation-fill-mode: forwards;
   -webkit-animation-fill-mode: forwards;
@@ -223,7 +226,7 @@ footer {
   left: 2rem;
   transform: translateY(-50%);
   opacity: 0;
-  animation: opacity 6s ease 19s;
+  animation: opacity 3s ease 12s;
   animation-fill-mode: forwards;
   -o-animation-fill-mode: forwards;
   -webkit-animation-fill-mode: forwards;
@@ -234,7 +237,7 @@ footer {
   left: 18rem;
   transform: translateY(-50%) translateX(-50%);
   opacity: 0;
-  animation: move3 5s ease 20s;
+  animation: move3 2.5s ease 12.5s;
   animation-fill-mode: forwards;
   -o-animation-fill-mode: forwards;
   -webkit-animation-fill-mode: forwards;
@@ -251,7 +254,7 @@ footer {
   left: 28rem;
   transform: translateY(-50%);
   opacity: 0;
-  animation: opacity 5s ease 21s;
+  animation: opacity 2.5s ease 13s;
   animation-fill-mode: forwards;
   -o-animation-fill-mode: forwards;
   -webkit-animation-fill-mode: forwards;
@@ -262,7 +265,7 @@ footer {
   left: 31rem;
   transform: translateY(-50%);
   opacity: 0;
-  animation: opacity 5s ease 22s;
+  animation: opacity 2.5s ease 13.5s;
   animation-fill-mode: forwards;
   -o-animation-fill-mode: forwards;
   -webkit-animation-fill-mode: forwards;
@@ -359,7 +362,7 @@ footer {
 }
 
 .global a {
-  color: #600c1b;
+  color: #fff;
 }
 
 .about {
@@ -492,4 +495,103 @@ ul {
   background-color: #600c1b;
   color: #fff;
   border: 2px solid #600c1b;
+}
+
+.formscroll option {
+  color: #000;
+}
+
+.donation {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 2rem;
+  color: #fff;
+}
+
+.donationleft {
+  height: 100vh;
+  width: 50%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.donationleft p {
+  font-size: 2rem;
+  vertical-align: middle;
+}
+
+.donationright {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 50%;
+  padding: 0 2rem;
+  font-size: 1.2rem;
+}
+
+.paymodel {
+  width: 100%;
+  margin-bottom: 2rem;
+}
+
+.paymodel label {
+  border: 2px solid #fff;
+  padding: 0.8rem 1rem;
+  cursor: pointer;
+  transition: 0.6s ease;
+}
+
+.labelchecked {
+  background-color: #fff;
+  color: #000;
+}
+
+.paymodel input {
+  visibility: hidden;
+}
+
+.paymodelflex {
+  display: flex;
+  justify-content: space-between;
+}
+
+.payamount input {
+  display: inline-block;
+  margin-bottom: 1rem;
+  cursor: pointer;
+}
+
+.payamount label {
+  margin-left: 1rem;
+  cursor: pointer;
+}
+
+.paybtn {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.paybtn input {
+  width: 50%;
+  background-color: #fff;
+  padding: 0.8rem 1rem;
+  cursor: pointer;
+  border: none;
+  font-size: 1.2rem;
+  transition: 0.6s ease;
+}
+
+.paybtn input:hover {
+  background-color: #600c1b;
+  color: #fff;
+}
+
+.paybtn input:first-child {
+  margin-right: 0.5rem;
+}
+
+.paybtn input:last-child {
+  margin-left: 0.5rem;
 }
