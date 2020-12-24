@@ -1,0 +1,95 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background-color: #fff;
+  position: relative;
+  padding-left: 10vw;
+  color: #2e74ff;
+  overflow: hidden;
+}
+
+a {
+  color: #2e74ff;
+  text-decoration: none;
+}
+
+.sidenav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 10vw;
+  background-color: #fff;
+  box-shadow: 0 4px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 40px 0 rgba(0, 0, 0, 0.19);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.sidetop {
+  padding: 2rem 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.sidetop img {
+  width: 80%;
+}
+
+.sidetop a {
+  margin-top: 4rem;
+  font-size: 1.5rem;
+}
+
+.sidebottom {
+  width: 100%;
+  padding: 2rem 1rem;
+  font-size: 1.5rem;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.intro {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.introleft {
+  width: 50%;
+  height: 100vh;
+  padding: 4rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.introleft h1 {
+  vertical-align: middle;
+  font-size: 3rem;
+}
+
+.introright {
+  width: 50%;
+  background-color: #2e74ff;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.introright img {
+  width: 70%;
+}
