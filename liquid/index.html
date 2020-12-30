@@ -3,33 +3,103 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LiquidKlear</title>
+    <title>LK LiquidKlear</title>
     <script src="https://kit.fontawesome.com/25fb0cd007.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="animate.min.css">
+    <link rel="stylesheet" href="swiper-bundle.min.css">
     <link rel="stylesheet" href="main.css">
 </head>
 <body>
-    <div class="sidenav animate__animated animate__fadeInLeftBig">
-        <div class="sidetop">
-            <img src="logo.png" alt="lk">
-            <a href="index.html"><i class="fas fa-home"></i></a>
-            <a href=""><i class="far fa-question-circle"></i></a>
-        </div>
-        <div class="sidebottom">
-            <a href=""><i class="fab fa-facebook"></i></a>
-            <a href=""><i class="fab fa-twitter"></i></a>
-        </div>
+
+    <div class="menu">
+        <img src="assets/logo.png" alt="">
+        <i class="fas fa-bars" id="menuopen"></i>
     </div>
-    <div class="intro">
-        <div class="introleft">
-            <h1 class="animate__animated animate__fadeIn animate__delay-1s">One card.</h1>
-            <h1 class="animate__animated animate__fadeIn animate__delay-2s">One app.</h1>
-            <h1 class="animate__animated animate__fadeIn animate__delay-3s">One bank.</h1>
-            <h1 class="animate__animated animate__fadeIn animate__delay-4s">One love.</h1>
-        </div>
-        <div class="introright animate__animated animate__fadeInRightBig animate__delay-4s">
-            <img src="card.png" alt="" class="animate__animated animate__flipInY animate__delay-5s">
-        </div>
+
+    <div class="menuexpanded">
+        <i class="fas fa-times menuclose"></i>
     </div>
+
+    <main>
+
+
+        <section class="liquid">
+                <div class="imghover1"></div>
+                <div class="download">
+                    <a class="fab fa-app-store-ios"></a>
+                    <a class="fab fa-google-play"></a>
+                </div>
+                <div class="imghover2"></div>
+        </section>
+
+        <section class="slide" id="slide">
+            <div class="swiper-container">
+                <div class="parallax-bg" style="background-image:url(assets/slidebg.png)" data-swiper-parallax="-20%">
+                </div>
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <img src="assets/3d1.png" alt="">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="assets/3d2.png" alt="">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="assets/3d1.png" alt="">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="assets/3d2.png" alt="">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="assets/3d1.png" alt="">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="assets/3d2.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <section class="signup">
+            <img src="assets/logo.png" alt="LiquidKlear">
+            <h3>Interested?
+                <br>
+                Enter your mobile number and we'll notify you when we launch!
+            </h3>
+            <form action="signup.php" method="post">
+                <input type="text" name="phone" id="phone" value="+1" disabled>
+                <div class="keypad">
+                    <div class="keyrow">
+                        <span onclick="keypad(1)">1</span>
+                        <span onclick="keypad(2)">2</span>
+                        <span onclick="keypad(3)">3</span>
+                    </div>
+                    <div class="keyrow">
+                        <span onclick="keypad(4)">4</span>
+                        <span onclick="keypad(5)">5</span>
+                        <span onclick="keypad(6)">6</span>
+                    </div>
+                    <div class="keyrow">
+                        <span onclick="keypad(7)">7</span>
+                        <span onclick="keypad(8)">8</span>
+                        <span onclick="keypad(9)">9</span>
+                    </div>
+                    <div class="keyrow">
+                        <input type="submit" value="&#128515">
+                        <span onclick="keypad(0)">0</span>
+                        <input type="button" value="&#10060" onclick="deleteValue()">
+                    </div>
+                </div>
+            </form>
+        </section>
+
+        
+    </main>
+    <script src="https://threejs.org/build/three.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js"></script>
+    <script src="hover-effect.umd.js"></script>
+    <script src="swiper-bundle.min.js"></script>
+    <script src="app.js"></script>
+    <script src="animate.js"></script>
 </body>
 </html>
