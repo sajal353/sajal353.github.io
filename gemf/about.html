@@ -7,36 +7,29 @@
     <link rel="stylesheet" href="animate.min.css">
     <link rel="stylesheet" href="main.css">
 </head>
-<style>
-    #si1, #si2{
-        opacity: 0;
-    }
-
-    .about p{
-        width: 50%;
-    }
-</style>
 <body>
-    <div class="videoc">
+    <!-- <div class="videoc">
         <video src="assets/leaf.mp4" autoplay muted loop></video>
-    </div>
+    </div> -->
     <header>
         <img src="assets/secondary_maroon.png" alt="global equity movement" class="logo">
-        <div class="about">
-            <h1 class="animate__animated animate__fadeInUp animate__delay-1s">About</h1>
-            <p class="animate__animated animate__fadeInUp animate__delay-2s">The Global Equity Movement Foundation is an organization taking a comprehensive approach to improving the social welfare of Black people around the world. The organization is made up of three complimentary <a href="updates.html">programs</a> that we use to identify and execute on high value opportunities for economic development on a community by community basis.</p>
-            <p class="animate__animated animate__fadeInUp animate__delay-3s">We are an independent organization – free from the influences of any other entity. This means we serve you only. However, this also means we rely more heavily on your <a href="donate.html">support</a>. We understand we need to earn your trust, and that that trust you show is not unconditional. To that end, we aim to always be one of the most transparent organizations you will come across.<sup>1</sup> </p>
-            <p class="animate__animated" id="si1">We also understand that your trust gives us power. And collectively, when we have the trust of an entire people, as we hope to have earned one day, the problems facing Black communities across the world will resolve. The Movement begins and ends with <a href="donate.html">you</a>. We know that. We need you to know that, and to remember that. </p>
-            <br><br><br><br>
-            <h5 id="si2" style="text-align: justify; padding: 1rem 0 0; border-top: 2px solid rgb(0, 0, 0, 0.5); display: inline-block;" class="animate__animated">  Moreover, it is important that we are clear that we collect data only to the extent it is necessary to facilitate our programs and furthers the mission stated above. We respect your <a href="privacy.html">privacy</a> and would never sell or share your information in a manner that is not beneficial to you.</h5>
-            <br><br><br><br>
+        <div class="aboutflex">
+            <div class="about">
+                <h1 class="animate__animated animate__fadeInUp animate__delay-1s">About</h1>
+                <p class="animate__animated animate__fadeInUp animate__delay-2s">The Global Equity Movement Foundation is an organization taking a comprehensive approach to improving the social welfare of Black people around the world. The organization is made up of three complimentary <a href="updates.html">programs</a> that we use to identify and execute on high value opportunities for economic development on a community by community basis.</p>
+                <p class="animate__animated animate__fadeInUp animate__delay-3s">We are an independent organization – free from the influences of any other entity. This means we serve you only. However, this also means we rely more heavily on your <a href="donate.html">support</a>. We understand we need to earn your trust, and that that trust you show is not unconditional. To that end, we aim to always be one of the most transparent organizations you will come across.<sup title="Moreover, it is important that we are clear that we collect data only to the extent it is necessary to facilitate our programs and furthers the mission stated above. We respect your privacy and would never sell or share your information in a manner that is not beneficial to you." style="cursor: pointer;">&#9432;</sup> </p>
+                <p class="animate__animated animate__fadeInUp animate__delay-4s" id="si1">We also understand that your trust gives us power. And collectively, when we have the trust of an entire people, as we hope to have earned one day, the problems facing Black communities across the world will resolve. The Movement begins and ends with <a href="donate.html">you</a>. We know that. We need you to know that, and to remember that. </p>
+            </div>
+            <div class="aboutimg animate__animated animate__fadeIn animate__delay-1s">
+                <img src="assets/imgd.png" alt="">
+            </div>
         </div>
     </header>
     <footer>
         <div class="footerflex">
             <div class="footerlinks">
                 <a href="about.html">About</a>
-                <a href="updates.html">Updates</a>
+                <a href="updates.html">Programs</a>
                 <a href="donate.html">Donate</a>
             </div>
             <div class="footerlinks">
@@ -51,24 +44,5 @@
         </div>
     </footer>
     <script src="app.js"></script>
-    <script>
-        const scrollAppear = () => {
-            let si1 = document.querySelector('#si1');
-            let si1pos = si1.getBoundingClientRect().top;
-            let si2 = document.querySelector('#si2');
-            let si2pos = si2.getBoundingClientRect().top;
-            let screenPosition = window.innerHeight / 1.2;
-
-            if (si1pos < screenPosition) {
-                si1.classList.add('animate__fadeInUp');
-            }
-            if (si2pos < screenPosition) {
-                si2.classList.add('animate__fadeInUp');
-                console.log('aaa');
-            }
-        }
-
-        window.addEventListener('scroll', scrollAppear);
-    </script>
 </body>
 </html>

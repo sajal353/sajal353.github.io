@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 	<meta charset="utf-8">
-	<title>Updates</title>
+	<title>Programs</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
     <link rel="stylesheet" href="swiper-bundle.min.css">
     <link rel="stylesheet" href="main.css">
@@ -10,6 +10,8 @@
 <style>
     body{
         background-color: #fff;
+        max-width: 100vw;
+        overflow: hidden;
     }
 
     ::-webkit-scrollbar {
@@ -37,7 +39,8 @@
     .swiper-slide{
         background-color: #fff;
         color: #000;
-        font-size: 1rem;
+        font-size: 1.2rem;
+        padding: 2rem 0 0;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
@@ -52,8 +55,23 @@
         top: -180px;
         right: -300px;
         transition: all 0.6s ease;
-        transform: rotate(370deg);
+        transform: rotate(11deg);
         z-index: 99;
+        pointer-events: none;
+    }
+
+    .slidename{
+        position: absolute;
+        right: 130px;
+        top: 130px;
+        color: #600c1b;
+        z-index: 99;
+        text-align: right;
+        transition: all 0.6s ease;
+    }
+
+    .slidename h3{
+        transition: all 0.6s ease;
     }
 
     .circle img{
@@ -80,7 +98,7 @@
     #more1{
         position: fixed;
         z-index: 100;
-        top: -100%;
+        top: -150%;
         left: 0;
         background-color: #fff;
         min-height: 100vh;
@@ -94,8 +112,8 @@
 
     #more2{
         position: fixed;
-        z-index: 100;
-        top: -100%;
+        z-index: 101;
+        top: -150%;
         left: 0;
         background-color: #fff;
         color: #000;
@@ -110,8 +128,8 @@
 
     #more3{
         position: fixed;
-        z-index: 100;
-        top: -100%;
+        z-index: 102;
+        top: -150%;
         left: 0;
         background-color: #fff;
         min-height: 100vh;
@@ -134,7 +152,6 @@
         width: 50%;
         min-height: 100vh;
         padding: 0;
-        overflow-y: scroll;
     }
 
     .moreflex2 img{
@@ -164,6 +181,133 @@
     a{
         color: #600c1b;
     }
+
+    .slidetext{
+        text-align: center; width: 30vw;
+    }
+
+    @media screen and (max-width: 768px) {
+        .swiper-container{
+        width: 100%;
+        height: 100vh;
+        overflow: hidden;
+    }
+
+    .swiper-slide{
+        background-color: #fff;
+        color: #000;
+        font-size: 1rem;
+        padding: 8rem 0 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+
+    .circle{
+        background-color: transparent;
+        width: 420px;
+        height: 420px;
+        position: absolute;
+        top: -210px;
+        right: -300px;
+        transition: all 0.6s ease;
+        transform: rotate(11deg);
+        z-index: 99;
+        pointer-events: none;
+    }
+
+    .slidename{
+        position: absolute;
+        right: 60px;
+        top: 55px;
+        color: #600c1b;
+        z-index: 99;
+        font-size: 0.8rem;
+        text-align: right;
+        transition: all 0.6s ease;
+    }
+
+    .slidename h3{
+        transition: all 0.6s ease;
+    }
+
+    .circle img{
+        width: 100%;
+    }
+
+    button{
+        background-color: #fff;
+        border: 1px solid #000;
+        padding: 0.6rem 1rem;
+        border-radius: 40px;
+        font-size: 1rem;
+        transition: 0.6s ease;
+        cursor: pointer;
+        outline: none;
+    }
+
+    button:hover{
+        background-color: #600c1b;
+        border: 1px solid #600c1b;
+        color: #fff;
+    }
+
+    .moreflex{
+        width: 100%;
+        height: 100vh;
+        padding: 2rem;
+        overflow-y: scroll;
+    }
+
+    .moreflex2{
+        width: 100%;
+        height: 50vh;
+        padding: 0;
+        overflow: hidden;
+        display: none;
+    }
+
+    .moreflex2 img{
+        width: 100%;
+        height: 50vh;
+        object-fit: cover;
+        object-position: left;
+    }
+
+    .close{
+        opacity: 0;
+        font-size: 4rem;
+        font-weight: bold;
+        position: fixed;
+        z-index: 101;
+        top: 0;
+        right: 2rem;
+        cursor: pointer;
+        transition: 0.6s ease;
+    }
+
+    .close:hover{
+        color: #600c1b;
+        transform: rotate(90deg);
+    }
+
+    a{
+        color: #600c1b;
+    }
+
+    .slidetext{
+        width: 100%;
+        padding: 0 2rem;
+        text-align: left;
+    }
+
+    .imgcover{
+        width: 100%;
+        object-fit: cover;
+        object-position: top;
+    }
+    }
 </style>
 <body>
     <!-- <div class="videoc">
@@ -173,12 +317,15 @@
         <div class="circle">
             <img src="assets/wheel.png" alt="">
         </div>
+        <div class="slidename">
+            <h3>Where We Are</h3>
+        </div>
         <img src="assets/secondary_maroon_2.png" alt="global equity movement" class="logo">
         <div class="swiper-container">
             <div class="swiper-wrapper">
                 <div class="swiper-slide">
                     <div></div>
-                    <div style="text-align: center; width: 50vw;"><h1>Where We Are</h1>
+                    <div class="slidetext"><h1>Where We Are</h1>
                         <br>
                         <p>We have several programs designed for rapid and high-impact development. Many of these programs require comprehensive, detailed, and accurate information on the current state and trajectory of Black communities around the world. This information needs to be of the highest integrity to allow us to identify what and where the issues are – on a community level – that are impeding the growth and development that we need to be a competitive and continuing group. We collect and maintain that information.</p>
                         <br>
@@ -190,19 +337,19 @@
                 </div>
                 <div class="swiper-slide">
                     <div></div>
-                    <div style="text-align: center; width: 50vw;"><h1>Dispatch and Fortify</h1>
+                    <div class="slidetext"><h1>Dispatch and Fortify</h1>
                         <br>
                         <p>With the Where We Are information informing us of the most detrimental, unnecessarily persistent, or easily fixable issues facing Black communities around the world, and a fraternity of skilled volunteers ready to be organized and empowered to address these issues, we have the opportunity to match resources to needs in the most enduring and productive way possible.</p>
                         <br>
                         <button id="b2">Learn More</button>
                     </div>
                     <div style="height: 50vh;">
-                        <img src="assets/imgs1.jpg" alt="" height="100%">
+                        <img src="assets/imgs1.jpg" alt="" height="100%" class="imgcover">
                     </div>
                 </div>
                 <div class="swiper-slide">
                     <div></div>
-                    <div style="text-align: center; width: 50vw;"><h1>Special Situations Teams</h1>
+                    <div class="slidetext"><h1>Special Situations Teams</h1>
                         <br>
                         <p>We want to bring in our best and brightest from around the world – truly, the standouts among the standouts – for a two- to five-year fellowship, and give them the resources (the capital, connections, and expertise) to build for the future. These fellows will work in teams and, depending on their aptitude and expertise, can work on a number of long-haul, high profile projects.</p>
                         <br>
@@ -317,58 +464,112 @@
         direction: 'horizontal',
         slidesPerView: 1,
         spaceBetween: 0,
+        loop: false,
         mousewheel: true,
         parallax: true,
-        speed: 600
+        speed: 600,
+        preventClicks: false,
+        preventClicksPropagation: false
     });
 
     const circle = document.querySelector(".circle");
+    const sn = document.querySelector(".slidename");
+    const snt = sn.querySelector("h3");
 
     document.addEventListener("wheel", ()=> {
         if(swiper.realIndex == 0){
-            circle.style.transform = "rotate("+10+"deg)";
+            circle.style.transform = "rotate("+11+"deg)";
+            snt.style.opacity = 0;
+            setTimeout(() => {
+                snt.innerText = "Where We Are";
+                snt.style.opacity = 1;
+            }, 300);
         }
         if(swiper.realIndex == 1){
-            circle.style.transform = "rotate("+120+"deg)";
+            circle.style.transform = "rotate("+118+"deg)";
+            snt.style.opacity = 0;
+            setTimeout(() => {
+                snt.innerText = "Dispatch and Fortify";
+                snt.style.opacity = 1;
+            }, 300);
         }
         if(swiper.realIndex == 2){
-            circle.style.transform = "rotate("+240+"deg)";
+            circle.style.transform = "rotate("+245+"deg)";
+            snt.style.opacity = 0;
+            setTimeout(() => {
+                snt.innerText = "Special Situations Teams";
+                snt.style.opacity = 1;
+            }, 300);
         }
     });
 
     document.addEventListener("mousemove", ()=> {
         if(swiper.realIndex == 0){
-            circle.style.transform = "rotate("+10+"deg)";
+            circle.style.transform = "rotate("+11+"deg)";
+                snt.innerText = "Where We Are";
         }
         if(swiper.realIndex == 1){
-            circle.style.transform = "rotate("+120+"deg)";
+            circle.style.transform = "rotate("+118+"deg)";
+                snt.innerText = "Dispatch and Fortify";
+
         }
         if(swiper.realIndex == 2){
-            circle.style.transform = "rotate("+240+"deg)";
+            circle.style.transform = "rotate("+245+"deg)";
+                snt.innerText = "Special Situations Teams";
         }
     });
 
     document.addEventListener("touchmove", ()=> {
         if(swiper.realIndex == 0){
-            circle.style.transform = "rotate("+10+"deg)";
+            circle.style.transform = "rotate("+11+"deg)";
+            snt.style.opacity = 0;
+            setTimeout(() => {
+                snt.innerText = "Where We Are";
+                snt.style.opacity = 1;
+            }, 300);
         }
         if(swiper.realIndex == 1){
-            circle.style.transform = "rotate("+120+"deg)";
+            circle.style.transform = "rotate("+118+"deg)";
+            snt.style.opacity = 0;
+            setTimeout(() => {
+                snt.innerText = "Dispatch and Fortify";
+                snt.style.opacity = 1;
+            }, 300);
         }
         if(swiper.realIndex == 2){
-            circle.style.transform = "rotate("+240+"deg)";
+            circle.style.transform = "rotate("+245+"deg)";
+            snt.style.opacity = 0;
+            setTimeout(() => {
+                snt.innerText = "Special Situations Teams";
+                snt.style.opacity = 1;
+            }, 300);
         }
     });
 
     document.addEventListener("touchend", ()=> {
         if(swiper.realIndex == 0){
-            circle.style.transform = "rotate("+10+"deg)";
+            circle.style.transform = "rotate("+11+"deg)";
+            snt.style.opacity = 0;
+            setTimeout(() => {
+                snt.innerText = "Where We Are";
+                snt.style.opacity = 1;
+            }, 300);
         }
         if(swiper.realIndex == 1){
-            circle.style.transform = "rotate("+120+"deg)";
+            circle.style.transform = "rotate("+118+"deg)";
+            snt.style.opacity = 0;
+            setTimeout(() => {
+                snt.innerText = "Dispatch and Fortify";
+                snt.style.opacity = 1;
+            }, 300);
         }
         if(swiper.realIndex == 2){
-            circle.style.transform = "rotate("+240+"deg)";
+            circle.style.transform = "rotate("+245+"deg)";
+            snt.style.opacity = 0;
+            setTimeout(() => {
+                snt.innerText = "Special Situations Teams";
+                snt.style.opacity = 1;
+            }, 300);
         }
     });
 
@@ -391,6 +592,9 @@
         close1.style.opacity = "1";
         close2.style.display = "none";
         close3.style.display = "none";
+        close1.style.pointerEvents = "all";
+        close2.style.pointerEvents = "none";
+        close3.style.pointerEvents = "none";
     });
 
     close1.addEventListener("click", () => {
@@ -406,12 +610,16 @@
         close2.style.opacity = "1";
         close1.style.display = "none";
         close3.style.display = "none";
+        close1.style.pointerEvents = "none";
+        close2.style.pointerEvents = "all";
+        close3.style.pointerEvents = "none";
     });
 
     close2.addEventListener("click", () => {
         more2.style.top = "-100%";
         more2.style.opacity = "0";
         close2.style.opacity = "0";
+        close2.style.pointerEvents = "none";
     });
 
     b3.addEventListener("click", () => {
@@ -421,6 +629,9 @@
         close3.style.opacity = "1";
         close1.style.display = "none";
         close2.style.display = "none";
+        close1.style.pointerEvents = "none";
+        close2.style.pointerEvents = "none";
+        close3.style.pointerEvents = "all";
     });
 
     close3.addEventListener("click", () => {
