@@ -41,3 +41,27 @@ var mySwiper = new Swiper('.swiper-container', {
         releaseOnEdges: true
     }
 });
+
+const displayimage = document.querySelector('.displayimage');
+const changetext = document.querySelector('.changetext');
+
+const changeMobile = (x) => {
+    displayimage.style.opacity = 0;
+    setTimeout(() => {
+        displayimage.src = 'assets/' + x + '.jpeg';
+        displayimage.style.opacity = 1;
+    }, 300);
+    if (x == 'ss1') {
+        changetext.style.opacity = 0;
+        setTimeout(() => {
+            changetext.innerHTML = '<span class="lkblue">Set</span> and <span class="lkblue">monitor</span> your <span class="lkblue">goals</span> for the future you plan.<br><br><span class="lkblue">Set budgets and track daily progress to help you reach your financial goals faster!</span>';
+            changetext.style.opacity = 1;
+        }, 300);
+    } else if (x == 'ss2') {
+        changetext.style.opacity = 0;
+        setTimeout(() => {
+            changetext.innerHTML = '<span class="lkblue">Is</span> and <span class="lkblue">this</span> your <span class="lkblue">working?</span> for the future you plan.<br><br><span class="lkblue">Maybe!</span>';
+            changetext.style.opacity = 1;
+        }, 300);
+    }
+}
