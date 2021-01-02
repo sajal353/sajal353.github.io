@@ -188,7 +188,16 @@ main {
   background-size: cover;
 }
 
+#menu3:hover {
+  background: url("assets/menufeaturebg.jpeg");
+  background-size: cover;
+}
+
 #menu2:hover a {
+  color: var(--lkblue2);
+}
+
+#menu3:hover a {
   color: var(--lkblue2);
 }
 
