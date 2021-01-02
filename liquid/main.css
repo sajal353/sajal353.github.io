@@ -2,6 +2,7 @@
 
 :root {
   --lkblue: #2e74ff;
+  --lkblue2: #000267;
   --lkgrey: #bbbebf;
 }
 
@@ -87,9 +88,9 @@ main {
 }
 
 .menu {
-  background-color: rgba(255, 255, 255, 0.3);
+  background-color: #fff;
   backdrop-filter: blur(3px);
-  border: 2px solid var(--lkblue);
+  border: 2px solid var(--lkblue2);
   position: fixed;
   top: 2rem;
   left: 2rem;
@@ -108,7 +109,7 @@ main {
 }
 
 .menu div {
-  background-color: var(--lkblue);
+  background-color: var(--lkblue2);
   width: 50%;
   height: 100%;
   display: flex;
@@ -128,8 +129,9 @@ main {
 }
 
 .menuexpanded {
-  background-color: rgba(46, 116, 255, 0.5);
-  backdrop-filter: blur(3px);
+  /* background-color: rgba(46, 116, 255, 0.5);
+  backdrop-filter: blur(3px); */
+  background-color: transparent;
   color: #fff;
   width: 0;
   height: calc(100vh - 4rem);
@@ -140,20 +142,53 @@ main {
   opacity: 0;
   pointer-events: none;
   transition: 0.6s ease;
+  overflow: hidden;
 }
 
 .menuclose {
-  position: fixed;
+  position: absolute;
   right: 2rem;
   top: 2rem;
   font-size: 2rem;
   cursor: pointer;
   opacity: 0;
+  z-index: 100;
   transition: 0.6s ease;
 }
 
 .menuclose:hover {
   transform: rotate(180deg) scale(1.2);
+}
+
+.menutiles {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  height: 50%;
+}
+
+.menutiles:not(:last-child) {
+  margin-bottom: 1rem;
+}
+
+.menutiles div {
+  background-color: rgba(0, 2, 103, 0.7);
+  backdrop-filter: blur(3px);
+  width: 33.3%;
+  height: 100%;
+  z-index: 99;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.menutiles a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.menutiles div:not(:last-child) {
+  margin-right: 1rem;
 }
 
 .signup {
