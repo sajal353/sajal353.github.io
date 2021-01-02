@@ -18,6 +18,7 @@ const bigmenu = document.querySelector('.menuexpanded');
 menubtn.addEventListener('click', () => {
     bigmenu.style.opacity = '1';
     bigmenu.style.pointerEvents = 'all';
+    bigmenu.style.width = 'calc(100vw - 4rem)';
     setTimeout(() => {
         menuclose.style.opacity = '1';
     }, 600);
@@ -27,6 +28,7 @@ menuclose.addEventListener('click', () => {
     bigmenu.style.opacity = '0';
     bigmenu.style.pointerEvents = 'none';
     menuclose.style.opacity = '0';
+    bigmenu.style.width = '0';
 });
 
 var mySwiper = new Swiper('.swiper-container', {
