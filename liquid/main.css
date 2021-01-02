@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lato&display=swap");
 
 :root {
   --lkblue: #2e74ff;
@@ -10,7 +10,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Poppins", sans-serif;
+  font-family: "Lato", sans-serif;
   transition: 0.6s ease;
 }
 
@@ -440,6 +440,58 @@ main {
   color: var(--lkblue);
 }
 
+.lkgrey {
+  color: var(--lkgrey);
+}
+
 .changetext {
   transition: 0.6s ease;
+}
+
+.faq {
+  margin-bottom: 1rem;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.ques {
+  width: 100%;
+  height: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+}
+
+.num {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 15%;
+  height: 100%;
+  background-color: var(--lkblue2);
+  color: #fff;
+  font-size: 4rem;
+}
+
+.text {
+  display: flex;
+  align-items: center;
+  width: 85%;
+  height: 100%;
+  background-color: #f3f6fd;
+  padding: 2rem;
+}
+
+.ans {
+  height: auto;
+  max-height: 0px;
+  line-height: 2;
+  overflow: hidden;
+  background-color: #f3f6fd;
+}
+
+.ans h3 {
+  margin: 2rem;
 }

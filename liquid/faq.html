@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LK LiquidKlear</title>
+    <script src="https://kit.fontawesome.com/25fb0cd007.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="animate.min.css">
+    <link rel="stylesheet" href="main.css">
+</head>
+<style>
+    .faqheader{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 2rem;
+    }
+
+    .faqcontainer{
+        width: 80%;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+</style>
+<body>
+
+    <div class="menu">
+        <img src="assets/logo.png" alt="">
+        <div>
+            <i class="fas fa-bars" id="menuopen"></i>
+        </div>
+    </div>
+
+    <div class="menuexpanded">
+        <i class="fas fa-times menuclose"></i>
+        <div class="menutiles">
+            <div>
+                <img src="assets/logo.png" alt="" width="50%" style="cursor: pointer;"
+                    onclick="window.location.href = 'index.html'">
+            </div>
+            <div id="menu2">
+                <h1><a href="faq.html">FAQ</a></h1>
+            </div>
+        </div>
+        <div class="menutiles">
+            <div id="menu3">
+                <h1><a onclick="menuitem('#slide')">FEATURES</a></h1>
+            </div>
+            <div id="menu4">
+                <h1><a onclick="menuitem('#signup')">SUBSCRIBE</a></h1>
+            </div>
+        </div>
+    </div>
+    <div class="faqheader">
+        <img src="assets/logo.png" alt="" width="10%">
+        <br>
+        <h1>Frequenty asked questions</h1>
+    </div>
+    <div class="faqcontainer">
+
+        <div class="faq">
+            <div class="ques" onclick="collapse('a1')">
+                <div class="num">01</div>
+                <div class="text lkblue"><h2>How do I join the <span class="lkblue">L</span><span class="lkgrey">K</span> <span class="lkblue">Liquid</span><span class="lkgrey">Klear</span> ecosystem?</h2></div>
+            </div>
+            <div class="ans" id="a1">
+                <h3>Ready to join a seemless financial ecosystem, go to www.liquidklear.com and click on "Sign-up." All you need is your mobile number and you will be placed on our priority wait-list; simple as that.</h3>
+                <div style="display: flex; justify-content: center;">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/Fvjlj6fHguQ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+
+        <div class="faq">
+            <div class="ques" onclick="collapse('a2')">
+                <div class="num">02</div>
+                <div class="text lkblue"><h2>What does it cost to sign-up for  <span class="lkblue">L</span><span class="lkgrey">K</span> <span class="lkblue">Liquid</span><span class="lkgrey">Klear</span>?</h2></div>
+            </div>
+            <div class="ans" id="a2">
+                <h3>No charge until 90 days from activation. Then it's only $4.95 per month (or $59.40 per year total). There's no cost for making purchases with your <span class="lkblue">L</span><span class="lkgrey">K</span> <span class="lkblue">Liquid</span><span class="lkgrey">Klear</span> Prepaid Visa® card and you will get one free withdrawal per month at ANY nationwide ATM; beat that<sup>7</sup>. You can learn more about pricing <a href="cardholderAgreement.html">here</a>.</h3>
+            </div>
+        </div>
+
+        <div class="faq">
+            <div class="ques" onclick="collapse('a3')">
+                <div class="num">03</div>
+                <div class="text lkblue"><h2>Where is <span class="lkblue">L</span><span class="lkgrey">K</span> <span class="lkblue">Liquid</span><span class="lkgrey">Klear</span> available?</h2></div>
+            </div>
+            <div class="ans" id="a3">
+                <h3><span class="lkblue">L</span><span class="lkgrey">K</span> <span class="lkblue">Liquid</span><span class="lkgrey">Klear</span> is currently available to US residents nationwide who qualify.</h3>
+            </div>
+        </div>
+
+        <div class="faq">
+            <div class="ques" onclick="collapse('a4')">
+                <div class="num">04</div>
+                <div class="text lkblue"><h2>Where can I use my prepaid debit card?</div>
+            </div>
+            <div class="ans" id="a4">
+                <h3>You can use your <span class="lkblue">L</span><span class="lkgrey">K</span> <span class="lkblue">Liquid</span><span class="lkgrey">Klear</span> Visa® prepaid card anywhere in the world where Visa is accepted.</h3>
+            </div>
+        </div>
+
+        <div class="faq">
+            <div class="ques" onclick="collapse('a5')">
+                <div class="num">05</div>
+                <div class="text lkblue"><h2>Is <span class="lkblue">L</span><span class="lkgrey">K</span> <span class="lkblue">Liquid</span><span class="lkgrey">Klear</span> available on my smartphone?</h2></div>
+            </div>
+            <div class="ans" id="a5">
+                <h3>We will be initially launching on the App Store and shortly following up with Google Play<sup>8</sup>. For early sign-up to our priority waitlist, please go to our website at www.liquidklear.com or an LK-enabled ATM near you.</h3>
+            </div>
+        </div>
+        
+        <div class="faq">
+            <div class="ques" onclick="collapse('a6')">
+                <div class="num">06</div>
+                <div class="text lkblue"><h2>Why do you need my personal information?</h2></div>
+            </div>
+            <div class="ans" id="a6">
+                <h3>As a financial company, we must follow rules set forth by federal and state regulatory agencies that also allow us to FDIC ensure your funds. We will verify your identity, which means we need access to basic information like your Social Security Number and mailing address. Rest assured, your personal information is safe with us and we commit that we will NEVER share it with anyone, for any reason.</h3>
+            </div>
+        </div>
+        
+        <div class="faq">
+            <div class="ques" onclick="collapse('a7')">
+                <div class="num">07</div>
+                <div class="text lkblue"><h2>Does LiquidKlear support Apple Pay?</h2></div>
+            </div>
+            <div class="ans" id="a7">
+                <h3>Coming soon. You will soon be able to use your <span class="lkblue">L</span><span class="lkgrey">K</span> <span class="lkblue">Liquid</span><span class="lkgrey">Klear</span> Visa Prepaid Card anywhere Apple Pay is accepted.</h3>
+            </div>
+        </div>
+        
+        <div class="faq">
+            <div class="ques" onclick="collapse('a8')">
+                <div class="num">08</div>
+                <div class="text lkblue"><h2>Can I use the <span class="lkblue">L</span><span class="lkgrey">K</span> <span class="lkblue">Liquid</span><span class="lkgrey">Klear</span> app<sup>1</sup> to make purchases?</h2></div>
+            </div>
+            <div class="ans" id="a8">
+                <h3>We will offer this option in the near future.</h3>
+            </div>
+        </div>
+        
+        <div class="faq">
+            <div class="ques" onclick="collapse('a9')">
+                <div class="num">09</div>
+                <div class="text lkblue"><h2>How do I activate my <span class="lkblue">L</span><span class="lkgrey">K</span> <span class="lkblue">Liquid</span><span class="lkgrey">Klear</span> Visa Prepaid card?</h2></div>
+            </div>
+            <div class="ans" id="a9">
+                <h3>It's easy. Once your card arrives, just open the <span class="lkblue">L</span><span class="lkgrey">K</span> <span class="lkblue">Liquid</span><span class="lkgrey">Klear</span> app<sup>1</sup> and you will see the button prompting you to activate your account and card.</h3>
+            </div>
+        </div>
+        
+        <div class="faq">
+            <div class="ques" onclick="collapse('a10')">
+                <div class="num">10</div>
+                <div class="text lkblue"><h2>How do I change my PIN?</h2></div>
+            </div>
+            <div class="ans" id="a10">
+                <h3>You can do this right from the <span class="lkblue">L</span><span class="lkgrey">K</span> <span class="lkblue">Liquid</span><span class="lkgrey">Klear</span> app<sup>1</sup>. Simply go to Profile and select "Manage Cards & Accounts" and follow the prompts.</h3>
+            </div>
+        </div>
+        
+        <div class="faq">
+            <div class="ques" onclick="collapse('a11')">
+                <div class="num">11</div>
+                <div class="text lkblue"><h2>How do I reset my password?</h2></div>
+            </div>
+            <div class="ans" id="a11">
+                <h3>You can do this right from the <span class="lkblue">L</span><span class="lkgrey">K</span> <span class="lkblue">Liquid</span><span class="lkgrey">Klear</span> app<sup>1</sup>. Simply go to Profile and select "Change Password" and follow the prompts.</h3>
+            </div>
+        </div>
+        
+        <div class="faq">
+            <div class="ques" onclick="collapse('a12')">
+                <div class="num">12</div>
+                <div class="text lkblue"><h2>How do I view my financial statements?</h2></div>
+            </div>
+            <div class="ans" id="a12">
+                <h3>You can view your financial activity by selecting "Spending" in your Account Dashboard within the <span class="lkblue">L</span><span class="lkgrey">K</span> <span class="lkblue">Liquid</span><span class="lkgrey">Klear</span> app<sup>1</sup>.<span class="lkblue">L</span><span class="lkgrey">K</span> <span class="lkblue">Liquid</span><span class="lkgrey">Klear</span> app<sup>1</sup>.</h3>
+            </div>
+        </div>
+        
+        <div class="faq">
+            <div class="ques" onclick="collapse('a13')">
+                <div class="num">13</div>
+                <div class="text lkblue"><h2>How much can I withdraw from an ATM per day?</h2></div>
+            </div>
+            <div class="ans" id="a13">
+                <h3>You can withdraw up to $500 per rolling twenty-four (24) hours, with no more than 3 withdrawals as well in the same twenty-four (24) hours.</h3>
+            </div>
+        </div>
+        
+        <div class="faq">
+            <div class="ques" onclick="collapse('a14')">
+                <div class="num">14</div>
+                <div class="text lkblue"><h2>What are you mobile check deposit limits?</h2></div>
+            </div>
+            <div class="ans" id="a14">
+                <h3>We require a minimum deposit of $10 and allow up to $10,000 a day, with up to 20 transactions a month.</h3>
+            </div>
+        </div>
+        
+        <div class="faq">
+            <div class="ques" onclick="collapse('a15')">
+                <div class="num">15</div>
+                <div class="text lkblue"><h2>What are your Bill Pay Limits?</h2></div>
+            </div>
+            <div class="ans" id="a15">
+                <h3>Standard daily Bill Pay limits are $2,000 per day.</h3>
+            </div>
+        </div>
+        
+        <div class="faq">
+            <div class="ques" onclick="collapse('a16')">
+                <div class="num">16</div>
+                <div class="text lkblue"><h2>What are your overdraft fees?</h2></div>
+            </div>
+            <div class="ans" id="a16">
+                <h3><span class="lkblue">L</span><span class="lkgrey">K</span> <span class="lkblue">Liquid</span><span class="lkgrey">Klear</span> is a Visa Prepaid card with a major benefit of no overdraft.</h3>
+            </div>
+        </div>
+        
+        <div class="faq">
+            <div class="ques" onclick="collapse('a17')">
+                <div class="num">17</div>
+                <div class="text lkblue"><h2>What is the maximum balance I'm allowed in my account?</h2></div>
+            </div>
+            <div class="ans" id="a17">
+                <h3>The most amount of money allowed in your account is $10,000, with up to an additional $10,000 in your savings subaccount.</h3>
+            </div>
+        </div>
+        
+        <div class="faq">
+            <div class="ques" onclick="collapse('a18')">
+                <div class="num">18</div>
+                <div class="text lkblue"><h2>How do I fund my account?</h2></div>
+            </div>
+            <div class="ans" id="a18">
+                <h3>Just click the "+" button on the app home screen and follow the prompts. You can add money from other bank accounts, set up direct deposit, or request money from other members.</h3>
+            </div>
+        </div>
+        
+        <div class="faq">
+            <div class="ques" onclick="collapse('a19')">
+                <div class="num">19</div>
+                <div class="text lkblue"><h2>Is my money FDIC insured?</h2></div>
+            </div>
+            <div class="ans" id="a19">
+                <h3>Yes, up to $250,000 like any other financial institution.</h3>
+            </div>
+        </div>
+        
+        <div class="faq">
+            <div class="ques" onclick="collapse('a20')">
+                <div class="num">20</div>
+                <div class="text lkblue"><h2>How long does it take for money to post to my account?</h2></div>
+            </div>
+            <div class="ans" id="a20">
+                <h3>Based on your deposit history with us, we will make up to $500 available real-time for immediate use. As an initial customer, funds will post to your <span class="lkblue">L</span><span class="lkgrey">K</span> <span class="lkblue">Liquid</span><span class="lkgrey">Klear</span> Visa Prepaid Card within 5 business days. To get funds faster, you can request expedited funds from another <span class="lkblue">L</span><span class="lkgrey">K</span> <span class="lkblue">Liquid</span><span class="lkgrey">Klear</span> user, or load your card at any qualified retail location for up to $4.95.</h3>
+            </div>
+        </div>
+        
+        <div class="faq">
+            <div class="ques" onclick="collapse('a21')">
+                <div class="num">21</div>
+                <div class="text lkblue"><h2>Can I enable pre-authorized debits?</h2></div>
+            </div>
+            <div class="ans" id="a21">
+                <h3>Setting up auto-payments is simple. Go to your biller or payers online payment site or app. Provide the payer or biller your 16-digit card number, schedule your payment, and you're all set.</h3>
+            </div>
+        </div>
+        
+        <div class="faq">
+            <div class="ques" onclick="collapse('a22')">
+                <div class="num">22</div>
+                <div class="text lkblue"><h2>Does <span class="lkblue">L</span><span class="lkgrey">K</span> <span class="lkblue">Liquid</span><span class="lkgrey">Klear</span> work with PayPal?</h2></div>
+            </div>
+            <div class="ans" id="a22">
+                <h3>Yes. You can add your <span class="lkblue">L</span><span class="lkgrey">K</span> <span class="lkblue">Liquid</span><span class="lkgrey">Klear</span> Visa Prepaid Card as a way to pay for things on PayPal. No additional fees.</h3>
+            </div>
+        </div>
+        
+        <!-- <div class="faq">
+            <div class="ques" onclick="collapse('a3')">
+                <div class="num">03</div>
+                <div class="text lkblue"><h2>Where is <span class="lkblue">L</span><span class="lkgrey">K</span> <span class="lkblue">Liquid</span><span class="lkgrey">Klear</span> available?</h2></div>
+            </div>
+            <div class="ans" id="a3">
+                <h3><span class="lkblue">L</span><span class="lkgrey">K</span> <span class="lkblue">Liquid</span><span class="lkgrey">Klear</span> is currently available to US residents nationwide who qualify.</h3>
+            </div>
+        </div>
+        
+        <div class="faq">
+            <div class="ques" onclick="collapse('a3')">
+                <div class="num">03</div>
+                <div class="text lkblue"><h2>Where is <span class="lkblue">L</span><span class="lkgrey">K</span> <span class="lkblue">Liquid</span><span class="lkgrey">Klear</span> available?</h2></div>
+            </div>
+            <div class="ans" id="a3">
+                <h3><span class="lkblue">L</span><span class="lkgrey">K</span> <span class="lkblue">Liquid</span><span class="lkgrey">Klear</span> is currently available to US residents nationwide who qualify.</h3>
+            </div>
+        </div>
+        
+        <div class="faq">
+            <div class="ques" onclick="collapse('a3')">
+                <div class="num">03</div>
+                <div class="text lkblue"><h2>Where is <span class="lkblue">L</span><span class="lkgrey">K</span> <span class="lkblue">Liquid</span><span class="lkgrey">Klear</span> available?</h2></div>
+            </div>
+            <div class="ans" id="a3">
+                <h3><span class="lkblue">L</span><span class="lkgrey">K</span> <span class="lkblue">Liquid</span><span class="lkgrey">Klear</span> is currently available to US residents nationwide who qualify.</h3>
+            </div>
+        </div>
+        
+        <div class="faq">
+            <div class="ques" onclick="collapse('a3')">
+                <div class="num">03</div>
+                <div class="text lkblue"><h2>Where is <span class="lkblue">L</span><span class="lkgrey">K</span> <span class="lkblue">Liquid</span><span class="lkgrey">Klear</span> available?</h2></div>
+            </div>
+            <div class="ans" id="a3">
+                <h3><span class="lkblue">L</span><span class="lkgrey">K</span> <span class="lkblue">Liquid</span><span class="lkgrey">Klear</span> is currently available to US residents nationwide who qualify.</h3>
+            </div>
+        </div>
+        
+        <div class="faq">
+            <div class="ques" onclick="collapse('a3')">
+                <div class="num">03</div>
+                <div class="text lkblue"><h2>Where is <span class="lkblue">L</span><span class="lkgrey">K</span> <span class="lkblue">Liquid</span><span class="lkgrey">Klear</span> available?</h2></div>
+            </div>
+            <div class="ans" id="a3">
+                <h3><span class="lkblue">L</span><span class="lkgrey">K</span> <span class="lkblue">Liquid</span><span class="lkgrey">Klear</span> is currently available to US residents nationwide who qualify.</h3>
+            </div>
+        </div>
+        
+        <div class="faq">
+            <div class="ques" onclick="collapse('a3')">
+                <div class="num">03</div>
+                <div class="text lkblue"><h2>Where is <span class="lkblue">L</span><span class="lkgrey">K</span> <span class="lkblue">Liquid</span><span class="lkgrey">Klear</span> available?</h2></div>
+            </div>
+            <div class="ans" id="a3">
+                <h3><span class="lkblue">L</span><span class="lkgrey">K</span> <span class="lkblue">Liquid</span><span class="lkgrey">Klear</span> is currently available to US residents nationwide who qualify.</h3>
+            </div>
+        </div>
+        
+        <div class="faq">
+            <div class="ques" onclick="collapse('a3')">
+                <div class="num">03</div>
+                <div class="text lkblue"><h2>Where is <span class="lkblue">L</span><span class="lkgrey">K</span> <span class="lkblue">Liquid</span><span class="lkgrey">Klear</span> available?</h2></div>
+            </div>
+            <div class="ans" id="a3">
+                <h3><span class="lkblue">L</span><span class="lkgrey">K</span> <span class="lkblue">Liquid</span><span class="lkgrey">Klear</span> is currently available to US residents nationwide who qualify.</h3>
+            </div>
+        </div>
+        
+        <div class="faq">
+            <div class="ques" onclick="collapse('a3')">
+                <div class="num">03</div>
+                <div class="text lkblue"><h2>Where is <span class="lkblue">L</span><span class="lkgrey">K</span> <span class="lkblue">Liquid</span><span class="lkgrey">Klear</span> available?</h2></div>
+            </div>
+            <div class="ans" id="a3">
+                <h3><span class="lkblue">L</span><span class="lkgrey">K</span> <span class="lkblue">Liquid</span><span class="lkgrey">Klear</span> is currently available to US residents nationwide who qualify.</h3>
+            </div>
+        </div>
+        
+        <div class="faq">
+            <div class="ques" onclick="collapse('a3')">
+                <div class="num">03</div>
+                <div class="text lkblue"><h2>Where is <span class="lkblue">L</span><span class="lkgrey">K</span> <span class="lkblue">Liquid</span><span class="lkgrey">Klear</span> available?</h2></div>
+            </div>
+            <div class="ans" id="a3">
+                <h3><span class="lkblue">L</span><span class="lkgrey">K</span> <span class="lkblue">Liquid</span><span class="lkgrey">Klear</span> is currently available to US residents nationwide who qualify.</h3>
+            </div>
+        </div>
+        
+        <div class="faq">
+            <div class="ques" onclick="collapse('a3')">
+                <div class="num">03</div>
+                <div class="text lkblue"><h2>Where is <span class="lkblue">L</span><span class="lkgrey">K</span> <span class="lkblue">Liquid</span><span class="lkgrey">Klear</span> available?</h2></div>
+            </div>
+            <div class="ans" id="a3">
+                <h3><span class="lkblue">L</span><span class="lkgrey">K</span> <span class="lkblue">Liquid</span><span class="lkgrey">Klear</span> is currently available to US residents nationwide who qualify.</h3>
+            </div>
+        </div>
+        
+        <div class="faq">
+            <div class="ques" onclick="collapse('a3')">
+                <div class="num">03</div>
+                <div class="text lkblue"><h2>Where is <span class="lkblue">L</span><span class="lkgrey">K</span> <span class="lkblue">Liquid</span><span class="lkgrey">Klear</span> available?</h2></div>
+            </div>
+            <div class="ans" id="a3">
+                <h3><span class="lkblue">L</span><span class="lkgrey">K</span> <span class="lkblue">Liquid</span><span class="lkgrey">Klear</span> is currently available to US residents nationwide who qualify.</h3>
+            </div>
+        </div>
+    </div> -->
+
+    <script src="app.js"></script>
+    <script>
+        document.querySelector('#a1').style.maxHeight = '0px';
+        document.querySelector('#a2').style.maxHeight = '0px';
+        document.querySelector('#a3').style.maxHeight = '0px';
+        document.querySelector('#a4').style.maxHeight = '0px';
+        document.querySelector('#a5').style.maxHeight = '0px';
+        document.querySelector('#a6').style.maxHeight = '0px';
+        document.querySelector('#a7').style.maxHeight = '0px';
+        document.querySelector('#a8').style.maxHeight = '0px';
+        document.querySelector('#a9').style.maxHeight = '0px';
+        document.querySelector('#a10').style.maxHeight = '0px';
+        document.querySelector('#a11').style.maxHeight = '0px';
+        document.querySelector('#a12').style.maxHeight = '0px';
+        document.querySelector('#a13').style.maxHeight = '0px';
+        document.querySelector('#a14').style.maxHeight = '0px';
+        document.querySelector('#a15').style.maxHeight = '0px';
+        document.querySelector('#a16').style.maxHeight = '0px';
+        document.querySelector('#a17').style.maxHeight = '0px';
+        document.querySelector('#a18').style.maxHeight = '0px';
+        document.querySelector('#a19').style.maxHeight = '0px';
+        document.querySelector('#a20').style.maxHeight = '0px';
+        document.querySelector('#a21').style.maxHeight = '0px';
+        document.querySelector('#a22').style.maxHeight = '0px';
+
+        const collapse = (x) => {
+            a = document.querySelector('#'+x+'');
+            if(a.style.maxHeight == '0px'){
+                a.style.maxHeight = '100vh';
+            } else {
+                a.style.maxHeight = '0px';
+            }
+        }
+    </script>
+</body>
+</html>
