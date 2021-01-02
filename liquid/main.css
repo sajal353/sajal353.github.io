@@ -196,11 +196,21 @@ main {
   background-position: center;
 }
 
+#menu4:hover {
+  background: url("assets/menusubscribebg.jpeg");
+  background-size: cover;
+  background-position: center;
+}
+
 #menu2:hover a {
   color: var(--lkblue2);
 }
 
 #menu3:hover a {
+  color: var(--lkblue2);
+}
+
+#menu4:hover a {
   color: var(--lkblue2);
 }
 
