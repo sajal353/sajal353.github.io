@@ -177,12 +177,22 @@ main {
   width: 33.3%;
   height: 100%;
   z-index: 99;
+  font-size: 2rem;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
+.menutiles div:hover {
+  background-color: rgba(0, 2, 103, 1);
+}
+
 .menutiles a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.menutiles a:visited {
   color: #fff;
   text-decoration: none;
 }
