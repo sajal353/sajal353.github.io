@@ -67,3 +67,13 @@ const changeMobile = (x) => {
         }, 300);
     }
 }
+
+const menuitem = (x) => {
+    document.querySelector(x).scrollIntoView({
+        behavior: 'smooth'
+    });
+    bigmenu.style.opacity = '0';
+    bigmenu.style.pointerEvents = 'none';
+    menuclose.style.opacity = '0';
+    bigmenu.style.width = '0';
+};

@@ -172,7 +172,7 @@ main {
 }
 
 .menutiles div {
-  background-color: rgba(0, 2, 103, 0.7);
+  background: var(--lkblue2);
   backdrop-filter: blur(3px);
   width: 50%;
   height: 100%;
@@ -183,13 +183,20 @@ main {
   align-items: center;
 }
 
-.menutiles div:hover {
-  background-color: rgba(0, 2, 103, 1);
+#menu2:hover {
+  background: url("assets/menufaqbg.jpeg");
+  background-position: center;
+  background-size: cover;
+}
+
+#menu2:hover a {
+  color: var(--lkblue2);
 }
 
 .menutiles a {
   color: #fff;
   text-decoration: none;
+  cursor: pointer;
 }
 
 .menutiles a:visited {
