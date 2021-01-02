@@ -185,7 +185,6 @@ main {
 
 #menu2:hover {
   background: url("assets/menufaqbg.jpeg");
-  background-position: center;
   background-size: cover;
 }
 
