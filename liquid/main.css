@@ -181,16 +181,19 @@ main {
   display: flex;
   justify-content: center;
   align-items: center;
+  background-position: center;
 }
 
 #menu2:hover {
   background: url("assets/menufaqbg.jpeg");
   background-size: cover;
+  background-position: center;
 }
 
 #menu3:hover {
   background: url("assets/menufeaturebg.jpeg");
   background-size: cover;
+  background-position: center;
 }
 
 #menu2:hover a {
