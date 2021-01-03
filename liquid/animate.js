@@ -24,3 +24,8 @@ var hoverDistort2 = new hoverEffect({
     speedIn: 1.6,
     speedOut: 1.6
 });
+
+VanillaTilt.init(document.querySelector(".card"), {
+    max: 30,
+    glare: false
+});

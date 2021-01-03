@@ -10,23 +10,41 @@
     <link rel="stylesheet" href="main.css">
 </head>
 <style>
+    body{
+        background-image: url("assets/faqbg.jpeg");
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+        padding: 2rem;
+    }
     .faqheader{
+        width: 80%;
+        max-width: 1200px;
+        height: 30vh;
+        background-color: rgba(255, 255, 255, 0.7);
         display: flex;
         flex-direction: column;
         align-items: center;
         padding: 2rem;
+        margin: 0 auto;
     }
 
     .faqcontainer{
+        background-color: rgba(255, 255, 255, 0.7);
+        padding: 2rem;
         width: 80%;
         max-width: 1200px;
-        margin: 0 auto;
+        margin: 2rem auto 0;
+        height: 60vh;
+        overflow-x: hidden;
+        overflow-y: scroll;
     }
 </style>
 <body>
 
     <div class="menu">
-        <img src="assets/logo.png" alt="">
+        <a href="index.html"><img src="assets/logo.png" alt=""></a>
         <div>
             <i class="fas fa-bars" id="menuopen"></i>
         </div>
