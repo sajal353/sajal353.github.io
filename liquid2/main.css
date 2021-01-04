@@ -28,6 +28,8 @@
   background-position: center;
   background-attachment: fixed;
   -webkit-background-clip: text;
+  -moz-background-clip: text;
+  background-clip: text;
   overflow: hidden;
 }
 
