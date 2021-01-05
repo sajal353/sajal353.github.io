@@ -63,9 +63,9 @@ body {
 }
 
 .side {
-  width: 300vw;
+  width: 300vw !important;
   height: 100vh;
-  display: flex;
+  display: inline-flex;
   transform: translateX(0px);
 }
 
