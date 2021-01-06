@@ -7,25 +7,9 @@
     <link rel="stylesheet" href="main.css">
 </head>
 <body>
-    <script src="smooth-scrollbar.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js"></script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/debug.addIndicators.min.js"></script>
 
     <!-- <div class="container"> -->
-        <div class="zoom2">
-
-        </div>
-        <div class="side">
-            <div class="tile1">
-
-            </div>
-            <div class="tile2">
-
-            </div>
-            <div class="tile3">
-
-            </div>
-        </div>
         <div class="zoom2">
 
         </div>
@@ -39,34 +23,29 @@
         </div>
     <!-- </div> -->
     
-
+    <script src="iscroll-probe.js"></script>
     <script>
-            // let Scrollbar = window.Scrollbar;
-
             let controller = new ScrollMagic.Controller();
-
-            // Scrollbar.init(document.querySelector('.container'));
 
             let zoom = document.querySelector('.zoom');
             let c = document.querySelector('.cover');
             let cover = document.querySelector('#covertext');
 
+            let zoomv = (window.innerHeight * 1);
+            
             let scene = new ScrollMagic.Scene({triggerElement: zoom, duration: 2600, triggerHook: 0})
-            .addIndicators({name: "zoom"})
             .setPin(zoom)
             .addTo(controller);
 
-            let zoomv = (window.innerHeight * 3) + (window.innerWidth * 3);
-
-            scene.on("update", e => {
+                scene.on("update", e => {
                 position = e.scrollPos;
-                basesize = 64;
+                basesize = 16;
                 positioncal = position + basesize;
                 positioncal = positioncal - zoomv;
                 if(positioncal < basesize){
                     zoom.style.fontSize = ""+basesize+"px";
                 } else {
-                    positioncal = positioncal / (basesize / 8);
+                    positioncal = positioncal / (basesize / 2);
                     if(positioncal > 300){
                         cover.style.webkitBackgroundClip = "none";
                     } else {
@@ -77,20 +56,6 @@
                     }
                 }
             });
-
-            let side = document.querySelector('.side');
-            let sidev = window.innerWidth * 3;
-
-            let scene2 = new ScrollMagic.Scene({triggerElement: side, duration: sidev, triggerHook: 0})
-            .addIndicators({name: "side scroll"})
-            .setPin(side)
-            .addTo(controller);
-
-            scene2.on("update", e => {
-                position = e.scrollPos;
-                position = position - window.innerHeight;
-                side.style.transform = "translateX(-"+position+"px)";
-            })
     </script>
 </body>
 </html>
