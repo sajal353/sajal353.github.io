@@ -35,6 +35,8 @@ body {
 }
 
 .cover {
+  background-color: #2e74ff;
+  color: #fff;
   position: absolute;
   top: 0;
   left: 0;
@@ -51,6 +53,15 @@ body {
   height: 100vh;
   object-fit: cover;
   object-position: center;
+}
+
+.cover h1 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 4rem;
+  text-align: center;
 }
 
 .keypad form {
@@ -296,6 +307,10 @@ footer {
   .keyparallax:nth-of-type(6) {
     bottom: 10%;
     right: 5%;
+  }
+
+  .cover h1 {
+    font-size: 2rem;
   }
 
   .footerlinks {
