@@ -5,6 +5,11 @@
   font-family: Lato;
 }
 
+body {
+  width: 100%;
+  overflow-x: hidden;
+}
+
 .lower-container {
   background-image: url(assets/images/Component\ 3\ –\ 1.png);
   background-size: cover;
@@ -256,8 +261,41 @@ footer {
 }
 
 @media screen and (max-width: 768px) {
-  .keyparallax {
+  .keyparallax:nth-of-type(7) {
     display: none;
+  }
+
+  .keyparallax:nth-of-type(1) {
+    top: 5%;
+    left: 5%;
+  }
+
+  .keyparallax:nth-of-type(2) {
+    top: 50%;
+    left: 5%;
+    transform: translateY(-50%);
+  }
+
+  .keyparallax:nth-of-type(3) {
+    bottom: 10%;
+    left: 5%;
+  }
+
+  .keyparallax:nth-of-type(4) {
+    top: 5%;
+    right: 5%;
+  }
+
+  .keyparallax:nth-of-type(5) {
+    top: 50%;
+    right: 5%;
+    transform: translateY(-50%);
+    z-index: 2;
+  }
+
+  .keyparallax:nth-of-type(6) {
+    bottom: 10%;
+    right: 5%;
   }
 
   .footerlinks {
