@@ -17,7 +17,6 @@ scene.on("update", e => {
     position -= window.innerHeight;
     width = position * 0.05;
     width = 95 - width;
-    console.log("Position: " + position + " & Width: " + width + "");
     if (position > 10) {
         cover.style.width = "" + width + "vw";
         if (width < 2) {
