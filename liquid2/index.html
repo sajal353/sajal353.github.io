@@ -3,59 +3,93 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LiquidKlear</title>
-    <link rel="stylesheet" href="main.css">
+    <title>LK</title>
+    <link rel="stylesheet" href="style.css">  
 </head>
 <body>
     <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js"></script>
-
-    <!-- <div class="container"> -->
-        <div class="zoom2">
-
-        </div>
-        <div class="zoom" id="zoom">
-            <div class="cover">
-                <h1 id="covertext">INTERESTED?</h1>
+    <main>
+        <section class="lower-container">
+            <div style="height: 100vh; width: 100vw; background-color: aqua;"></div>
+            <div class="keypad" id="keypad">
+                <div class="cover">
+                    <img src="assets/images/cover.png" alt="">
+                </div>
+                <h2>Enter Your Mobile Number And <br> We Will Notify You When We Launch</h2>
+                <form action="signup.php" action="post">
+                    <div class="keypad-card">
+                            <div class="input-field">
+                                <input type="text" id="phone" name="phone" value="+1" required>
+                                <img src="assets/images/Path 34.png" alt="backspace" onclick="deleteValue()">
+                            </div>
+                            <div class="keypad-buttons">
+                                <div class="keypad-row">
+                                    <div class="key" onclick="keypad(1)">1</div>
+                                    <div class="key" onclick="keypad(2)">2</div>
+                                    <div class="key" onclick="keypad(3)">3</div>
+                                </div>
+                                <div class="keypad-row">
+                                    <div class="key" onclick="keypad(4)">4</div>
+                                    <div class="key" onclick="keypad(5)">5</div>
+                                    <div class="key" onclick="keypad(6)">6</div>
+                                </div>
+                                <div class="keypad-row">
+                                    <div class="key" onclick="keypad(7)">7</div>
+                                    <div class="key" onclick="keypad(8)">8</div>
+                                    <div class="key" onclick="keypad(9)">9</div>
+                                </div>
+                                <div class="keypad-row">
+                                    <div class="key" onclick="keypad('*')">*</div>
+                                    <div class="key" onclick="keypad(0)">0</div>
+                                    <div class="key" onclick="keypad('#')">#</div>
+                                </div>
+                            </div>  
+                    </div>
+                    <button type="submit">Sign Up</button>
+                </form>
+                <img src="assets/images/Image 2.png" alt="" class="keyparallax">
+                <img src="assets/images/Rendered Image (Reduced Noise).png" alt="" class="keyparallax">
+                <img src="assets/images/Image 3.png" alt="" class="keyparallax">
+                <img src="assets/images/Image 4.png" alt="" class="keyparallax">
+                <img src="assets/images/Rendered Image (Reduced Noise) - 2.png" alt="" class="keyparallax">
+                <img src="assets/images/Image 1.png" alt="" class="keyparallax">
+                <img src="assets/images/Mask Group 9.png" alt="" class="keyparallax">
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="footerlinks">
+            <img src="assets/images/Layer 2.png" alt="">
+            <div class="linkcol">
+                <div class="linkrow">
+                    <h4>Company</h4>
+                    <h5><a href="index.html">Home</a></h5>
+                    <h5><a href="#features">Features</a></h5>
+                    <h5><a href="#about">About</a></h5>
+                    <h5><a href="#careers">Careers</a></h5>
+                </div>
+                <div class="linkrow">
+                    <h4>Download Our App</h4>
+                    <h5><a href="#">App Store</a></h5>
+                    <h5><a href="#">Google Play</a></h5>
+                </div>
+                <div class="linkrow">
+                    <h4>Resources</h4>
+                    <h5><a href="faq.html">FAQ's</a></h5>
+                    <h5><a href="#features">Google Play</a></h5>
+                </div>
+                <div class="linkrow">
+                    <h4>Contact Us</h4>
+                    <h5><a href="mailto:support@liquidklear.com">support@liquidklear.com</a></h5>
+                </div>
+            </div>
+            <div class="copy">
+                <hr>
+                <h6>Copyright 2020 All Rights Reserved</h6>
             </div>
         </div>
-        <div class="zoom2">
-            <h1>Keypad</h1>
-        </div>
-    <!-- </div> -->
-    
-    <script src="iscroll-probe.js"></script>
-    <script>
-            let controller = new ScrollMagic.Controller();
-
-            let zoom = document.querySelector('.zoom');
-            let c = document.querySelector('.cover');
-            let cover = document.querySelector('#covertext');
-
-            let zoomv = (window.innerHeight * 1);
-            
-            let scene = new ScrollMagic.Scene({triggerElement: zoom, duration: 2600, triggerHook: 0})
-            .setPin(zoom)
-            .addTo(controller);
-
-                scene.on("update", e => {
-                position = e.scrollPos;
-                basesize = 16;
-                positioncal = position + basesize;
-                positioncal = positioncal - zoomv;
-                if(positioncal < basesize){
-                    zoom.style.fontSize = ""+basesize+"px";
-                } else {
-                    positioncal = positioncal / (basesize / 2);
-                    if(positioncal > 300){
-                        cover.style.webkitBackgroundClip = "none";
-                    } else {
-                        zoom.style.fontSize = ""+positioncal+"rem";
-                        if(cover.style.opacity == 0){
-                            
-                        }
-                    }
-                }
-            });
-    </script>
+    </footer>
+    <script src="keypad.js"></script>
+    <script src="scrolleffect.js"></script>
 </body>
 </html>

@@ -1,0 +1,278 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Lato;
+}
+
+.lower-container {
+  background-image: url(assets/images/Component\ 3\ –\ 1.png);
+  background-size: cover;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.keypad {
+  width: 95vw;
+  max-width: 95vw;
+  height: 100vh;
+  max-height: 100vh;
+  margin: 0 auto;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  text-align: center;
+  overflow: hidden;
+}
+
+.cover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 95vw;
+  height: 100vh;
+  z-index: 4;
+  pointer-events: none;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.cover img {
+  width: 95vw;
+  height: 100vh;
+  object-fit: cover;
+  object-position: center;
+}
+
+.keypad form {
+  z-index: 3;
+}
+
+.keypad h2 {
+  z-index: 3;
+}
+
+.keypad-card {
+  background-color: #fff;
+  margin: 4rem 0 0;
+  width: 289px;
+  height: 386px;
+  border-radius: 12px;
+  box-shadow: 0px -3px 30px 0 rgba(229, 231, 235, 0.67),
+    0 -3px 30px 0 rgba(0, 0, 0, 0.19);
+  padding: 2rem 2rem;
+  z-index: 3;
+}
+
+.input-field {
+  width: 100%;
+  position: relative;
+  z-index: 3;
+}
+
+.input-field input {
+  width: 100%;
+  border: 1.3px solid rgba(50, 108, 255, 0.2);
+  background-color: #fff;
+  color: #316cff;
+  font-weight: bold;
+  padding: 0.8rem 1rem;
+  border-radius: 40px;
+  outline: none;
+  cursor: default;
+  pointer-events: none;
+}
+
+.input-field img {
+  position: absolute;
+  right: 1rem;
+  top: 0.9rem;
+  cursor: pointer;
+}
+
+.keypad-buttons {
+  width: 100%;
+  margin: 1rem 0;
+  z-index: 3;
+}
+
+.keypad-row {
+  margin-bottom: 1rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.key {
+  font-weight: bold;
+  border: 1px solid rgba(167, 167, 167, 0.35);
+  border-radius: 50%;
+  width: 52px;
+  height: 52px;
+  line-height: 52px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: all 0.6s ease;
+}
+
+.key:hover {
+  background-color: rgba(167, 167, 167, 0.35);
+}
+
+.keypad button {
+  background: rgb(49, 108, 255);
+  background: linear-gradient(
+    150deg,
+    rgba(49, 108, 255, 1) 0%,
+    rgba(25, 54, 128, 1) 100%
+  );
+  color: #fff;
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: 40px;
+  font-weight: bold;
+  transform: translateY(-1.5rem);
+  outline: none;
+  cursor: pointer;
+  z-index: 3;
+}
+
+.keyparallax {
+  position: absolute;
+  pointer-events: none;
+}
+
+.keyparallax:nth-of-type(1) {
+  top: 15%;
+  left: 20%;
+}
+
+.keyparallax:nth-of-type(2) {
+  top: 50%;
+  left: 10%;
+  transform: translateY(-50%);
+}
+
+.keyparallax:nth-of-type(3) {
+  bottom: 15%;
+  left: 20%;
+}
+
+.keyparallax:nth-of-type(4) {
+  top: 15%;
+  right: 20%;
+}
+
+.keyparallax:nth-of-type(5) {
+  top: 50%;
+  right: 30%;
+  transform: translateY(-50%);
+  z-index: 2;
+}
+
+.keyparallax:nth-of-type(6) {
+  bottom: 15%;
+  right: 20%;
+}
+
+.keyparallax:nth-of-type(7) {
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  z-index: 1;
+}
+
+footer {
+  background-image: url(assets/images/Component\ 3\ –\ 1.png);
+  background-size: cover;
+  width: 100%;
+}
+
+.footerlinks {
+  padding: 14rem 0 0;
+  background-color: #fff;
+  background-image: url(assets/images/Path\ 40.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 95vw;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.linkcol {
+  margin: 2rem 0;
+  padding: 0 2rem;
+  width: 100%;
+  max-width: 900px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.linkrow {
+  color: #fff;
+}
+
+.linkrow h4 {
+  margin-bottom: 1rem;
+}
+
+.linkrow a {
+  color: #fff;
+  opacity: 0.5;
+  text-decoration: none;
+  line-height: 1.5rem;
+  transition: opacity 0.6s ease;
+}
+
+.linkrow a:hover {
+  opacity: 1;
+}
+
+.copy {
+  width: 100%;
+  max-width: 900px;
+}
+
+.copy hr {
+  border: 1px solid #fff;
+  opacity: 0.2;
+}
+
+.copy h6 {
+  color: #fff;
+  margin: 2rem 0;
+  text-align: right;
+}
+
+@media screen and (max-width: 768px) {
+  .keyparallax {
+    display: none;
+  }
+
+  .footerlinks {
+    background-position: right;
+  }
+
+  .linkcol {
+    flex-direction: column;
+  }
+
+  .linkrow {
+    margin-bottom: 1rem;
+  }
+
+  .copy h6 {
+    text-align: center;
+  }
+}
