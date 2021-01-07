@@ -55,13 +55,19 @@ body {
   object-position: center;
 }
 
+.covertext {
+  width: 95vw;
+  height: 100%;
+  background-color: #2e74ff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .cover h1 {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
   font-size: 4rem;
   text-align: center;
+  transition: all 0.3s ease;
 }
 
 .keypad form {
@@ -269,6 +275,25 @@ footer {
   color: #fff;
   margin: 2rem 0;
   text-align: right;
+}
+
+.footnotes {
+  width: 100%;
+  max-width: 900px;
+  padding: 0 2rem 2rem;
+  color: #fff;
+}
+
+.footnotes h5 {
+  font-weight: 400;
+}
+
+.footnotes ol {
+  margin: 1.5rem 0;
+}
+
+.footnotes li {
+  margin: 0.5rem 0;
 }
 
 @media screen and (max-width: 768px) {

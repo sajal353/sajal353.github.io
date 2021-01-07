@@ -4,6 +4,8 @@ const keypaddiv = document.querySelector(".keypad");
 
 const cover = document.querySelector(".cover");
 
+const covertext = document.querySelector("#covertext");
+
 let keypadduration = 1500 + window.innerHeight;
 
 let scene = new ScrollMagic.Scene({ triggerElement: keypaddiv, duration: keypadduration, triggerHook: 0 })
