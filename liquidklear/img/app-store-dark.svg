@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="67" height="68" viewBox="0 0 67 68">
+  <g id="Group_60" data-name="Group 60" transform="translate(-797 -1343)">
+    <g id="Ellipse_30" data-name="Ellipse 30" transform="translate(797 1343)" fill="none" stroke="#316cff" stroke-width="1.5">
+      <ellipse cx="33.5" cy="34" rx="33.5" ry="34" stroke="none"/>
+      <ellipse cx="33.5" cy="34" rx="32.75" ry="33.25" fill="none"/>
+    </g>
+    <g id="app-store" transform="translate(816.011 1363.115)">
+      <g id="Group_45" data-name="Group 45" transform="translate(0)">
+        <path id="Path_39" data-name="Path 39" d="M22.4,0H5.778A5.785,5.785,0,0,0,0,5.778V22.4a5.785,5.785,0,0,0,5.778,5.778H22.4A5.785,5.785,0,0,0,28.175,22.4V5.778A5.785,5.785,0,0,0,22.4,0ZM8.675,21.71a1.376,1.376,0,0,1-2.383-1.376l.271-.469H9.74ZM6.081,18.765a1.376,1.376,0,0,1,0-2.752H8.787L12.5,9.584,11.493,7.842A1.377,1.377,0,0,1,12,5.963h0a1.377,1.377,0,0,1,1.879.5l.212.367.212-.367a1.376,1.376,0,1,1,2.383,1.376l-4.718,8.172H14.94l1.589,2.752Zm16.014,0H20.977l.906,1.569A1.376,1.376,0,1,1,19.5,21.71l-4.777-8.274,1.589-2.752,3.077,5.329h2.706a1.376,1.376,0,0,1,0,2.752Z" transform="translate(0)" fill="#316cff"/>
+      </g>
+    </g>
+  </g>
+</svg>

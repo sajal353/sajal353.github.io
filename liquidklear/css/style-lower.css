@@ -1,0 +1,364 @@
+.hero-img {
+  background-color: transparent;
+  transform: rotateZ(30deg);
+}
+
+.card {
+  background: linear-gradient(
+    60deg,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.5) 100%
+  );
+  backdrop-filter: blur(3px);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  width: 337.5px;
+  height: 212.5px;
+  border-radius: 10px;
+  padding: 2rem 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.cardlogo {
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0.5) 0%,
+    rgba(255, 255, 255, 0) 50%
+  );
+}
+
+.cardnumber {
+  text-align: left;
+  padding: 0 2rem;
+  font-size: 21px;
+}
+
+.cardbottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 0 2rem;
+}
+
+.lkblue {
+  color: var(--lkblue);
+}
+
+.lkblue2 {
+  color: var(--lkblue2);
+}
+
+.lkgrey {
+  color: var(--lkgrey);
+}
+
+.keypad {
+  width: 100%;
+  height: 100vh;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  overflow: hidden;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  z-index: 3;
+}
+
+.keypad form {
+  z-index: 3;
+}
+
+.keypad h2 {
+  z-index: 3;
+}
+
+.keypad-card {
+  background-color: #fff;
+  margin: 4rem 0 0;
+  width: 289px;
+  height: 395px;
+  border-radius: 12px;
+  box-shadow: 0px -2px 5rem 0 rgba(229, 231, 235, 0.1),
+    0 -3px 5rem 0 rgba(75, 75, 75, 0.1);
+  padding: 3rem 4rem;
+  z-index: 3;
+}
+
+.keypad-btn {
+  transform: translateY(-2.5rem);
+}
+
+.input-field {
+  width: 100%;
+  position: relative;
+  z-index: 3;
+  margin-bottom: 2rem;
+}
+
+.input-field input {
+  width: 100%;
+  border: 1.3px solid rgba(50, 108, 255, 0.2);
+  background-color: #fff;
+  color: #316cff;
+  font-weight: bold;
+  padding: 1.5rem 2rem;
+  border-radius: 40px;
+  outline: none;
+  cursor: default;
+  pointer-events: none;
+}
+
+.input-field img {
+  position: absolute;
+  right: 2rem;
+  top: 1.5rem;
+  cursor: pointer;
+}
+
+.keypad-buttons {
+  width: 100%;
+  margin: 1rem 0;
+  z-index: 3;
+}
+
+.keypad-row {
+  margin-bottom: 1rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.key {
+  font-weight: 400;
+  border: 1px solid rgba(167, 167, 167, 0.35);
+  border-radius: 50%;
+  width: 52px;
+  height: 52px;
+  line-height: 52px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: all 0.6s ease;
+  font-size: 1.5rem;
+}
+
+.key:hover {
+  background-color: rgba(167, 167, 167, 0.35);
+}
+
+.keyparallax {
+  position: absolute;
+  pointer-events: none;
+}
+
+.keyparallax:nth-of-type(1) {
+  top: 15%;
+  left: 20%;
+}
+
+.keyparallax:nth-of-type(2) {
+  top: 50%;
+  left: 10%;
+  transform: translateY(-50%);
+}
+
+.keyparallax:nth-of-type(3) {
+  bottom: 15%;
+  left: 20%;
+}
+
+.keyparallax:nth-of-type(4) {
+  top: 15%;
+  right: 20%;
+}
+
+.keyparallax:nth-of-type(5) {
+  top: 50%;
+  right: 30%;
+  transform: translateY(-50%);
+  z-index: 2;
+}
+
+.keyparallax:nth-of-type(6) {
+  bottom: 15%;
+  right: 20%;
+}
+
+.keyparallax:nth-of-type(7) {
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  z-index: 1;
+}
+
+footer {
+  background-image: url(../assets/images/Component\ 3\ –\ 1.png);
+  background-size: cover;
+  width: 100%;
+  font-weight: 400;
+}
+
+.footerlinks {
+  padding: 24rem 0 0;
+  background-color: #fff;
+  background-image: url(../assets/images/Path\ 40.svg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 95%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.linkcol {
+  margin: 2rem 0;
+  padding: 0 2rem;
+  width: 100%;
+  max-width: 900px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.linkrow {
+  color: #fff;
+}
+
+.linkrow h4 {
+  margin-bottom: 1rem;
+  font-weight: 400;
+  font-size: 16px;
+}
+
+.linkrow h5 {
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 2;
+}
+
+.linkrow a {
+  color: #fff;
+  opacity: 0.5;
+  text-decoration: none;
+  line-height: 1.5rem;
+  transition: opacity 0.6s ease;
+}
+
+.linkrow a:hover {
+  opacity: 1;
+}
+
+.copy {
+  width: 100%;
+  max-width: 900px;
+}
+
+.copy hr {
+  border: 1px solid #fff;
+  opacity: 0.2;
+}
+
+.copy h6 {
+  color: #fff;
+  margin: 2rem 0;
+  text-align: right;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.footnotes {
+  width: 100%;
+  max-width: 900px;
+  padding: 0 4rem 2rem;
+  color: #fff;
+  font-size: 14px;
+}
+
+.footnotes h5 {
+  font-weight: 400;
+  font-size: 14px;
+}
+
+.footnotes ol {
+  margin: 1.5rem 0;
+}
+
+.footnotes li {
+  margin: 0.5rem 0;
+}
+
+@media screen and (max-width: 768px) {
+  .hero-img {
+    background-color: transparent;
+    transform: rotateZ(0deg);
+  }
+
+  .keyparallax:nth-of-type(7) {
+    display: none;
+  }
+
+  .keyparallax:nth-of-type(1) {
+    top: 5%;
+    left: 5%;
+  }
+
+  .keyparallax:nth-of-type(2) {
+    top: 50%;
+    left: 5%;
+    transform: translateY(-50%);
+  }
+
+  .keyparallax:nth-of-type(3) {
+    bottom: 10%;
+    left: 5%;
+  }
+
+  .keyparallax:nth-of-type(4) {
+    top: 5%;
+    right: 5%;
+  }
+
+  .keyparallax:nth-of-type(5) {
+    top: 50%;
+    right: 5%;
+    transform: translateY(-50%);
+    z-index: 2;
+  }
+
+  .keyparallax:nth-of-type(6) {
+    bottom: 10%;
+    right: 5%;
+  }
+
+  .cover h1 {
+    font-size: 2rem;
+  }
+
+  .footerlinks {
+    background-position: right;
+  }
+
+  .linkcol {
+    flex-direction: column;
+  }
+
+  .linkrow {
+    margin-bottom: 1rem;
+  }
+
+  .copy h6 {
+    text-align: center;
+  }
+}
