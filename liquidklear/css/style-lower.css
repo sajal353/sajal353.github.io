@@ -33,6 +33,7 @@
   text-align: left;
   padding: 0 2rem;
   font-size: 21px;
+  color: #000;
 }
 
 .cardbottom {
@@ -40,6 +41,7 @@
   justify-content: space-between;
   align-items: flex-start;
   padding: 0 2rem;
+  color: #000;
 }
 
 .lkblue {
