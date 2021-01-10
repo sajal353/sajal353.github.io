@@ -34,22 +34,6 @@ tlFeatures.to('.feature-2', {height: '100%', ease: 'power2.inOut'})
 .to('.feature-3', {height: '100%', ease: 'power2.inOut'})
 .to('.feature-4', {height: '100%', ease: 'power2.inOut'});
 
-// BACKGROUND CHANGE
-
-let tlBg = gsap.timeline({
-    scrollTrigger: {
-        trigger: "#features",
-        pin: true,
-        start: "top top",
-        end: "+=" + document.querySelector("#features").offsetHeight * 4,
-        scrub: 1,
-    }
-});
-
-tlBg.to(document.body, {backgroundColor: '#2251C6', ease: 'power2.inOut'})
-.to(document.body, {backgroundColor: '#EAF0FF', ease: 'power2.inOut'})
-.to(document.body, {backgroundColor: '#262C3C', ease: 'power2.inOut'});
-
 // SCROLLS
 
 document.querySelector('.scroll-bottom').addEventListener('click', (e) => {
@@ -64,84 +48,32 @@ document.querySelector('.btn-signup').addEventListener('click', (e) => {
 
 // VIDEO SECTION
 
-let sections = gsap.utils.toArray(".video"), currentVideo = -1;
-let videos = [  document.getElementById('video-0'), 
-                document.getElementById('video-1'), 
-                document.getElementById('video-2'), 
-                document.getElementById('video-3'), 
-                document.getElementById('video-0-mobile'), 
-                document.getElementById('video-1-mobile'), 
-                document.getElementById('video-2-mobile'), 
-                document.getElementById('video-3-mobile'), 
-             ];
-
-let firstPageSrc = ['videos/1.mp4', 'videos/2.mp4', 'videos/3.mp4', 'videos/4.mp4', 'videos/1-mobile.mp4', 'videos/2-mobile.mp4', 'videos/3-mobile.mp4', 'videos/4-mobile.mp4'];
-let secondPageSrc = ['videos/5.mp4', 'videos/6.mp4', 'videos/7.mp4', 'videos/8.mp4', 'videos/5-mobile.mp4', 'videos/6-mobile.mp4', 'videos/7-mobile.mp4', 'videos/8-mobile.mp4'];
-
-for(let i = 0; i < videos.length; i++) {
-    videos[i].play();
-}
-
-let currentActiveBtn = false, isAnimatingVideos = false;
-let firstButton = document.querySelector('.video-btn--active'), secondButton = document.querySelector('.video-btn--inactive')
-
-document.querySelectorAll('.video-btn').forEach((el) => {
-    el.addEventListener('click', (e) => {
-        e.preventDefault();
-        
-        if(el.classList.contains('video-btn--active'))
-            return;
-
-        if(currentActiveBtn === true) {
-            firstButton.classList.remove('btn--inactive');
-            firstButton.classList.add('video-btn--active');
-            firstButton.classList.remove('video-btn--inactive');
-        
-            secondButton.classList.add('btn--inactive');
-            secondButton.classList.add('video-btn--inactive');
-            secondButton.classList.remove('video-btn--active');
-        } else {
-            secondButton.classList.remove('btn--inactive');
-            secondButton.classList.add('video-btn--active');
-            secondButton.classList.remove('video-btn--inactive');
-        
-            firstButton.classList.add('btn--inactive');
-            firstButton.classList.add('video-btn--inactive');
-            firstButton.classList.remove('video-btn--active');
-        }
-    
-        isAnimatingVideos = true;
-        currentActiveBtn = !currentActiveBtn;
-        let tl = gsap.timeline();
-        tl.to('.videos-container', 1, {opacity: 0, onComplete: () => {
-            for(let i = 0; i < videos.length; i++) {
-                videos[i].pause();
-                console.log('here with' + currentActiveBtn);
-                if(currentActiveBtn)
-                    videos[i].childNodes[1].src = secondPageSrc[i];
-                else
-                    videos[i].childNodes[1].src = firstPageSrc[i];
-    
-                var tlInner = gsap.timeline();
-                videos[i].load();
-                videos[i].play();
-            }
-        }}).to('.videos-container', 1, {opacity: 1});
-    })
-});
+let sections = gsap.utils.toArray(".general-feature");
 
 gsap.to(sections, {
   xPercent: -100 * (sections.length - 1),
   ease: 'none',
   scrollTrigger: {
-    trigger: '#videos',
+    trigger: '#general-features',
     pin: true,
     scrub: 1,
-    snap: 1 / (sections.length - 1),
-    ease: 'power4.inOut',
-    end: () => "+=" + document.querySelector('.videos-container').offsetWidth,
+    //snap: 1 / (sections.length - 1),
+    ease: 'Expo.easeInOut',
+    end: () => "+=" + document.querySelector('.general-features-container').offsetWidth,
   }
 });
+
+gsap.to('.general-feature-bg', {
+    xPercent: -20,
+    ease: 'none',
+    scrollTrigger: {
+      trigger: '#general-features',
+      pin: true,
+      scrub: 1,
+      ease: 'Expo.easeInOut',
+      end: () => "+=" + document.querySelector('.general-features-container').offsetWidth,
+    }
+  });
 
 // ZOOM IN EFFECT
 
@@ -150,7 +82,7 @@ let tlZoom = gsap.timeline({
         trigger: "#interested",
         pin: true,
         start: "top top",
-        end: "+=" + document.querySelector("#interested").offsetHeight * 6,
+        end: "+=" + document.querySelector("#interested").offsetWidth * 3,
         scrub: 1,
     }
 });
@@ -158,8 +90,8 @@ let tlZoom = gsap.timeline({
 let tlZoomBg = gsap.timeline({
     scrollTrigger: {
         trigger: "#interested",
-        start: "top top",
-        end: "+=" + document.querySelector("#interested").offsetHeight * 6,
+        start: "center center",
+        end: "+=" + document.querySelector("#interested").offsetWidth * 3,
         scrub: 1,
     }
 });
@@ -167,8 +99,8 @@ let tlZoomBg = gsap.timeline({
 let tlZoomCircleFade = gsap.timeline({
     scrollTrigger: {
         trigger: "#interested",
-        start: "top top",
-        end: "+=" + document.querySelector("#interested").offsetHeight * 6,
+        start: "center center",
+        end: "+=" + document.querySelector("#interested").offsetWidth * 3,
         scrub: 1,
     }
 });
@@ -176,8 +108,8 @@ let tlZoomCircleFade = gsap.timeline({
 let tlKeypad = gsap.timeline({
     scrollTrigger: {
         trigger: "#interested",
-        start: "top top",
-        end: "+=" + document.querySelector("#interested").offsetHeight * 6,
+        start: "center center",
+        end: "+=" + document.querySelector("#interested").offsetWidth * 3 / 2,
         scrub: 1,
     }
 });
@@ -187,32 +119,30 @@ tlZoomBg.to(document.body, {backgroundColor: '#EAF0FF'});
 tlZoomCircleFade.to('.big-circle', {opacity: 0});
 tlKeypad.to('.keypad', {opacity: 1});
 
-// LIQUID DISTORTION
-
-var hoverDistort = new hoverEffect({
-    parent: document.querySelector('.menu-inner--homepage'),
-    intensity: 0.5,
-    image1: 'img/homepage.png',
-    image2: 'img/homepage-2.png',
-    displacementImage: 'img/distortion.png'
-});
-
-var hoverDistort = new hoverEffect({
-    parent: document.querySelector('.menu-inner--faq'),
-    intensity: 0.5,
-    image1: 'img/faq.png',
-    image2: 'img/faq-2.png',
-    displacementImage: 'img/distortion.png'
-});
-
-// MAGNET BTN
+// MAGNET BTN AND CUSTOM CURSOR
 
 if(!isTouch) {
+    document.querySelector('.follow').style.display = 'block';
+
+    window.addEventListener('mousemove', (e) => {
+        TweenMax.to('.follow', .5, {x: e.clientX, y: e.clientY});
+    });
+
+    document.querySelector('#footer').addEventListener('mouseenter', () => {
+        TweenMax.to('.follow', .5, {backgroundColor: 'white'});
+    });
+
+    document.querySelector('#footer').addEventListener('mouseleave', () => {
+        TweenMax.to('.follow', .5, {backgroundColor: '#316CFF'});
+    });
+
     document.querySelector('.btn-container').addEventListener('mouseleave', () => {
         TweenMax.to('.btn--magnet', 0.1, {scale: 1, x: 0, y: 0});
+        TweenMax.to('.follow', .5, {opacity: 1});
     });
     
     document.querySelector('.btn-container').addEventListener('mousemove', (e) => {
+        TweenMax.to('.follow', .5, {opacity: 0});
         callParallax(e);
     });
     
@@ -230,6 +160,8 @@ if(!isTouch) {
           y: (relY - btnContainer.getBoundingClientRect().height / 2) / btnContainer.getBoundingClientRect().height / 2 * movement,
         });
     }
+} else {
+    document.querySelector('.follow').style.display = 'none';
 }
 
 // INTRO VIDEO

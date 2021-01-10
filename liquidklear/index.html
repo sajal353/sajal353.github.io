@@ -11,11 +11,31 @@
     <title>LiquidKlear | Homepage</title>
 </head>
 <body>
-    <section id="intro">
+    <div class="follow"></div>
+    <!--<section id="intro">
         <img src="img/logo-single.svg" alt="LiquidKlear" class="intro-logo">
         <div class="intro-text">
             <img src="img/logo-text.svg" alt="" class="intro-logo-text">
             <div class="intro-overlay"></div>
+        </div>
+    </section>-->
+    <section id="legal-notes">
+        <a href="" class="close-btn close-legal-notes"><img src="img/close-img-dark.svg" alt="" class="close-img"></a>
+        <div class="legal-notes-container">
+            <div class="primary-heading primary-heading--dark">Legal Notes</div>
+            <p class="paragraph paragraph--dark">
+                The <span class="lkblue">Liquid</span><span class="lkgrey">Klear</span> Visa® Prepaid Card is issued by Metabank®, Member FDIC, pursuant to a license from Visa U.S.A Inc. Use your card anywhere Visa debit cards are accepted.
+            </p>
+            <ol>
+                <li>Standard messaging and data rates may apply.</li>
+                <li>Register your Visa Prepaid Card for FDIC insurance eligibility and other protections.</li>
+                <li>Your funds are FDIC insured up to $250,000. Coverage limit is subject to the aggregation of all funds held on deposit. To minimize losses, Visa's Zero Liability policies requires you to promptly notify us of any losses or compromise of the card account. Visa's Zero Liability policy covers U.S.-issued cards only and does not apply to ATM transactions, PIN transactions not processed by Visa, or certain commercial card transactions. Cardholder must notify issuer promptly of unauthorized use. Consult issuer for additional details or visit www.visa.com/security.</li>
+                <li>Faster and easier access to funds is based on a comparison of traditional banking policies and deposit of paper checks versus deposits made electronically. Direct Deposit and earlier availability of funds are subject to payer's support of the feature and timing of payer's funding.</li>
+                <li>Important information for opening a Card account: To help the federal government fight the funding of terrorism and money laundering activities, the USA PATRIOT Act requires all financial institutions and their third parties to obtain, verify, and record information that identifies each person who opens a card account. What this means for you: When you open a card account, we will ask for your name, address, date of birth, and other information that will allow us to identify you. We may also ask to see your driver's license or other identifying documents.</li>
+                <li>To enable real-time ACH deposits, one needs to first qualify.</li>
+                <li>While this specific feature is available for free, certain other transaction fees and costs, terms, and conditions are associated with the use of this Card. See the Cardholder Agreement for more details.</li>
+                <li>App Store is a service mark of Apple Inc. Google Play is a trademark of Google Inc.</li>
+            </ol>
         </div>
     </section>
     <section id="video-intro">
@@ -31,11 +51,11 @@
             </a>
         </div>
         <div class="menu-item menu-item--dark menu-item--right">
-            <a href="faq.html" class="menu-inner menu-inner--faq">
+            <a href="faqs.html" class="menu-inner menu-inner--faq">
             </a>
         </div>
     </section>
-    <img src="img/big-circle.png" alt="" class="big-circle">
+    <img src="img/big-circle.svg" alt="" class="big-circle">
     <section id="hero">
         <div class="container container--hero">
             <div class="navbar">
@@ -47,40 +67,23 @@
                 </div>
             </div>
             <div class="hero-content">
+                <div class="play-btn">
+                    <img src="img/play-btn.svg" alt="Play The Video">
+                </div>
                 <div class="hero-left">
-                    <img src="img/liquidklear-text.svg" alt="LiquidKlear" class="hero-left-img">
+                    <img src="img/hero-left-1.svg" alt="LiquidKlear" class="hero-left-img">
                     <h1 class="primary-heading primary-heading--big mtb-0">Welcome to the future<br>
                         of financial mobility.</h1>
                     <div class="btn-container">
                         <a href="" class="btn btn--magnet btn-signup"><div class="btn-text-first">More Details</div></a>
                     </div>
                 </div>
-                <div data-rellax-xs-speed="1" data-rellax-tablet-speed="1.5" data-rellax-mobile-speed="1.5" data-rellax-speed="3" class="rellax hero-right">
-                    <div class="hero-img">
-                        <div class="card" data-tilt-full-page-listening data-tilt-reverse="true">
-                            <div class="cardlogo">
-                                <img src="img/Layer 2.png" style="float: right" alt="">
-                            </div>
-                            <img src="img/Path 42.png" alt="" width="34px" style="background: 
-                                rgba(170, 169, 173, 1); border-radius: 4px; margin: 0 2rem;">
-                            <p class="cardnumber">4000 1234 1234 1234</p>
-                            <div class="cardbottom">
-                                <div style="font-size: 14px; text-align: left;">
-                                    <p>Jhon Doe</p>
-                                    <p>1234</p>
-                                </div>
-                                <div style="display: flex; align-items: center; align-self: start;">
-                                    <div style="margin-right: 4px;">
-                                        <p style="font-size: 5px;">VALID<br>THRU</p>
-                                    </div>
-                                    <div>
-                                        <p style="font-size: 13px;">09/22</p>
-                                    </div>
-                                </div>
-                                <div>
-                                    <p style="font-size: 11px; margin-bottom: 4px; text-align: right; color: #2e74ff;">DEBIT</p>
-                                    <img src="img/symbols.png" alt="">
-                                </div>
+                <div class="rellax hero-right">
+                    <!--<img src="img/cards-hero.svg" alt="LiquidKlear Cards" class="hero-img">-->
+                    <div class="hero-right-inner">
+                        <div class="card-holder card-holder--single">
+                            <div class="card" data-tilt-full-page-listening data-tilt-reverse="true">
+                                <img src="img/card-inner.svg" alt="" class="card-inner">
                             </div>
                         </div>
                     </div>
@@ -90,14 +93,13 @@
                 <a href="#" class="scroll-bottom"><img src="img/scroll-btn.svg" alt="Scroll Bottom" class="scroll-bottom-img"></a>
             </div>
         </div>
-        <img src="img/play-btn.svg" alt="Play The Video" class="play-btn">
         <img src="img/hero-decoration.svg" alt="Hero Decoration" class="hero-decoration">
         <img src="img/hero-decoration-mobile.svg" alt="Hero Decoration" class="hero-decoration-mobile">
     </section>
     <section id="features">
         <div class="feature feature--glassmorphism feature-base">
             <div class="feature-inner">
-                <div class="primary-heading">Get Started By downloading<br> <span class="blue">L</span><span class="gray">K</span> <span class="blue">Liquid</span><span class="gray">Klear</span> Mobile App</div>
+                <div class="primary-heading">Get Started By downloading<br> The <span class="blue">L</span><span class="gray">K</span> <span class="blue">Liquid</span><span class="gray">Klear</span> Mobile App</div>
                 <div class="feature-btns">
                     <a href="#" class="feature-btn"><img src="img/android.svg" alt="Play Store"></a>
                     <a href="#" class="feature-btn"><img src="img/app-store.svg" alt="App Store"></a>
@@ -120,7 +122,7 @@
                 <img src="img/money.png" alt="" class="feature-decoration feature-decoration--2">
                 <img src="img/heart.png" alt="" class="feature-decoration feature-decoration--3">
                 <img src="img/circle.png" alt="" class="feature-decoration feature-decoration--4">
-                <img src="img/atm.png" alt="App Details" class="feature-img feature-img--small">
+                <img src="img/atm-1.png" alt="App Details" class="feature-img feature-img--small">
             </div>
         </div>
         <div class="feature feature--white feature-3">
@@ -148,77 +150,96 @@
                 <img src="img/money.png" alt="" class="feature-decoration feature-decoration--2">
                 <img src="img/heart.png" alt="" class="feature-decoration feature-decoration--3">
                 <img src="img/circle.png" alt="" class="feature-decoration feature-decoration--4">
-                <img src="img/card.png" alt="App Details" class="feature-img">
+                <div class="feature-img feature-img--last">
+                    <div class="hero-right-inner">
+                        <div class="card-holder card-holder--single">
+                            <div class="card" data-tilt-full-page-listening data-tilt-reverse="true">
+                                <img src="img/card-inner.svg" alt="" class="card-inner">
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
     <section id="card-features">
         <div class="card-features-container">
+            <h1 class="card-features-heading">The <span class="lkblue">L</span><span class="lkgrey">K</span> <span class="lkblue">Liquid</span><span class="lkgrey">Klear</span> program is a<br>seamlessly integrated services ecosystem:</h1>
             <div class="card-feature-group">
                 <div class="card-feature">
-                    <img src="img/person.svg" alt="" class="card-feature-img">
+                    <img src="img/1.png" alt="" class="card-feature-img">
                     <p class="paragraph">Send and request money with
-                        other LK LiquidKlear members.</p>
+                        other <span class="lkblue">L</span><span class="lkgrey">K</span> <span class="lkblue">Liquid</span><span class="lkgrey">Klear</span> members.</p>
                 </div>
                 <div class="card-feature">
-                    <img src="img/purse.svg" alt="" class="card-feature-img">
+                    <img src="img/2.png" alt="" class="card-feature-img">
                     <p class="paragraph">Spend what you have and
                     enjoy the benetifs of prepaid.</p>
                 </div>
             </div>
             <div class="card-feature-group">
                 <div class="card-feature">
-                    <img src="img/analytics.svg" alt="" class="card-feature-img">
+                    <img src="img/3.png" alt="" class="card-feature-img">
                     <p class="paragraph">Set and monitor your goals<br>
                     for the future you plan.</p>
                 </div>
                 <div class="card-feature">
-                    <img src="img/wallet.svg" alt="" class="card-feature-img">
+                    <img src="img/4.png" alt="" class="card-feature-img">
                     <p class="paragraph">Cash when and where you need it.</p>
                 </div>
             </div>
             <div class="card-feature-group">
                 <div class="card-feature">
-                    <img src="img/dashboard.svg" alt="" class="card-feature-img">
+                    <img src="img/5.png" alt="" class="card-feature-img">
                     <p class="paragraph">Set budgets and track daily progress
                     to help you reach your financial goals faster!</p>
                 </div>
                 <div class="card-feature">
-                    <img src="img/tick.svg" alt="" class="card-feature-img">
+                    <img src="img/6.png" alt="" class="card-feature-img">
                     <p class="paragraph">We take a personal approach to
                     finances andprovide complete transPayrency</p>
+                </div>
+            </div>
+            <div class="card-feature-group">
+                <div class="card-feature">
+                    <img src="img/7.png" alt="" class="card-feature-img">
+                    <p class="paragraph">Describe reason for fund transfer and chat with other members.</p>
                 </div>
             </div>
             <div class="swiper-container">
                 <div class="swiper-wrapper">
                   <div class="swiper-slide">
-                    <img src="img/person.svg" alt="" class="card-feature-img-mobile">
+                    <img src="img/1.png" alt="" class="card-feature-img-mobile">
                     <p class="paragraph paragraph--big">Send and request money with<br>
                         other LK LiquidKlear members.</p>
                   </div>
                   <div class="swiper-slide">
-                    <img src="img/purse.svg" alt="" class="card-feature-img-mobile">
+                    <img src="img/2.png" alt="" class="card-feature-img-mobile">
                     <p class="paragraph paragraph--big">Spend what you have and <br>
                     enjoy the benetifs of prepaid.</p>
                   </div>
                   <div class="swiper-slide">
-                    <img src="img/analytics.svg" alt="" class="card-feature-img-mobile">
+                    <img src="img/3.png" alt="" class="card-feature-img-mobile">
                     <p class="paragraph paragraph--big">Set and monitor your goals<br>
                     for the future you plan.</p>
                   </div>
                   <div class="swiper-slide">
-                    <img src="img/wallet.svg" alt="" class="card-feature-img-mobile">
+                    <img src="img/4.png" alt="" class="card-feature-img-mobile">
                     <p class="paragraph paragraph--big">Cash when and where you need it.</p>
                   </div>
                   <div class="swiper-slide">
-                    <img src="img/dashboard.svg" alt="" class="card-feature-img-mobile">
+                    <img src="img/5.png" alt="" class="card-feature-img-mobile">
                     <p class="paragraph paragraph--big">Set budgets and track daily progress<br>
                     to help you reach your financial goals faster!</p>
                   </div>
                   <div class="swiper-slide">
-                    <img src="img/tick.svg" alt="" class="card-feature-img-mobile">
+                    <img src="img/6.png" alt="" class="card-feature-img-mobile">
                     <p class="paragraph paragraph--big">We take a personal approach to<br>
                     finances andprovide complete transPayrency</p>
+                  </div>
+                  <div class="swiper-slide">
+                    <img src="img/7.png" alt="" class="card-feature-img-mobile">
+                    <p class="paragraph">Describe reason for fund transfer and chat with other members.</p>
                   </div>
                 </div>
                 <!-- Add Pagination -->
@@ -226,50 +247,170 @@
             </div>
         </div>
     </section>
-    <section id="videos">
-        <div class="videos-pages">
-            <a href="" class="btn video-btn video-btn--active">Page 1</a>
-            <a href="" class="btn btn--inactive video-btn video-btn--inactive">Page 2</a>
-        </div>
-        <div class="videos-container">
-            <div class="video">
-                <video width="100%" height="100%" id="video-0" class="video-showcase video-showcase--desktop" muted="muted" preload="false" loop>
-                    <source src="videos/1.mp4" type="video/mp4"/>
-                </video>
-                <video width="100%" height="100%" id="video-0-mobile" class="video-showcase video-showcase--mobile" muted="muted" preload="false" loop>
-                    <source src="videos/1-mobile.mp4" type="video/mp4"/>
-                </video>
+    <section id="general-features">
+        <div class="general-features-container">
+            <div class="general-feature-bg">Liquid Klear</div>
+            <div class="general-feature">
+                <div class="general-feature-left">
+                    <div class="general-feature-left-inner">
+                        <div class="general-feature-indicator"><span class="indicator">01</span>The <span class="lkblue">L</span><span class="lkgrey">K</span> <span class="lkblue">Liquid</span><span class="lkgrey">Klear</span> Visa® Prepaid Card</div>
+                        <h1 class="general-feature-heading">Beautifully Transparent Like Our Fees</h1>
+                        <div class="paragraph">
+                            Use anywhere in the world, wherever Visa is accepted.<br>
+                            Conveniently integrated with 3rd party digital wallets like Apple Pay (coming soon).<br>
+                            Spend what you have and enjoy the comfort of prepaid.<br>
+                            Your funds are FDIC insured up to $250,000<sup class="open-legal-notes" style="cursor: pointer;">3</sup>.<br></div>
+                        <hr class="general-feature-line">
+                    </div>
+                </div>
+                <div class="general-feature-right">
+                    <video width="100%" height="100%" class="general-feature-video" muted="true" preload="false" autoplay loop>
+                        <source src="videos/1.mp4" type="video/mp4"/>
+                    </video>
+                    <video width="100%" height="100%" class="general-feature-video general-feature-video--mobile" muted="true" preload="false" autoplay loop>
+                        <source src="videos/1-mobile.mp4" type="video/mp4"/>
+                    </video>
+                </div>
             </div>
-            <div class="video">
-                <video width="100%" height="100%" id="video-1" class="video-showcase video-showcase--desktop" muted="muted" preload="false" loop>
-                    <source src="videos/2.mp4" type="video/mp4"/>
-                </video>
-                <video width="100%" height="100%" id="video-1-mobile" class="video-showcase video-showcase--mobile" muted="muted" preload="false" loop>
-                    <source src="videos/2-mobile.mp4" type="video/mp4"/>
-                </video>
+            <div class="general-feature">
+                <div class="general-feature-left">
+                    <div class="general-feature-left-inner">
+                        <div class="general-feature-indicator"><span class="indicator">02</span>The <span class="lkblue">L</span><span class="lkgrey">K</span> <span class="lkblue">Liquid</span><span class="lkgrey">Klear</span> Visa® Prepaid Card</div>
+                        <h1 class="general-feature-heading">Use anywhere in the world, wherever Visa is accepted.</h1>
+                        <hr class="general-feature-line">
+                    </div>
+                </div>
+                <div class="general-feature-right">
+                    <video width="100%" height="100%" class="general-feature-video" muted="true" preload="false" autoplay loop>
+                        <source src="videos/2.mp4" type="video/mp4"/>
+                    </video>
+                    <video width="100%" height="100%" class="general-feature-video general-feature-video--mobile" muted="true" preload="false" autoplay loop>
+                        <source src="videos/2-mobile.mp4" type="video/mp4"/>
+                    </video>
+                </div>
             </div>
-            <div class="video">
-                <video width="100%" height="100%" id="video-2" class="video-showcase video-showcase--desktop" muted="muted" preload="false" loop>
-                    <source src="videos/3.mp4" type="video/mp4"/>
-                </video>
-                <video width="100%" height="100%" id="video-2-mobile" class="video-showcase video-showcase--mobile" muted="muted" preload="false" loop>
-                    <source src="videos/3-mobile.mp4" type="video/mp4"/>
-                </video>
+            <div class="general-feature">
+                <div class="general-feature-left">
+                    <div class="general-feature-left-inner">
+                        <div class="general-feature-indicator"><span class="indicator">03</span>The <span class="lkblue">L</span><span class="lkgrey">K</span> <span class="lkblue">Liquid</span><span class="lkgrey">Klear</span> Visa® Prepaid Card</div>
+                        <h1 class="general-feature-heading">Conveniently integrated with 3rd party digital wallets like Apple Pay (coming soon).</h1>
+                        <hr class="general-feature-line">
+                    </div>
+                </div>
+                <div class="general-feature-right">
+                    <video width="100%" height="100%" class="general-feature-video" muted="true" preload="false" autoplay loop>
+                        <source src="videos/3.mp4" type="video/mp4"/>
+                    </video>
+                    <video width="100%" height="100%" class="general-feature-video general-feature-video--mobile" muted="true" preload="false" autoplay loop>
+                        <source src="videos/3-mobile.mp4" type="video/mp4"/>
+                    </video>
+                </div>
             </div>
-            <div class="video">
-                <video width="100%" height="100%" id="video-3" class="video-showcase video-showcase--desktop" muted="muted" preload="false" loop>
-                    <source src="videos/4.mp4" type="video/mp4"/>
-                </video>
-                <video width="100%" height="100%" id="video-3-mobile" class="video-showcase video-showcase--mobile" muted="muted" preload="false" loop>
-                    <source src="videos/4-mobile.mp4" type="video/mp4"/>
-                </video>
+            <div class="general-feature">
+                <div class="general-feature-left">
+                    <div class="general-feature-left-inner">
+                        <div class="general-feature-indicator"><span class="indicator">04</span>The <span class="lkblue">L</span><span class="lkgrey">K</span> <span class="lkblue">Liquid</span><span class="lkgrey">Klear</span> Visa® Prepaid Card</div>
+                        <h1 class="general-feature-heading">Your funds are FDIC insured up to $250,000 <sup class="open-legal-notes" style="cursor: pointer;">3</sup></h1>
+                        <hr class="general-feature-line">
+                    </div>
+                </div>
+                <div class="general-feature-right">
+                    <video width="100%" height="100%" class="general-feature-video" muted="true" preload="false" autoplay loop>
+                        <source src="videos/4.mp4" type="video/mp4"/>
+                    </video>
+                    <video width="100%" height="100%" class="general-feature-video general-feature-video--mobile" muted="true" preload="false" autoplay loop>
+                        <source src="videos/4-mobile.mp4" type="video/mp4"/>
+                    </video>
+                </div>
+            </div>
+            <div class="general-feature">
+                <div class="general-feature-left">
+                    <div class="general-feature-left-inner">
+                        <div class="general-feature-indicator"><span class="indicator">05</span>The <span class="lkblue">L</span><span class="lkgrey">K</span> <span class="lkblue">Liquid</span><span class="lkgrey">Klear</span> Touchless ATM Experience</div>
+                        <h1 class="general-feature-heading">Cash when and where you need it.</h1>
+                        <div class="paragraph">
+                            One free ATM withdrawal anywhere in United States.<br>
+                            Use our cardless withdrawal feature three times monthly for free.<br>
+                            Use the convenient ATM where you are, instead of across town.<br>
+                            Look for the growing fleet of proprietary glass ATMs.</div>
+                        <hr class="general-feature-line">
+                    </div>
+                </div>
+                <div class="general-feature-right">
+                    <video width="100%" height="100%" class="general-feature-video" muted="true" preload="false" autoplay loop>
+                        <source src="videos/5.mp4" type="video/mp4"/>
+                    </video>
+                    <video width="100%" height="100%" class="general-feature-video general-feature-video--mobile" muted="true" preload="false" autoplay loop>
+                        <source src="videos/5-mobile.mp4" type="video/mp4"/>
+                    </video>
+                </div>
+            </div>
+            <div class="general-feature">
+                <div class="general-feature-left">
+                    <div class="general-feature-left-inner">
+                        <div class="general-feature-indicator"><span class="indicator">06</span>The <span class="lkblue">L</span><span class="lkgrey">K</span> <span class="lkblue">Liquid</span><span class="lkgrey">Klear</span> Touchless ATM Experience</div>
+                        <h1 class="general-feature-heading">One free ATM withdrawal anywhere in United States.</h1>
+                        <hr class="general-feature-line">
+                    </div>
+                </div>
+                <div class="general-feature-right">
+                    <video width="100%" height="100%" class="general-feature-video" muted="true" preload="false" autoplay loop>
+                        <source src="videos/7.mp4" type="video/mp4"/>
+                    </video>
+                    <video width="100%" height="100%" class="general-feature-video general-feature-video--mobile" muted="true" preload="false" autoplay loop>
+                        <source src="videos/7-mobile.mp4" type="video/mp4"/>
+                    </video>
+                </div>
+            </div>
+            <div class="general-feature">
+                <div class="general-feature-left">
+                    <div class="general-feature-left-inner">
+                        <div class="general-feature-indicator"><span class="indicator">07</span>The <span class="lkblue">L</span><span class="lkgrey">K</span> <span class="lkblue">Liquid</span><span class="lkgrey">Klear</span> Touchless ATM Experience</div>
+                        <h1 class="general-feature-heading">Look for the growing fleet of proprietary glass ATMs.</h1>
+                        <hr class="general-feature-line">
+                    </div>
+                </div>
+                <div class="general-feature-right">
+                    <video width="100%" height="100%" class="general-feature-video" muted="true" preload="false" autoplay loop>
+                        <source src="videos/6.mp4" type="video/mp4"/>
+                    </video>
+                    <video width="100%" height="100%" class="general-feature-video general-feature-video--mobile" muted="true" preload="false" autoplay loop>
+                        <source src="videos/6-mobile.mp4" type="video/mp4"/>
+                    </video>
+                </div>
+            </div>
+            <div class="general-feature">
+                <div class="general-feature-left">
+                    <div class="general-feature-left-inner">
+                        <div class="general-feature-indicator"><span class="indicator">08</span>The <span class="lkblue">L</span><span class="lkgrey">K</span> <span class="lkblue">Liquid</span><span class="lkgrey">Klear</span> Marketplace Features</div>
+                        <h1 class="general-feature-heading">Stay financially fit.</h1>
+                        <div class="paragraph">
+                            Get your paycheck up to 2 days early with Direct Deposit<sup class="open-legal-notes" style="cursor: pointer;">4</sup>.<br>
+                            Expedite funds with the benefits of real-time ACH deposits<sup class="open-legal-notes" style="cursor: pointer;">6</sup>.<br>
+                            Stash and track your cash safely away to meet your goals.<br>
+                            Monitor activity on your card with real-time alerts.<br>
+                            +Tag people, places and things to make searching activity simple.<br>
+                            Visual breakdowns and analyses of your spending and saving behavior.<br>
+                            Use our internal chat channels for both support and social.</div>
+                        <hr class="general-feature-line">
+                    </div>
+                </div>
+                <div class="general-feature-right">
+                    <video width="100%" height="100%" class="general-feature-video" muted="true" preload="false" autoplay loop>
+                        <source src="videos/8.mp4" type="video/mp4"/>
+                    </video>
+                    <video width="100%" height="100%" class="general-feature-video general-feature-video--mobile general-feature-video--mobile-small" muted="true" preload="false" autoplay loop>
+                        <source src="videos/8.mp4" type="video/mp4"/>
+                    </video>
+                </div>
             </div>
         </div>
     </section>
     <section id="interested">
+        <img src="img/tablet.png" alt="" style="position: absolute; width: calc(100% - 4rem);">
         <h1 class="xl-heading">interested?</h1>
         <div class="keypad">
-            <h2 class="secondary-heading">Enter Your Mobile Number And <br> We Will Notify You When We Launch</h2>
+            <h2 class="secondary-heading"><span class="lkblue">Enter</span> Your <span class="lkblue">Mobile Number</span> And <br> We Will Notify You When We Launch</h2>
             <form action="signup.php" action="post">
                 <div class="keypad-card">
                         <div class="input-field">
@@ -301,6 +442,7 @@
                 </div>
                 <button class="btn btn--shadow keypad-btn " type="submit">Sign Up</button>
             </form>
+            <span class="lkblue">*Standard data rates apply</span>
             <img src="assets/images/Image 2.png" alt="" class="keyparallax">
             <img src="assets/images/Rendered Image (Reduced Noise).png" alt="" class="keyparallax">
             <img src="assets/images/Image 3.png" alt="" class="keyparallax">
@@ -310,57 +452,58 @@
             <img src="assets/images/Mask Group 9.png" alt="" class="keyparallax">
         </div>
     </section>
-    <footer>
-        <div class="footerlinks">
-            <img src="assets/images/logo.png" alt="" width="90px">
-            <div class="linkcol">
-                <div class="linkrow">
-                    <h4>Company</h4>
-                    <h5><a href="index.html">Home</a></h5>
-                    <h5><a href="#features">Features</a></h5>
-                    <h5><a href="#about">About</a></h5>
-                    <h5><a href="#careers">Careers</a></h5>
-                </div>
-                <div class="linkrow">
-                    <h4>Download Our App</h4>
-                    <h5><a href="#">App Store</a></h5>
-                    <h5><a href="#">Google Play</a></h5>
-                </div>
-                <div class="linkrow">
-                    <h4>Resources</h4>
-                    <h5><a href="faq.html">FAQ's</a></h5>
-                    <h5><a href="#features">Google Play</a></h5>
-                </div>
-                <div class="linkrow">
-                    <h4>Contact Us</h4>
-                    <h5><a href="mailto:support@liquidklear.com">support@liquidklear.com</a></h5>
-                </div>
+    <section id="footer">
+        <img src="img/footer.svg" alt="" class="footer-img">
+        <a href="#"><img src="img/logo.svg" alt="LiquidKlear" class="footer-logo"></a>
+        <div class="footer-container">
+            <div class="footer-item">
+                <div class="footer-heading">Company</div>
+                <a href="#" class="footer-link">Home</a>
+                <a href="" class="footer-link">Features</a>
+                <a href="" class="footer-link">About</a>
+                <a href="" class="footer-link">Careers</a>
             </div>
-
-
-            <div class="footnotes">
-                <h5>The Liquidklear Visa® Prepaid Card is issued by Metabank®, Member FDIC, pursuant to a license from Visa U.S.A Inc. Use your card anywhere Visa debit cards are accepted.</h5>
-
-
-                <ol>
-                    <li><h5>Standard messaging and data rates may apply.</h5></li>
-                    <li><h5>Register your Visa Prepaid Card for FDIC insurance eligibility and other protections.</h5></li>
-                    <li><h5>Your funds are FDIC insured up to $250,000. Coverage limit is subject to the aggregation of all funds held on deposit. To minimize losses, Visa's Zero Liability policies requires you to promptly notify us of any losses or compromise of the card account. Visa's Zero Liability policy covers U.S.-issued cards only and does not apply to ATM transactions, PIN transactions not processed by Visa, or certain commercial card transactions. Cardholder must notify issuer promptly of unauthorized use. Consult issuer for additional details or visit www.visa.com/security.</h5></li>
-                    <li><h5>Faster and easier access to funds is based on a comparison of traditional banking policies and deposit of paper checks versus deposits made electronically. Direct Deposit and earlier availability of funds are subject to payer's support of the feature and timing of payer's funding.</h5></li>
-                    <li><h5>Important information for opening a Card account: To help the federal government fight the funding of terrorism and money laundering activities, the USA PATRIOT Act requires all financial institutions and their third parties to obtain, verify, and record information that identifies each person who opens a card account. What this means for you: When you open a card account, we will ask for your name, address, date of birth, and other information that will allow us to identify you. We may also ask to see your driver's license or other identifying documents.</h5></li>
-                    <li><h5>To enable real-time ACH deposits, one needs to first qualify.</h5></li>
-                    <li><h5>While this specific feature is available for free, certain other transaction fees and costs, terms, and conditions are associated with the use of this Card. See the Cardholder Agreement for more details.</h5></li>
-                    <li><h5>App Store is a service mark of Apple Inc. Google Play is a trademark of Google Inc.</h5></li>
-                </ol>
-
+            <div class="footer-item">
+                <div class="footer-heading">Download Our App</div>
+                <a href="" class="footer-link">App Store</a>
+                <a href="" class="footer-link">Play Store</a>
             </div>
-
-            <div class="copy">
-                <hr>
-                <h6>Copyright 2020 All Rights Reserved</h6>
+            <div class="footer-item">
+                <div class="footer-heading">Company</div>
+                <a href="faqs.html" class="footer-link">FAQ's</a>
+                <a href="" class="footer-link">Policies</a>
+            </div>
+            <div class="footer-item">
+                <div class="footer-heading">Contact Us</div>
+                <a href="mailto://support@liquidklear.com" class="footer-link">support@liquidklear.com</a>
             </div>
         </div>
-    </footer>
+        <div class="footer-container">
+            <hr class="footer-divider">
+            <div class="footer-bottom">
+                <div class="paragraph">The Liquidklear Visa® Prepaid Card is issued by Metabank®, Member FDIC, pursuant to a license from Visa U.S.A Inc. Use your card anywhere Visa debit cards are accepted.
+                    <br><br>
+                    <ol style="margin-left: 2rem; padding: 0;">
+                        <li>Standard messaging and data rates may apply.</li>
+                        <li>Register your Visa Prepaid Card for FDIC insurance eligibility and other protections.</li>
+                        <li>Your funds are FDIC insured up to $250,000. Coverage limit is subject to the aggregation of all funds held on deposit. To minimize losses, Visa's Zero Liability policies requires you to promptly notify us of any losses or compromise of the card account. Visa's Zero Liability policy covers U.S.-issued cards only and does not apply to ATM transactions, PIN transactions not processed by Visa, or certain commercial card transactions. Cardholder must notify issuer promptly of unauthorized use. Consult issuer for additional details or visit www.visa.com/security.</li>
+                        <li>Faster and easier access to funds is based on a comparison of traditional banking policies and deposit of paper checks versus deposits made electronically. Direct Deposit and earlier availability of funds are subject to payer's support of the feature and timing of payer's funding.</li>
+                        <li>Important information for opening a Card account: To help the federal government fight the funding of terrorism and money laundering activities, the USA PATRIOT Act requires all financial institutions and their third parties to obtain, verify, and record information that identifies each person who opens a card account. What this means for you: When you open a card account, we will ask for your name, address, date of birth, and other information that will allow us to identify you. We may also ask to see your driver's license or other identifying documents.</li>
+                        <li>To enable real-time ACH deposits, one needs to first qualify.</li>
+                        <li>While this specific feature is available for free, certain other transaction fees and costs, terms, and conditions are associated with the use of this Card. See the Cardholder Agreement for more details.</li>
+                        <li>App Store is a service mark of Apple Inc. Google Play is a trademark of Google Inc.</li>
+                    </ol>
+                </div>
+            </div>
+            <hr class="footer-divider">
+            <div class="footer-bottom">
+                <!-- <a href="" class="footer-link open-legal-notes">Legal Notes</a> -->
+                <div></div>
+                <div class="paragraph">Copyright 2020 LiquidKlear© All Rights Reserved</div>
+            </div>
+        </div>
+    </section>
+    
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/ScrollTrigger.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/ScrollToPlugin.min.js"></script>
@@ -372,6 +515,8 @@
     <script src="js/main.js"></script>
     <script src="js/menu.js"></script>
     <script src="js/intro.js"></script>
+    <script src="js/keypad.js"></script>
+    <script src="js/footer.js"></script>
     <script src="js/vanilla-tilt.min.js"></script>
     <script src="js/card.js"></script>
 </body>

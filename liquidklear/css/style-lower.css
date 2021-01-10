@@ -1,45 +1,7 @@
-.hero-img {
-  background-color: transparent;
-  transform: rotateZ(30deg);
-}
-
-.card {
-  background: linear-gradient(
-    60deg,
-    rgba(255, 255, 255, 0) 0%,
-    rgba(255, 255, 255, 0.5) 100%
-  );
-  backdrop-filter: blur(3px);
-  border: 1px solid rgba(255, 255, 255, 0.5);
-  width: 337.5px;
-  height: 212.5px;
-  border-radius: 10px;
-  padding: 2rem 0;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  color: rgba(255, 255, 255, 0.5);
-}
-
-.cardlogo {
-  background: linear-gradient(
-    90deg,
-    rgba(255, 255, 255, 0.5) 0%,
-    rgba(255, 255, 255, 0) 50%
-  );
-}
-
-.cardnumber {
-  text-align: left;
-  padding: 0 2rem;
-  font-size: 21px;
-}
-
-.cardbottom {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  padding: 0 2rem;
+:root {
+  --lkblue: #2e74ff;
+  --lkblue2: #000267;
+  --lkgrey: #bbbebf;
 }
 
 .lkblue {
@@ -52,6 +14,10 @@
 
 .lkgrey {
   color: var(--lkgrey);
+}
+
+.ans a {
+  color: #fff;
 }
 
 .keypad {
@@ -201,104 +167,6 @@
   z-index: 1;
 }
 
-footer {
-  background-image: url(../assets/images/Component\ 3\ –\ 1.png);
-  background-size: cover;
-  width: 100%;
-  font-weight: 400;
-}
-
-.footerlinks {
-  padding: 24rem 0 0;
-  background-color: #fff;
-  background-image: url(../assets/images/Path\ 40.svg);
-  background-size: cover;
-  background-repeat: no-repeat;
-  width: 95%;
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.linkcol {
-  margin: 2rem 0;
-  padding: 0 2rem;
-  width: 100%;
-  max-width: 900px;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: flex-start;
-}
-
-.linkrow {
-  color: #fff;
-}
-
-.linkrow h4 {
-  margin-bottom: 1rem;
-  font-weight: 400;
-  font-size: 16px;
-}
-
-.linkrow h5 {
-  font-weight: 400;
-  font-size: 15px;
-  line-height: 2;
-}
-
-.linkrow a {
-  color: #fff;
-  opacity: 0.5;
-  text-decoration: none;
-  line-height: 1.5rem;
-  transition: opacity 0.6s ease;
-}
-
-.linkrow a:hover {
-  opacity: 1;
-}
-
-.copy {
-  width: 100%;
-  max-width: 900px;
-}
-
-.copy hr {
-  border: 1px solid #fff;
-  opacity: 0.2;
-}
-
-.copy h6 {
-  color: #fff;
-  margin: 2rem 0;
-  text-align: right;
-  font-size: 14px;
-  font-weight: 400;
-}
-
-.footnotes {
-  width: 100%;
-  max-width: 900px;
-  padding: 0 4rem 2rem;
-  color: #fff;
-  font-size: 14px;
-}
-
-.footnotes h5 {
-  font-weight: 400;
-  font-size: 14px;
-}
-
-.footnotes ol {
-  margin: 1.5rem 0;
-}
-
-.footnotes li {
-  margin: 0.5rem 0;
-}
-
 @media screen and (max-width: 768px) {
   .hero-img {
     background-color: transparent;
@@ -340,10 +208,6 @@ footer {
   .keyparallax:nth-of-type(6) {
     bottom: 10%;
     right: 5%;
-  }
-
-  .cover h1 {
-    font-size: 2rem;
   }
 
   .footerlinks {
