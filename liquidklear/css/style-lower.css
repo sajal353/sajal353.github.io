@@ -20,6 +20,50 @@
   color: #fff;
 }
 
+.hero-img {
+  background-color: transparent;
+  transform: rotateZ(30deg);
+}
+
+.card {
+  background: linear-gradient(
+    60deg,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.5) 100%
+  );
+  backdrop-filter: blur(3px);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  width: 337.5px;
+  height: 212.5px;
+  border-radius: 10px;
+  padding: 2rem 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.cardlogo {
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0.5) 0%,
+    rgba(255, 255, 255, 0) 50%
+  );
+}
+
+.cardnumber {
+  text-align: left;
+  padding: 0 2rem;
+  font-size: 21px;
+}
+
+.cardbottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 0 2rem;
+}
+
 .keypad {
   width: 100%;
   height: 100vh;
@@ -170,7 +214,11 @@
 @media screen and (max-width: 768px) {
   .hero-img {
     background-color: transparent;
-    transform: rotateZ(0deg);
+    transform: rotateZ(0deg) translateX(-4%);
+  }
+
+  .card {
+    backdrop-filter: none;
   }
 
   .keyparallax:nth-of-type(7) {
