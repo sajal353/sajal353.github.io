@@ -1398,8 +1398,9 @@ body {
 }
 
 .card-feature-img-mobile {
-  width: 20rem;
-  height: 12.5rem;
+  width: 40rem;
+  height: 30rem;
+  object-fit: cover;
   margin-bottom: 5rem;
 }
 
