@@ -50,6 +50,23 @@ body {
   background-color: #262c3c;
 }
 
+.render {
+  width: 95%;
+  margin: 0 auto;
+  min-height: 100vh;
+  background-color: #151924;
+  background-image: url(../img/render-2.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+@media screen and (max-width: 768px) {
+  .render {
+    background-size: contain;
+  }
+}
+
 .follow {
   position: fixed;
   left: 0;
