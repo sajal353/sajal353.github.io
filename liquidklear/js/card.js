@@ -1,5 +1,5 @@
 VanillaTilt.init(document.querySelectorAll(".card"), {
-    max: 40,
+    max: 35,
     glare: 0.2,
     gyroscope: true
 });

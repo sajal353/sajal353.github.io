@@ -680,8 +680,8 @@ body {
 
 @media only screen and (max-width: 1000px) {
   .card-holder--single {
-    -webkit-transform: translate(-15%, 0) !important;
-    transform: translate(-15%, 0) !important;
+    -webkit-transform: translate(-25%, 0) !important;
+    transform: translate(-25%, 0) !important;
     margin-bottom: 10rem;
   }
 }
@@ -740,8 +740,8 @@ body {
 @media only screen and (max-width: 1000px) {
   .card {
     border-radius: 1rem;
-    width: 70%;
-    height: 35%;
+    width: 90%;
+    height: 45%;
   }
 }
 
@@ -1400,7 +1400,7 @@ body {
 .card-feature-img-mobile {
   width: 40rem;
   height: 30rem;
-  object-fit: cover;
+  object-fit: contain;
   margin-bottom: 5rem;
 }
 
