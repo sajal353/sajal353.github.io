@@ -53,17 +53,27 @@ body {
 .render {
   width: 95%;
   margin: 0 auto;
-  min-height: 100vh;
+  height: 100vh;
   background-color: #151924;
-  background-image: url(../img/render-2.jpg);
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+}
+
+.render img {
+  height: 100vh;
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
 }
 
 @media screen and (max-width: 768px) {
   .render {
-    background-size: contain;
+    height: auto;
+  }
+
+  .render img {
+    height: auto;
+    width: 100%;
+    object-fit: contain;
+    object-position: center;
   }
 }
 
