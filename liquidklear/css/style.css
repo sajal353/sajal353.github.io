@@ -1026,9 +1026,21 @@ body {
   }
 }
 
+@media only screen and (max-width: 1600px) {
+  .feature-img {
+    height: 42.5rem;
+  }
+}
+
 @media only screen and (max-height: 700px) {
   .feature-img {
     height: 30rem;
+  }
+}
+
+@media only screen and (max-width: 786px) {
+  .feature-img {
+    height: 50rem;
   }
 }
 
