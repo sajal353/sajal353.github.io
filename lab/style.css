@@ -1,0 +1,50 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins";
+}
+
+.motion {
+  background-color: lightblue;
+  min-height: 100vh;
+  width: 100%;
+  position: relative;
+}
+
+#motioncard {
+  position: absolute;
+  top: 50%;
+  right: 0%;
+}
+
+.feature1 {
+  position: absolute;
+  top: 50%;
+  left: 2rem;
+  transform: translateY(-50%);
+}
+
+.feature2 {
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  right: 2rem;
+  transform: translateY(-50%);
+}
+
+.feature3 {
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 2rem;
+  transform: translateY(-50%);
+}
+
+.feature4 {
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  right: 2rem;
+  transform: translateY(-50%);
+}
