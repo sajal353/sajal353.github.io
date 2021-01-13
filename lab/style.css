@@ -5,6 +5,10 @@
   font-family: "Poppins";
 }
 
+::-webkit-scrollbar {
+  display: none;
+}
+
 .motion {
   background-color: lightblue;
   min-height: 100vh;
@@ -13,9 +17,11 @@
 }
 
 #motioncard {
+  width: 25vw;
   position: absolute;
   top: 50%;
-  right: 0%;
+  right: 2rem;
+  transition: all 0.2s ease-out;
 }
 
 .feature1 {
@@ -47,4 +53,22 @@
   top: 50%;
   right: 2rem;
   transform: translateY(-50%);
+}
+
+@media screen and (max-width: 1200px) {
+  #motioncard {
+    width: 30vw;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  #motioncard {
+    width: 40vw;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  #motioncard {
+    width: 50vw;
+  }
 }
