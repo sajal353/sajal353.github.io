@@ -8,7 +8,7 @@ const motionpath = {
         curviness: 1,
         autoRotate: false,
         values: [
-            { x: -(vw - 64 - cw), y: 0, rotation: 270 },
+            { x: -(vw - 64 - cw - (13.5 * vw / 100) * 2), y: 0, rotation: 270 },
         ]
     },
     feature2: {
@@ -22,7 +22,7 @@ const motionpath = {
         curviness: 1,
         autoRotate: false,
         values: [
-            { x: -(vw - 64 - cw), y: 0, rotation: 0 },
+            { x: -(vw - 64 - cw - (13.5 * vw / 100) * 2), y: 0, rotation: 0 },
         ]
     }
 };
@@ -31,9 +31,12 @@ var controller = new ScrollMagic.Controller();
 
 var tween = new TimelineMax().set($("#motioncard"), { x: "0%", y: "-50%" })
     .add(TweenMax.to($(".feature1"), 2, { css: { opacity: 0 }, ease: Power1.easeInOut }))
+    .add(TweenMax.to($(".cardbg1"), 2, { css: { transform: "scale(0)" }, ease: Power1.easeInOut }))
     .add(TweenMax.to($("#motioncard"), 2, { css: { bezier: motionpath.feature1 }, ease: Power0.easeInOut }))
+    .add(TweenMax.to($(".cardbg2"), 2, { css: { transform: "scale(1)" }, ease: Power1.easeInOut }))
     .add(TweenMax.to($(".feature2"), 2, { css: { opacity: 1 }, ease: Power1.easeInOut }))
     .add(TweenMax.to($(".feature2"), 2, { css: { opacity: 0 }, ease: Power1.easeInOut }))
+    .add(TweenMax.to($(".cardbg2"), 2, { css: { transform: "scale(0)" }, ease: Power1.easeInOut }))
     .add(TweenMax.to($("#motioncard"), 2, { css: { bezier: motionpath.feature2 }, ease: Power0.easeInOut }))
     .add(TweenMax.to($(".feature3"), 2, { css: { opacity: 1 }, ease: Power1.easeInOut }))
     .add(TweenMax.to($(".feature3"), 2, { css: { opacity: 0 }, ease: Power1.easeInOut }))
