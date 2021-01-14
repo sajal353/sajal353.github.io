@@ -107,11 +107,11 @@
 }
 
 .feature2 {
-  opacity: 0;
+  opacity: 1;
   position: absolute;
   top: 50%;
   right: 13.5%;
-  transform: translateY(-50%);
+  transform: translateY(100vh);
 }
 
 .cardbg2 {
