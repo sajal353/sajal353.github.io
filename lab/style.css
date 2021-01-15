@@ -152,21 +152,127 @@
   right: -30%;
   animation: rotation 10s infinite reverse;
 }
+.cardbg2 img:nth-of-type(6) {
+  position: absolute;
+  top: -30%;
+  right: -50%;
+}
 
 .feature3 {
-  opacity: 0;
+  opacity: 1;
   position: absolute;
   top: 50%;
   left: 13.5%;
-  transform: translateY(-50%);
+  transform: translateY(100vh);
 }
 
-.feature4 {
-  opacity: 0;
+.cardbg3 {
+  width: 25vw;
+  height: 50vh;
   position: absolute;
   top: 50%;
   right: 13.5%;
-  transform: translateY(-50%);
+  transform: translateY(-50%) scale(0);
+}
+
+.cardbg3 img:nth-of-type(1) {
+  position: absolute;
+  top: -50%;
+  left: 0;
+  transform: translate(-25%, -25%);
+}
+.cardbg3 img:nth-of-type(2) {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translate(0, -50%);
+}
+.cardbg3 img:nth-of-type(3) {
+  position: absolute;
+  top: 0%;
+  left: 70%;
+}
+.cardbg3 img:nth-of-type(4) {
+  position: absolute;
+  bottom: 20%;
+  left: -30%;
+  animation: rotation 5s infinite alternate-reverse ease-in-out;
+}
+.cardbg3 img:nth-of-type(5) {
+  position: absolute;
+  top: -80%;
+  right: -30%;
+  animation: rotation 10s infinite reverse;
+}
+.cardbg3 img:nth-of-type(6) {
+  position: absolute;
+  top: -50%;
+  right: -30%;
+  animation: rotation 10s infinite reverse;
+}
+.cardbg3 img:nth-of-type(7) {
+  position: absolute;
+  top: -50%;
+  right: 0%;
+}
+.cardbg3 img:nth-of-type(8) {
+  position: absolute;
+  top: 30%;
+  left: -10%;
+}
+
+.feature4 {
+  opacity: 1;
+  position: absolute;
+  top: 50%;
+  right: 13.5%;
+  transform: translateY(100vh);
+}
+
+.cardbg4 {
+  width: 25vw;
+  height: 50vh;
+  position: absolute;
+  top: 50%;
+  left: 13.5%;
+  transform: translateY(-50%) scale(0);
+}
+
+.cardbg4 img:nth-of-type(1) {
+  position: absolute;
+  top: 25%;
+  left: 100%;
+  transform: translate(-25%, -25%);
+}
+.cardbg4 img:nth-of-type(2) {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translate(0, -50%);
+}
+.cardbg4 img:nth-of-type(3) {
+  position: absolute;
+  top: -50%;
+  right: -10%;
+}
+.cardbg4 img:nth-of-type(4) {
+  position: absolute;
+  bottom: 20%;
+  left: -30%;
+  animation: rotation 5s infinite alternate-reverse ease-in-out;
+}
+.cardbg4 img:nth-of-type(5) {
+  position: absolute;
+  top: -80%;
+  right: -30%;
+  animation: rotation 10s infinite reverse;
+}
+
+.cardbg4 img:nth-of-type(6) {
+  position: absolute;
+  top: -50%;
+  left: -40%;
+  transform: translate(0, -50%);
 }
 
 @media screen and (max-width: 1200px) {

@@ -38,10 +38,13 @@ var tween = new TimelineMax().set($("#motioncard"), { x: "0%", y: "-50%" })
     .add(TweenMax.to($(".feature2"), 2, { css: { transform: "translateY(-100vh)" }, ease: Power0.easeInOut }))
     .add(TweenMax.to($(".cardbg2"), 2, { css: { transform: "scale(0)" }, ease: Power0.easeInOut }), 4)
     .add(TweenMax.to($("#motioncard"), 2, { css: { bezier: motionpath.feature2 }, ease: Power0.easeInOut }), 5)
-    .add(TweenMax.to($(".feature3"), 2, { css: { opacity: 1 }, ease: Power0.easeInOut }))
-    .add(TweenMax.to($(".feature3"), 2, { css: { opacity: 0 }, ease: Power0.easeInOut }))
-    .add(TweenMax.to($("#motioncard"), 2, { css: { bezier: motionpath.feature3 }, ease: Power0.easeInOut }))
-    .add(TweenMax.to($(".feature4"), 2, { css: { opacity: 1 }, ease: Power0.easeInOut }));
+    .add(TweenMax.to($(".cardbg3"), 2, { css: { transform: "scale(1)" }, ease: Power0.easeInOut }), 6)
+    .add(TweenMax.to($(".feature3"), 2, { x: "0%", y: "-50%" }, { css: { transform: "translateY(-50%)" }, ease: Power0.easeInOut }), 6)
+    .add(TweenMax.to($(".feature3"), 2, { css: { transform: "translateY(-100vh)" }, ease: Power0.easeInOut }))
+    .add(TweenMax.to($(".cardbg3"), 2, { css: { transform: "scale(0)" }, ease: Power0.easeInOut }), 8)
+    .add(TweenMax.to($("#motioncard"), 2, { css: { bezier: motionpath.feature3 }, ease: Power0.easeInOut }), 9)
+    .add(TweenMax.to($(".cardbg4"), 2, { css: { transform: "scale(1)" }, ease: Power0.easeInOut }), 10)
+    .add(TweenMax.to($(".feature4"), 2, { x: "0%", y: "-50%" }, { css: { transform: "translateY(-50%)" }, ease: Power0.easeInOut }), 10);
 
 var scene = new ScrollMagic.Scene({ triggerElement: "#motion", duration: (window.innerHeight * 8), offset: 0, triggerHook: 0 })
     .setPin("#motion")
