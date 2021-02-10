@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="577.112" height="942.257" viewBox="0 0 577.112 942.257">
+  <defs>
+    <linearGradient id="linear-gradient" x1="0.479" x2="0.5" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#fff" stop-opacity="0"/>
+      <stop offset="1" stop-color="#316cff"/>
+    </linearGradient>
+  </defs>
+  <path id="_02.-Egg-Sour" data-name="02.-Egg-Sour" d="M-39.85,0H485.914V937.044S134.856,961.532,44.8,904.355s-153.511-156.5-131.676-315.4S68.457,461.853,80.213,314.616c4.749-59.484-13.935-122.255-37.9-175.954C6.974,59.455-39.85,0-39.85,0Z" transform="translate(91.198)" fill="url(#linear-gradient)"/>
+</svg>
